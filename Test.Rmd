@@ -1,0 +1,33 @@
+---
+title: "Minimal Bookdown Test"
+author: "Your Name"
+output:
+  bookdown::gitbook:
+    split_by: chapter
+---
+
+# Minimal Bookdown Test
+
+Welcome! If this builds, your bookdown setup works.
+
+This is the index page. The **next chapter** will test Markdown and R code.
+
+
+# Chapter 1: Test
+
+This is a test chapter.
+
+## Text
+Some **bold**, *italic*, and normal text.
+
+## R Code Test
+
+```{r}
+plot(cars, main = "Bookdown Test Plot")
+
+
+---
+
+# ✔ File 3 — `_bookdown.yml`
+
+Create a file named `_bookdown.yml`:
