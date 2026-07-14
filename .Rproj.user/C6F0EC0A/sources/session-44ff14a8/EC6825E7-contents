@@ -1,0 +1,7 @@
+---
+title: "main"
+output:
+  bookdown::gitbook:
+    split_by: chapter
+---
+

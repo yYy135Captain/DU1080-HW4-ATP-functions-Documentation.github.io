@@ -1,0 +1,15 @@
+rmd_files: 
+- Chroma2238.Rmd
+- AGMTestBox.Rmd
+- Relay.Rmd
+- DAQ.Rmd
+- InterfaceBox.Rmd
+- MxFoundation.Rmd
+- Photometer.Rmd
+- PickeringRelay.Rmd
+- PowerSupply.Rmd
+- SerialUART.Rmd
+- DMM.Rmd
+
+book_filename: "my-html-website"
+  
