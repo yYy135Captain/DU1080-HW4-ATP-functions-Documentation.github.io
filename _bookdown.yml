@@ -1,0 +1,21 @@
+book_filename: "DU1080-HW4-Documentation"
+
+output_dir: "_book"
+
+rmd_files:
+  - "index.Rmd"
+  - "Relay.Rmd"
+  - "SerialUART.Rmd"
+  - "PowerSupply.Rmd"
+  - "DAQ.Rmd"
+  - "DMM.Rmd"
+  - "MUX.Rmd"
+  - "InterfaceBox.Rmd"
+  - "Photometer.Rmd"
+  - "GraphicsDiscreteIO.Rmd"
+  - "AGMTestBox.Rmd"
+  - "Chroma2238.Rmd"
+  - "MxFoundation.Rmd"
+  - "PickeringRelay.Rmd"
+  
+delete_merged_file: true
