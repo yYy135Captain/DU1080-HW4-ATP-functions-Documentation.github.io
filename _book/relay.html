@@ -106,15 +106,18 @@
 <span class="header-section-number">1.2.2</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li><p><code>session</code>
-An active NI Switch session established by <code>RelayInitialize</code>.</p></li>
-<li><p><code>channel</code>
-The relay channel to control. The function uses this value to identify the corresponding common (<code>com</code>), normally closed (<code>nc</code>), and normally</p></li>
 <li>
-<p><code>operation</code>
-Specifies the requested relay state:</p>
+<code>session</code>
+An active NI Switch session established by <code>RelayInitialize</code>.</li>
+<li>
+<code>channel</code>
+The relay channel to control. The function uses this value to identify the corresponding common (<code>com</code>), normally closed (<code>nc</code>), and normally</li>
+<li>
+<code>operation</code>
+Specifies the requested relay state:
 <ul>
-<li>
+<li><p>‘0’ opens the switch by disconnecting the normally open connection and connecting the normally closed connection.</p></li>
+<li><p>Any non-zero</p></li>
 </ul>
 </li>
 </ul>
