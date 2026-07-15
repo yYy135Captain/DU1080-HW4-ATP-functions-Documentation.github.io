@@ -5,7 +5,8 @@ retun-value
 example
 error-codes
 relayset
-purpose-1
+usage
+parameters
 retun-value-1
 relayclose
 purpose-2
@@ -25,3 +26,4 @@ retun-value-6
 setprocdiscretebydata
 purpose-7
 retun-value-7
+purpose-1
