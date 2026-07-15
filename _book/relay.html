@@ -4,23 +4,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>2 Relay | DU1080 HW4 ATP Function Documentation</title>
+<title>Relay | DU1080 HW4 ATP Function Documentation</title>
 <meta name="author" content="">
 <meta name="generator" content="bookdown 0.47 with bs4_book()">
-<meta property="og:title" content="2 Relay | DU1080 HW4 ATP Function Documentation">
+<meta property="og:title" content="Relay | DU1080 HW4 ATP Function Documentation">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2 Relay | DU1080 HW4 ATP Function Documentation">
+<meta name="twitter:title" content="Relay | DU1080 HW4 ATP Function Documentation">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Sen-0.4.10/font.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
+<link href="libs/Bitter-0.4.10/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="2.1 RelayInitialize">
-<meta property="og:description" content="2.1 RelayInitialize">
-<meta name="twitter:description" content="2.1 RelayInitialize">
+<meta name="description" content="Overview RelayInitialize opens a connection to the NI switch hardware. If the initialization succeeds, the session handle is returned and the test_result flag is set to TRUE. Otherwise, an error...">
+<meta property="og:description" content="Overview RelayInitialize opens a connection to the NI switch hardware. If the initialization succeeds, the session handle is returned and the test_result flag is set to TRUE. Otherwise, an error...">
+<meta name="twitter:description" content="Overview RelayInitialize opens a connection to the NI switch hardware. If the initialization succeeds, the session handle is returned and the test_result flag is set to TRUE. Otherwise, an error...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -42,20 +45,21 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Welcome</a></li>
-<li><a class="active" href="relay.html"><span class="header-section-number">2</span> Relay</a></li>
-<li><a class="" href="serialuart.html"><span class="header-section-number">3</span> SerialUART</a></li>
-<li><a class="" href="powersupply.html"><span class="header-section-number">4</span> PowerSupply</a></li>
-<li><a class="" href="daq.html"><span class="header-section-number">5</span> DAQ</a></li>
-<li><a class="" href="dmm.html"><span class="header-section-number">6</span> DMM</a></li>
-<li><a class="" href="mux.html"><span class="header-section-number">7</span> MUX</a></li>
-<li><a class="" href="interfacebox.html"><span class="header-section-number">8</span> InterfaceBox</a></li>
-<li><a class="" href="photometer.html"><span class="header-section-number">9</span> Photometer</a></li>
-<li><a class="" href="graphicsdiscreteio.html"><span class="header-section-number">10</span> GraphicsDiscreteIO</a></li>
-<li><a class="" href="agmtestbox.html"><span class="header-section-number">11</span> AGMTestBox</a></li>
-<li><a class="" href="chroma2238.html"><span class="header-section-number">12</span> Chroma2238</a></li>
-<li><a class="" href="mxfoundation.html"><span class="header-section-number">13</span> MxFoundation</a></li>
-<li><a class="" href="pickeringrelay.html"><span class="header-section-number">14</span> PickeringRelay</a></li>
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="" href="mux.html">MUX</a></li>
+<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="active" href="relay.html">Relay</a></li>
+<li><a class="" href="serialuart.html">SerialUART</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,25 +67,194 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="relay" class="section level1" number="2">
-<h1>
-<span class="header-section-number">2</span> Relay<a class="anchor" aria-label="anchor" href="#relay"><i class="fas fa-link"></i></a>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="relay" class="section level1 unnumbered">
+<h1>Relay<a class="anchor" aria-label="anchor" href="#relay"><i class="fas fa-link"></i></a>
 </h1>
-<div id="relayinitialize" class="section level2" number="2.1">
-<h2>
-<span class="header-section-number">2.1</span> RelayInitialize<a class="anchor" aria-label="anchor" href="#relayinitialize"><i class="fas fa-link"></i></a>
+<div id="overview" class="section level2 unnumbered">
+<h2>Overview<a class="anchor" aria-label="anchor" href="#overview"><i class="fas fa-link"></i></a>
 </h2>
+<p>RelayInitialize opens a connection to the NI switch hardware. If the initialization succeeds, the session handle is returned and the test_result flag is set to TRUE. Otherwise, an error message is stored in status_message.</p>
+</div>
+<div id="relayinitialize" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> RelayInitialize<a class="anchor" aria-label="anchor" href="#relayinitialize"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose" class="section level3" number="1.1.1">
+<h3>
+<span class="header-section-number">1.1.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose"><i class="fas fa-link"></i></a>
+</h3>
+<p>Initialize the NI switch module and establish a VI session</p>
+</div>
+<div id="retun-value" class="section level3" number="1.1.2">
+<h3>
+<span class="header-section-number">1.1.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value"><i class="fas fa-link"></i></a>
+</h3>
+<p>Returns an integer status code.</p>
+</div>
+</div>
+<div id="relayset" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> RelaySet<a class="anchor" aria-label="anchor" href="#relayset"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose-1" class="section level3" number="1.2.1">
+<h3>
+<span class="header-section-number">1.2.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-1"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="retun-value-1" class="section level3" number="1.2.2">
+<h3>
+<span class="header-section-number">1.2.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value-1"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="relayclose" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> RelayClose<a class="anchor" aria-label="anchor" href="#relayclose"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose-2" class="section level3" number="1.3.1">
+<h3>
+<span class="header-section-number">1.3.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-2"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="retun-value-2" class="section level3" number="1.3.2">
+<h3>
+<span class="header-section-number">1.3.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value-2"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="replayopenall" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> ReplayOpenAll<a class="anchor" aria-label="anchor" href="#replayopenall"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose-3" class="section level3" number="1.4.1">
+<h3>
+<span class="header-section-number">1.4.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="retun-value-3" class="section level3" number="1.4.2">
+<h3>
+<span class="header-section-number">1.4.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="relaysignalset" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> RelaySignalSet<a class="anchor" aria-label="anchor" href="#relaysignalset"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose-4" class="section level3" number="1.5.1">
+<h3>
+<span class="header-section-number">1.5.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="retun-value-4" class="section level3" number="1.5.2">
+<h3>
+<span class="header-section-number">1.5.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value-4"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="setnicdiscrete" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> SetNICDiscrete<a class="anchor" aria-label="anchor" href="#setnicdiscrete"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose-5" class="section level3" number="1.6.1">
+<h3>
+<span class="header-section-number">1.6.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="retun-value-5" class="section level3" number="1.6.2">
+<h3>
+<span class="header-section-number">1.6.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value-5"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="setnicdiscretebydata" class="section level2" number="1.7">
+<h2>
+<span class="header-section-number">1.7</span> SetNICDiscreteByData<a class="anchor" aria-label="anchor" href="#setnicdiscretebydata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose-6" class="section level3" number="1.7.1">
+<h3>
+<span class="header-section-number">1.7.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="retun-value-6" class="section level3" number="1.7.2">
+<h3>
+<span class="header-section-number">1.7.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value-6"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="setprocdiscretebydata" class="section level2" number="1.8">
+<h2>
+<span class="header-section-number">1.8</span> SetProcDiscreteByData<a class="anchor" aria-label="anchor" href="#setprocdiscretebydata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="purpose-7" class="section level3" number="1.8.1">
+<h3>
+<span class="header-section-number">1.8.1</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="retun-value-7" class="section level3" number="1.8.2">
+<h3>
+<span class="header-section-number">1.8.2</span> Retun Value<a class="anchor" aria-label="anchor" href="#retun-value-7"><i class="fas fa-link"></i></a>
+</h3>
 
 </div>
 </div>
+</div>
   <div class="chapter-nav">
-<div class="prev"><a href="index.html"><span class="header-section-number">1</span> Welcome</a></div>
-<div class="next"><a href="serialuart.html"><span class="header-section-number">3</span> SerialUART</a></div>
+<div class="prev"><a href="powersupply.html">PowerSupply</a></div>
+<div class="next"><a href="serialuart.html">SerialUART</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#relay"><span class="header-section-number">2</span> Relay</a></li>
-<li><a class="nav-link" href="#relayinitialize"><span class="header-section-number">2.1</span> RelayInitialize</a></li>
+<li><a class="nav-link" href="#relay">Relay</a></li>
+<li><a class="nav-link" href="#overview">Overview</a></li>
+<li>
+<a class="nav-link" href="#relayinitialize"><span class="header-section-number">1.1</span> RelayInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose"><span class="header-section-number">1.1.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value"><span class="header-section-number">1.1.2</span> Retun Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relayset"><span class="header-section-number">1.2</span> RelaySet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose-1"><span class="header-section-number">1.2.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value-1"><span class="header-section-number">1.2.2</span> Retun Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relayclose"><span class="header-section-number">1.3</span> RelayClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose-2"><span class="header-section-number">1.3.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value-2"><span class="header-section-number">1.3.2</span> Retun Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#replayopenall"><span class="header-section-number">1.4</span> ReplayOpenAll</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose-3"><span class="header-section-number">1.4.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value-3"><span class="header-section-number">1.4.2</span> Retun Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relaysignalset"><span class="header-section-number">1.5</span> RelaySignalSet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose-4"><span class="header-section-number">1.5.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value-4"><span class="header-section-number">1.5.2</span> Retun Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscrete"><span class="header-section-number">1.6</span> SetNICDiscrete</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose-5"><span class="header-section-number">1.6.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value-5"><span class="header-section-number">1.6.2</span> Retun Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscretebydata"><span class="header-section-number">1.7</span> SetNICDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose-6"><span class="header-section-number">1.7.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value-6"><span class="header-section-number">1.7.2</span> Retun Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setprocdiscretebydata"><span class="header-section-number">1.8</span> SetProcDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#purpose-7"><span class="header-section-number">1.8.1</span> Purpose</a></li>
+<li><a class="nav-link" href="#retun-value-7"><span class="header-section-number">1.8.2</span> Retun Value</a></li>
+</ul>
+</li>
 </ul>
 
       <div class="book-extra">

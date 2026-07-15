@@ -1,4 +1,47 @@
-# Relay
+# Relay {-}
+## Overview {-}
+  RelayInitialize opens a connection to the NI switch hardware. If the initialization succeeds, the session handle is returned and the test_result flag is set to TRUE. Otherwise, an error message is stored in status_message.
 
 ## RelayInitialize
+### Purpose
+  Initialize the NI switch module and establish a VI session
+
+### Retun Value
+  Returns an integer status code.
+
+
+## RelaySet
+### Purpose
+
+### Retun Value
+
+## RelayClose
+### Purpose
+
+### Retun Value
+
+## ReplayOpenAll
+### Purpose
+
+### Retun Value
+
+## RelaySignalSet
+### Purpose
+
+### Retun Value
+
+## SetNICDiscrete
+### Purpose
+
+### Retun Value
+
+## SetNICDiscreteByData
+### Purpose
+
+### Retun Value
+
+## SetProcDiscreteByData
+### Purpose
+
+### Retun Value
 
