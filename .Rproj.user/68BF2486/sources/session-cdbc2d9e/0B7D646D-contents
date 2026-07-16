@@ -21,10 +21,11 @@
   Creates a switch session and initializes the relay module.
 
 ### Return Value
-  Returns an integer status code.
-  
-  - 0 indicates the operation completed successfully.
-  - A non-zero value indicates a NI Switch or VISA error occurred during initialization.
+| Error | Description |
+|--------------|-------------|
+| 0 | Initialization completed successfully.|
+| 1 | Failed to open VISA resource manager. |
+| 2 | Failed to open VISA resource.         |
 
 ### Example
 
@@ -45,10 +46,11 @@
 | `operation`|    `int`    | Relay state (NC OR NO).|
   
 ### Return Value
-| Return Value | Description |
+| Error | Description |
 |--------------|-------------|
-|      `0`     | Operation completed successfully.|
-|   Non-zero   | NI Switch returned an error. |
+|  0 | Relay state changed successfully.|
+| <0 | NI Switch API error. |
+
 
 
 ### Example
@@ -68,10 +70,10 @@ Resets the switch module and closes the active session.
 |  `status_message` |   `char *`  | Output buffer used to store status and error messages generated during the reset and close operations. |
 
 ### Return Value
-| Return Value | Description |
-|--------------|-------------|
-|      `0`     | Session was successfully reset and closed.|
-|   Non-zero   | One or more NI Switch operations failed. The returned value contains the accumlated NI Switch error status. |
+| Error | Description |
+|-------|-------------|
+|  0 | Session closed successfully.|
+| <0 | Failed to reset or close the session. |
 
 ### Example
 
@@ -88,9 +90,10 @@ Resets the switch module and closes the active session.
 |  `session` | `ViSession` | Active switch session. |
 
 ### Return Value
-| Return Value |    Purpose  |
-|--------------|-------------|
-|     `0`      | Active switch session. |
+| Error | Description |
+|-------|-------------|
+|  0 | All relays opened successfully.|
+| <0 | Failed to open all relays. |
 
 ### Example
 
@@ -99,10 +102,24 @@ Resets the switch module and closes the active session.
 `int DLLEXPORT _stdcall RelaySignalSet(ViSession session, char *signal_name, void **signal_list, char *status_message);`
 
 ### Purpose
-
+Set the relay state for a specified signal in the signal list.
 
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+|  `session` | `ViSession` | Active switch session. |
+| `signal_name` | `char *` | Name of the signal to change.|
+| `signal_list` |`void **` | List of available relay signals.|
+| `status_message` | `char *` | Stores the operation status message.|
+
 ### Return Value
+| Error | Description |
+|-------|-------------|
+|  0  | Signal state updated successfully.|
+| -1  | Signal list has not been loaded. |
+| -2  | Invalid relay operation.|
+| -3  | Signal was not found.|
+
 ### Example
 
 ## **SetNICDiscrete**
@@ -110,8 +127,21 @@ Resets the switch module and closes the active session.
 `int DLLEXPORT __stdcall SetNICDiscrete(ViSession *session, ViBoolean *test_result, char *status_message);`
 
 ### Purpose
+Configures relay settings for NIC ID.
+
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+|  `session` | `ViSession` | Active switch session. |
+| `test_result` | `ViBoolean *` | Return test status.|
+| `status_message` | `char *` | Stores status message.|
+
 ### Return Value
+| Error | Description |
+|-------|-------------|
+|  0 | NIC discrete configured successfully.|
+| <0 | Failed to configure NIC discrete settings. |
+
 ### Example
 
 ## **SetNICDiscreteByData**
@@ -119,8 +149,21 @@ Resets the switch module and closes the active session.
 `int DLLEXPORT __stdcall SetNICDiscreteByData(ViSession *session, uint8_t data, void **signal_list, char *status_message);`
 
 ### Purpose
+Sets the NIC discrete signals based on the input data.
+
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+|  `session` | `ViSession` | Active switch session. |
+| `data` | `char *` | Input data used to configure NIC discrete signals.|
+| `status_message` | `char *` | Stores status message.|
+
 ### Return Value
+| Error | Description |
+|-------|-------------|
+|  0 | NIC discrete signals configured successfully.|
+| <0 | Failed to configure NIC discrete signals. |
+
 ### Example
 
 ## **SetProcDiscreteByData**
@@ -128,6 +171,21 @@ Resets the switch module and closes the active session.
 `int DLLEXPORT __stdcall SetProcDiscreteByData(ViSession *session, uint32_t data, void **signal_list, char *status_message);`
 
 ### Purpose
+Configures PROC discrete signals using the input data.
+
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+|  `session` | `ViSession` | Active switch session. |
+| `data` | `unit32_t *` | Input data for PROC DISCRETE SIGNALS.|
+| `signal_list` | `void **` | List of relay signals. |
+| `status_message` | `char *` | Stores status message.|
+
+
 ### Return Value
+| Error | Description |
+|-------|-------------|
+|  0 | PROC discrete signals configured successfully.|
+| <0 | Failed to configure PROC discrete signals. |
+
 ### Example

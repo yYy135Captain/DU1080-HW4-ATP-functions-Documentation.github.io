@@ -1,5 +1,7 @@
 # (PART\*) Instruments
 # AGMTestBox {-}
+## **Overview** {-}
+
 
 ## **SendAGMPacket** 
 ### Header
@@ -7,6 +9,14 @@
 
 ### Purpose
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+| ` * port`  |    `char`   |
+|   `baud`   |    `int`    |
+|` *command` |  `char * `  |
+|`command_size` | `int `     |
+|` *status_message` | ` char *` |
+
 ### Return Value
 ### Example
 
@@ -16,6 +26,10 @@
 
 ### Purpose
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+| 
+
 ### Return Value
 ### Example
 
@@ -25,5 +39,9 @@
 
 ### Purpose
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+| 
+
 ### Return Value
 ### Example

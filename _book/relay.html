@@ -44,7 +44,23 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">Relay</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="" href="mux.html">MUX</a></li>
+<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="active" href="relay.html">Relay</a></li>
+<li><a class="" href="serialuart.html">SerialUART</a></li>
+</ul>
 
         <div class="book-extra">
           
@@ -115,11 +131,26 @@
 <h3>
 <span class="header-section-number">1.4.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-3"><i class="fas fa-link"></i></a>
 </h3>
-<p>Returns an integer status code.</p>
-<ul>
-<li>0 indicates the operation completed successfully.</li>
-<li>A non-zero value indicates a NI Switch or VISA error occurred during initialization.</li>
-</ul>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Initialization completed successfully.</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Failed to open VISA resource manager.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Failed to open VISA resource.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example-3" class="section level3" number="1.4.5">
 <h3>
@@ -178,17 +209,17 @@
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
-<th>Return Value</th>
+<th>Error</th>
 <th>Description</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>0</code></td>
-<td>Operation completed successfully.</td>
+<td>0</td>
+<td>Relay state changed successfully.</td>
 </tr>
 <tr class="even">
-<td>Non-zero</td>
-<td>NI Switch returned an error.</td>
+<td>&lt;0</td>
+<td>NI Switch API error.</td>
 </tr>
 </tbody>
 </table></div>
@@ -249,22 +280,18 @@
 <span class="header-section-number">1.6.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
-<colgroup>
-<col width="51%">
-<col width="48%">
-</colgroup>
 <thead><tr class="header">
-<th>Return Value</th>
+<th>Error</th>
 <th>Description</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>0</code></td>
-<td>Session was successfully reset and closed.</td>
+<td>0</td>
+<td>Session closed successfully.</td>
 </tr>
 <tr class="even">
-<td>Non-zero</td>
-<td>One or more NI Switch operations failed. The returned value contains the accumlated NI Switch error status.</td>
+<td>&lt;0</td>
+<td>Failed to reset or close the session.</td>
 </tr>
 </tbody>
 </table></div>
@@ -314,13 +341,19 @@
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
-<th>Return Value</th>
-<th>Purpose</th>
+<th>Error</th>
+<th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td><code>0</code></td>
-<td>Active switch session.</td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>All relays opened successfully.</td>
+</tr>
+<tr class="even">
+<td>&lt;0</td>
+<td>Failed to open all relays.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="example-6" class="section level3" number="1.7.5">
@@ -343,16 +376,70 @@
 <h3>
 <span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
 </h3>
+<p>Set the relay state for a specified signal in the signal list.</p>
 </div>
 <div id="parameters-6" class="section level3" number="1.8.3">
 <h3>
 <span class="header-section-number">1.8.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>session</code></td>
+<td><code>ViSession</code></td>
+<td>Active switch session.</td>
+</tr>
+<tr class="even">
+<td><code>signal_name</code></td>
+<td><code>char *</code></td>
+<td>Name of the signal to change.</td>
+</tr>
+<tr class="odd">
+<td><code>signal_list</code></td>
+<td><code>void **</code></td>
+<td>List of available relay signals.</td>
+</tr>
+<tr class="even">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores the operation status message.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="return-value-7" class="section level3" number="1.8.4">
 <h3>
 <span class="header-section-number">1.8.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Signal state updated successfully.</td>
+</tr>
+<tr class="even">
+<td>-1</td>
+<td>Signal list has not been loaded.</td>
+</tr>
+<tr class="odd">
+<td>-2</td>
+<td>Invalid relay operation.</td>
+</tr>
+<tr class="even">
+<td>-3</td>
+<td>Signal was not found.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example-7" class="section level3" number="1.8.5">
 <h3>
@@ -374,16 +461,57 @@
 <h3>
 <span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
 </h3>
+<p>Configures relay settings for NIC ID.</p>
 </div>
 <div id="parameters-7" class="section level3" number="1.9.3">
 <h3>
 <span class="header-section-number">1.9.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>session</code></td>
+<td><code>ViSession</code></td>
+<td>Active switch session.</td>
+</tr>
+<tr class="even">
+<td><code>test_result</code></td>
+<td><code>ViBoolean *</code></td>
+<td>Return test status.</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status message.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="return-value-8" class="section level3" number="1.9.4">
 <h3>
 <span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>NIC discrete configured successfully.</td>
+</tr>
+<tr class="even">
+<td>&lt;0</td>
+<td>Failed to configure NIC discrete settings.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example-8" class="section level3" number="1.9.5">
 <h3>
@@ -405,16 +533,62 @@
 <h3>
 <span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
 </h3>
+<p>Sets the NIC discrete signals based on the input data.</p>
 </div>
 <div id="parameters-8" class="section level3" number="1.10.3">
 <h3>
 <span class="header-section-number">1.10.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="29%">
+<col width="35%">
+<col width="35%">
+</colgroup>
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>session</code></td>
+<td><code>ViSession</code></td>
+<td>Active switch session.</td>
+</tr>
+<tr class="even">
+<td><code>data</code></td>
+<td><code>char *</code></td>
+<td>Input data used to configure NIC discrete signals.</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status message.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="return-value-9" class="section level3" number="1.10.4">
 <h3>
 <span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>NIC discrete signals configured successfully.</td>
+</tr>
+<tr class="even">
+<td>&lt;0</td>
+<td>Failed to configure NIC discrete signals.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example-9" class="section level3" number="1.10.5">
 <h3>
@@ -436,16 +610,62 @@
 <h3>
 <span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
 </h3>
+<p>Configures PROC discrete signals using the input data.</p>
 </div>
 <div id="parameters-9" class="section level3" number="1.11.3">
 <h3>
 <span class="header-section-number">1.11.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>session</code></td>
+<td><code>ViSession</code></td>
+<td>Active switch session.</td>
+</tr>
+<tr class="even">
+<td><code>data</code></td>
+<td><code>unit32_t *</code></td>
+<td>Input data for PROC DISCRETE SIGNALS.</td>
+</tr>
+<tr class="odd">
+<td><code>signal_list</code></td>
+<td><code>void **</code></td>
+<td>List of relay signals.</td>
+</tr>
+<tr class="even">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status message.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="return-value-10" class="section level3" number="1.11.4">
 <h3>
 <span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-10"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>PROC discrete signals configured successfully.</td>
+</tr>
+<tr class="even">
+<td>&lt;0</td>
+<td>Failed to configure PROC discrete signals.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example-10" class="section level3" number="1.11.5">
 <h3>
@@ -456,11 +676,86 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="powersupply.html">PowerSupply</a></div>
+<div class="next"><a href="serialuart.html">SerialUART</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#relay">Relay</a></li>
+<li><a class="nav-link" href="#overview">Overview</a></li>
+<li>
+<a class="nav-link" href="#relayinitialize"><span class="header-section-number">1.4</span> RelayInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-3"><span class="header-section-number">1.4.1</span> Header</a></li>
+<li><a class="nav-link" href="#parameter"><span class="header-section-number">1.4.2</span> Parameter</a></li>
+<li><a class="nav-link" href="#purpose-3"><span class="header-section-number">1.4.3</span> Purpose</a></li>
+<li><a class="nav-link" href="#return-value-3"><span class="header-section-number">1.4.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-3"><span class="header-section-number">1.4.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relayset"><span class="header-section-number">1.5</span> RelaySet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-4"><span class="header-section-number">1.5.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-4"><span class="header-section-number">1.5.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-3"><span class="header-section-number">1.5.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-4"><span class="header-section-number">1.5.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-4"><span class="header-section-number">1.5.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relayclose"><span class="header-section-number">1.6</span> RelayClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-5"><span class="header-section-number">1.6.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-5"><span class="header-section-number">1.6.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-4"><span class="header-section-number">1.6.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-5"><span class="header-section-number">1.6.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-5"><span class="header-section-number">1.6.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#replayopenall"><span class="header-section-number">1.7</span> ReplayOpenAll</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-6"><span class="header-section-number">1.7.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-6"><span class="header-section-number">1.7.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-5"><span class="header-section-number">1.7.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-6"><span class="header-section-number">1.7.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-6"><span class="header-section-number">1.7.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relaysignalset"><span class="header-section-number">1.8</span> RelaySignalSet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-7"><span class="header-section-number">1.8.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-7"><span class="header-section-number">1.8.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-6"><span class="header-section-number">1.8.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-7"><span class="header-section-number">1.8.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-7"><span class="header-section-number">1.8.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscrete"><span class="header-section-number">1.9</span> SetNICDiscrete</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-8"><span class="header-section-number">1.9.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-8"><span class="header-section-number">1.9.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-7"><span class="header-section-number">1.9.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-8"><span class="header-section-number">1.9.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-8"><span class="header-section-number">1.9.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscretebydata"><span class="header-section-number">1.10</span> SetNICDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-9"><span class="header-section-number">1.10.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-9"><span class="header-section-number">1.10.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-8"><span class="header-section-number">1.10.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-9"><span class="header-section-number">1.10.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-9"><span class="header-section-number">1.10.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setprocdiscretebydata"><span class="header-section-number">1.11</span> SetProcDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-10"><span class="header-section-number">1.11.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-10"><span class="header-section-number">1.11.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-9"><span class="header-section-number">1.11.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-10"><span class="header-section-number">1.11.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-10"><span class="header-section-number">1.11.5</span> Example</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
