@@ -9,18 +9,16 @@
 `int DLLEXPORT _stdcall RelayInitialize(char *resource_name, ViSession *session, ViBoolean *test_result, char *status_message);`
 
 ### Parameter
-`resource_name`
+|  Parameter |     Type    | Purpose |
+| -----------|-------------|-------------|
+|  `resource_name` | `char *` | Switch resource name.|
+|  `session` |   `ViSession`  | Returns the switch session. |
+| `test_result`|    `ViBoolean`    | Indicates success or failure.|
+|`status_message`| `char *` | Returns status messages. |
 
-`session`
-
-`test_result`
-
-`status_message`
 
 ### Purpose
-  Initialize the NI switch module and establish a communication session with the switch hardware.
-  
-  If initialization succeeds, a valid NI Switch session is returned. Otherwise, an error message is generated and stored in status_message.
+  Creates a switch session and initializes the relay module.
 
 ### Return Value
   Returns an integer status code.
@@ -36,26 +34,22 @@
 `int DLLEXPORT _stdcall RelaySet(ViSession session, char channel[], int operation);`
 
 ### Purpose
-  Controls the open and closed state of specified relay channel.
-  
-  The function first checks whether each requested connection path already exists. It disconnect the existing path when necessary and then establishes the path required for the selected operation.
+  Changes the state of a specified relay channel.
 
 
 ### Parameters
-- `session`
-  An active NI Switch session established by `RelayInitialize`.
-- `channel`
-  The relay channel to control. The function uses this value to identify the corresponding common (`com`), normally closed (`nc`), and normally
-- `operation`
-  Specifies the requested relay state:
-  - '0' opens the switch by disconnecting the normally open connection and connecting the normally closed connection.
-  
-  - Any non-zero value closes the switch by disconnecting the normally closed connection and connecting the normally open connection.
+|  Parameter |     Type    | Purpose |
+| -----------|-------------|-------------|
+|  `session` | `ViSession` | Active switch session.|
+|  `channel` |   `char[]`  | Relay channel number. |
+| `operation`|    `int`    | Relay state (NC OR NO).|
   
 ### Return Value
-Return 0: errors
-Return -1:
-Return -2:
+| Return Value | Description |
+|--------------|-------------|
+|      `0`     | Operation completed successfully.|
+|   Non-zero   | NI Switch returned an error. |
+
 
 ### Example
 
@@ -65,8 +59,20 @@ Return -2:
 `int DLLEXPORT _stdcall RelayClose(ViSession session, char *status_message);`
 
 ### Purpose
+Resets the switch module and closes the active session.
+
 ### Parameters
+|  Parameter |     Type    | Purpose |
+| -----------|-------------|-------------|
+|  `session` | `ViSession` | Active NI Switch session to be closed. |
+|  `status_message` |   `char *`  | Output buffer used to store status and error messages generated during the reset and close operations. |
+
 ### Return Value
+| Return Value | Description |
+|--------------|-------------|
+|      `0`     | Session was successfully reset and closed.|
+|   Non-zero   | One or more NI Switch operations failed. The returned value contains the accumlated NI Switch error status. |
+
 ### Example
 
 ## **ReplayOpenAll**
@@ -74,8 +80,18 @@ Return -2:
 `int DLLEXPORT _stdcall RelayOpenAll(ViSession session);`
 
 ### Purpose
+  Disconnects all relay paths on the active switch module.
+
 ### Parameters
+|  Parameter |     Type    | Description |
+| -----------|-------------|-------------|
+|  `session` | `ViSession` | Active switch session. |
+
 ### Return Value
+| Return Value |    Purpose  |
+|--------------|-------------|
+|     `0`      | Active switch session. |
+
 ### Example
 
 ## **RelaySignalSet**
@@ -83,6 +99,8 @@ Return -2:
 `int DLLEXPORT _stdcall RelaySignalSet(ViSession session, char *signal_name, void **signal_list, char *status_message);`
 
 ### Purpose
+
+
 ### Parameters
 ### Return Value
 ### Example
