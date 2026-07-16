@@ -1,6 +1,6 @@
 book_filename: "DU1080-HW4-Documentation"
 
-output_dir: "_docs"
+output_dir: "docs"
 
 rmd_files:
   - "AGMTestBox.Rmd"
