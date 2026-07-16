@@ -3,6 +3,7 @@
 
 
 //MxFoundation Functions
+
 ## **MxFoundationInitialize**
 ### Header
 ### Purpose
@@ -34,6 +35,7 @@
 ### Example
 
 //ARINC429 Functions
+
 ## **ARINC429ChannelInitialize**
 ### Header
 ### Purpose
@@ -54,8 +56,12 @@
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|-------------------|-------------|-------------|
+|  `receive_channel`|  `uint64`   |
+|  `speed`          | `BOOL`      |
+|   `parity`        |   `int`     |
+|     `count`       |   `uint64`  |
+|  `*receive_buffer`|`HMXF_BUFFER`|
 
 ### Return Value
 | Error | Description |
@@ -68,9 +74,16 @@
 ### Header
 ### Purpose
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|           Parameter         |      Type    | Description |
+|-----------------------------|--------------|-------------|
+|` *arinc429_transmit_buffer` | `HMXF_BUFFER`|
+|` *arinc429_schedule_handle` | `HMXF_SCHED `|
+|   ` *transmit_channel`      |   `uint64`   |
+|       ` send_rate`          |     `int`    |
+|           `speed`           |     `BOOL`   |
+|           `parity`          |     `int`    |
+|       `transmit_data`       |`unsigned int`|
+|           `delay`           |`unsigned int`| 
 
 ### Return Value
 | Error | Description |
@@ -85,10 +98,12 @@
 ### Parameter
 |     Parameter     |     Type    | Description |
 | ------------------|-------------|-------------|
-|
+|   `count`         |   `uint64`  |
+| `receive_buffer`  |`HMXF_BUFFER`|
+|` *received_data`  |   `uint32`  |
 
 ### Return Value
-| Error | Description |
+|     Error    | Description |
 |--------------|-------------|
 |
 
@@ -98,9 +113,11 @@
 ### Header
 ### Purpose
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|        Parameter         |     Type    | Description |
+|--------------------------|-------------|-------------|
+|`arinc429_transmit_buffer`|`HMXF_BUFFER`|
+|`arinc429_receive_buffer` |`HMXF_BUFFER`|
+|`arinc429_schedule_handle`|`HMXF_SCHED` |
 
 ### Return Value
 | Error | Description |
@@ -113,9 +130,11 @@
 ### Header
 ### Purpose
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|     Parameter     |      Type    | Description |
+|-------------------|--------------|-------------|
+| `transmit_channel`|    `uint64`  |
+| `receive_channel` |    `uint64`  |
+|       `data`      |`unsigned int`|       
 
 ### Return Value
 | Error | Description |
@@ -125,6 +144,7 @@
 ### Example
 
 //ARINC708 Functions
+
 ## **ARINC708ChannelInitialize**
 ### Header
 ### Purpose
@@ -145,8 +165,9 @@
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|-------------------|-------------|-------------|
+|`receive_channel`  | `uint64`    |
+|` *receive_buffer` |`HMXF_BUFFER`
 
 ### Return Value
 | Error | Description |
@@ -159,9 +180,13 @@
 ### Header
 ### Purpose
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|        Parameter           |     Type     | Description |
+|----------------------------|--------------|-------------|
+|` *arinc708_transmit_buffer`| `HMXF_BUFFER`|
+|` *arinc708_schedule_handle`| `HMXF_SCHED` |
+|     `transmit_channel`     |   `uint64`   |
+|       `send_rate`          |     `int`    |
+|     `transmit_data`        |`unsigned int`|
 
 ### Return Value
 | Error | Description |
@@ -175,8 +200,10 @@
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|-------------------|-------------|-------------|
+|       `count`     |   `uint64`  |
+| `receive_buffer`  |`HMXF_BUFFER`|
+| `*received_data`  |   `uint32`  |
 
 ### Return Value
 | Error | Description |
@@ -189,9 +216,11 @@
 ### Header
 ### Purpose
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|         Parameter        |     Type    | Description |
+|--------------------------|-------------|-------------|
+|`arinc708_transmit_buffer`|`HMXF_BUFFER`|
+|`arinc708_receive_buffer` |`HMXF_BUFFER`|
+|`arinc708_schedule_handle`|`HMXF_SCHED` |
 
 ### Return Value
 | Error | Description |
@@ -204,9 +233,11 @@
 ### Header
 ### Purpose
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|     Parameter    |     Type     | Description |
+|------------------|--------------|-------------|
+|`transmit_channel`|    `uint64`  |
+| `receive_channel`|    `uint64`  |
+|       `data`     |`unsigned int`|
 
 ### Return Value
 | Error | Description |
@@ -220,7 +251,7 @@
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
+|------------------|-------------|-------------|
 |
 
 ### Return Value
@@ -231,13 +262,16 @@
 ### Example
 
 //MISC Helper
+
 ## **SetParityBit**
 ### Header
 ### Purpose
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+|     Parameter     |     Type     | Description |
+| ------------------|--------------|-------------|
+|   `arinc_word`    |`unsigned int`|
+|     ` *result`    |`unsigned int`|
+|     `parity`      |    `int`     |
 
 ### Return Value
 | Error | Description |
