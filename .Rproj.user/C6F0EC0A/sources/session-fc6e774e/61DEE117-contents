@@ -1,0 +1,70 @@
+# Relay {-}
+## Overview {-}
+  The Relay library provides functions for controlling NI switch hardware used in the DU1080 HW4 ATP system.
+  
+  It supports initialization, relay switching, signal routing, and discuss signal control.
+
+## RelayInitialize
+### Purpose
+  Initialize the NI switch module and establish a communication seesion with the switch hardware.
+  
+  If initialization succeeds, a valid NI Switch session is returned. Otherwise, an error message is generated and stored in status_message.
+
+### Retun Value
+  Returns an integer status code.
+  
+  - 0 indicates the operation completed successfully.
+  - A non-zero value indicates a NI Switch or VISA error occurred during initialization.
+
+### Example
+### Error Codes
+
+
+## RelaySet
+### Usage
+### Parameters
+- `session`
+  An active NI Switch session established by `RelayInitialize`.
+- `channel`
+  The relay channel to control. The function uses this value to identify the corresponding common (`com`), normally closed (`nc`), and normally
+- `operation`
+  Specifies the requested relay state:
+  - '0' opens the switch by disconnecting the normally open connection and connecting the normally closed connection.
+  
+  - Any non-zero 
+  
+### Purpose
+  
+
+### Retun Value
+
+## RelayClose
+### Purpose
+
+### Retun Value
+
+## ReplayOpenAll
+### Purpose
+
+### Retun Value
+
+## RelaySignalSet
+### Purpose
+
+### Retun Value
+
+## SetNICDiscrete
+### Purpose
+
+### Retun Value
+
+## SetNICDiscreteByData
+### Purpose
+
+### Retun Value
+
+## SetProcDiscreteByData
+### Purpose
+
+### Retun Value
+

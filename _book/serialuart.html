@@ -21,9 +21,9 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="A book created with bookdown.">
-<meta property="og:description" content="A book created with bookdown.">
-<meta name="twitter:description" content="A book created with bookdown.">
+<meta name="description" content="Overview   1.9 InitializeUART  1.9.1 Header int DLLEXPORT __stdcall InitializeUART(ViSession *session_handle, const char *resource_handle, ViBoolean *test_result, char *status_message);  1.9.2...">
+<meta property="og:description" content="Overview   1.9 InitializeUART  1.9.1 Header int DLLEXPORT __stdcall InitializeUART(ViSession *session_handle, const char *resource_handle, ViBoolean *test_result, char *status_message);  1.9.2...">
+<meta name="twitter:description" content="Overview   1.9 InitializeUART  1.9.1 Header int DLLEXPORT __stdcall InitializeUART(ViSession *session_handle, const char *resource_handle, ViBoolean *test_result, char *status_message);  1.9.2...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -44,23 +44,7 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Welcome</a></li>
-<li class="book-part">Instruments</li>
-<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
-<li><a class="" href="chroma2238.html">Chroma2238</a></li>
-<li><a class="" href="daq.html">DAQ</a></li>
-<li><a class="" href="dmm.html">DMM</a></li>
-<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
-<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
-<li><a class="" href="mux.html">MUX</a></li>
-<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
-<li><a class="" href="photometer.html">Photometer</a></li>
-<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
-<li><a class="" href="powersupply.html">PowerSupply</a></li>
-<li><a class="" href="relay.html">Relay</a></li>
-<li><a class="active" href="serialuart.html">SerialUART</a></li>
-</ul>
+        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">SerialUART</a></li></ul>
 
         <div class="book-extra">
           
@@ -70,14 +54,340 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="serialuart" class="section level1 unnumbered">
 <h1>SerialUART<a class="anchor" aria-label="anchor" href="#serialuart"><i class="fas fa-link"></i></a>
 </h1>
+<div id="overview-1" class="section level2 unnumbered">
+<h2>
+<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-1"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="initializeuart" class="section level2" number="1.9">
+<h2>
+<span class="header-section-number">1.9</span> InitializeUART<a class="anchor" aria-label="anchor" href="#initializeuart"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header" class="section level3" number="1.9.1">
+<h3>
+<span class="header-section-number">1.9.1</span> Header<a class="anchor" aria-label="anchor" href="#header"><i class="fas fa-link"></i></a>
+</h3>
+<pre><code>int DLLEXPORT __stdcall InitializeUART(ViSession *session_handle, const char *resource_handle, ViBoolean *test_result, char *status_message);</code></pre>
+</div>
+<div id="purpose-8" class="section level3" number="1.9.2">
+<h3>
+<span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
+</h3>
+<p>Initializes SerialUART communication between two serial ports that transmit data (TX) and receive data (RX). Handles RS-232 and RS-422 serial protocols.</p>
+</div>
+<div id="parameters-1" class="section level3" number="1.9.3">
+<h3>
+<span class="header-section-number">1.9.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-1"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value" class="section level3" number="1.9.4">
+<h3>
+<span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Error code</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>no errors and initialization was a success</td>
+</tr>
+<tr class="even">
+<td><code>-1</code></td>
+<td>VISA cannot open resource handle manager</td>
+</tr>
+<tr class="odd">
+<td><code>-2</code></td>
+<td>VISA cannot open port associated with resource handle</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="example-1" class="section level3" number="1.9.5">
+<h3>
+<span class="header-section-number">1.9.5</span> Example<a class="anchor" aria-label="anchor" href="#example-1"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>session_handle</code></td>
+<td>ViSession *</td>
+<td>sdkfjsdifisdflk</td>
+</tr>
+<tr class="even">
+<td><code>resource_handle</code></td>
+<td>const char *</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>test_result</code></td>
+<td>ViBoolean *</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>status_message</code></td>
+<td>char *</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div id="uartsetting" class="section level2" number="1.10">
+<h2>
+<span class="header-section-number">1.10</span> UARTSetting<a class="anchor" aria-label="anchor" href="#uartsetting"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-1" class="section level3" number="1.10.1">
+<h3>
+<span class="header-section-number">1.10.1</span> Header<a class="anchor" aria-label="anchor" href="#header-1"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-9" class="section level3" number="1.10.2">
+<h3>
+<span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-2" class="section level3" number="1.10.3">
+<h3>
+<span class="header-section-number">1.10.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-2"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-1" class="section level3" number="1.10.4">
+<h3>
+<span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-1"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-2" class="section level3" number="1.10.5">
+<h3>
+<span class="header-section-number">1.10.5</span> Example<a class="anchor" aria-label="anchor" href="#example-2"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="readuart" class="section level2" number="1.11">
+<h2>
+<span class="header-section-number">1.11</span> ReadUART<a class="anchor" aria-label="anchor" href="#readuart"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-2" class="section level3" number="1.11.1">
+<h3>
+<span class="header-section-number">1.11.1</span> Header<a class="anchor" aria-label="anchor" href="#header-2"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-10" class="section level3" number="1.11.2">
+<h3>
+<span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-3" class="section level3" number="1.11.3">
+<h3>
+<span class="header-section-number">1.11.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-2" class="section level3" number="1.11.4">
+<h3>
+<span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-2"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-3" class="section level3" number="1.11.5">
+<h3>
+<span class="header-section-number">1.11.5</span> Example<a class="anchor" aria-label="anchor" href="#example-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="replyuart" class="section level2" number="1.12">
+<h2>
+<span class="header-section-number">1.12</span> ReplyUART<a class="anchor" aria-label="anchor" href="#replyuart"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-3" class="section level3" number="1.12.1">
+<h3>
+<span class="header-section-number">1.12.1</span> Header<a class="anchor" aria-label="anchor" href="#header-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-11" class="section level3" number="1.12.2">
+<h3>
+<span class="header-section-number">1.12.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-11"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-4" class="section level3" number="1.12.3">
+<h3>
+<span class="header-section-number">1.12.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-4"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-3" class="section level3" number="1.12.4">
+<h3>
+<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-4" class="section level3" number="1.12.5">
+<h3>
+<span class="header-section-number">1.12.5</span> Example<a class="anchor" aria-label="anchor" href="#example-4"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="closeuart" class="section level2" number="1.13">
+<h2>
+<span class="header-section-number">1.13</span> CloseUART<a class="anchor" aria-label="anchor" href="#closeuart"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-4" class="section level3" number="1.13.1">
+<h3>
+<span class="header-section-number">1.13.1</span> Header<a class="anchor" aria-label="anchor" href="#header-4"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-12" class="section level3" number="1.13.2">
+<h3>
+<span class="header-section-number">1.13.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-12"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-5" class="section level3" number="1.13.3">
+<h3>
+<span class="header-section-number">1.13.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-5"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-4" class="section level3" number="1.13.4">
+<h3>
+<span class="header-section-number">1.13.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-5" class="section level3" number="1.13.5">
+<h3>
+<span class="header-section-number">1.13.5</span> Example<a class="anchor" aria-label="anchor" href="#example-5"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="serialvisainit" class="section level2" number="1.14">
+<h2>
+<span class="header-section-number">1.14</span> SerialVISAInit<a class="anchor" aria-label="anchor" href="#serialvisainit"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-5" class="section level3" number="1.14.1">
+<h3>
+<span class="header-section-number">1.14.1</span> Header<a class="anchor" aria-label="anchor" href="#header-5"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-13" class="section level3" number="1.14.2">
+<h3>
+<span class="header-section-number">1.14.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-13"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-6" class="section level3" number="1.14.3">
+<h3>
+<span class="header-section-number">1.14.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-5" class="section level3" number="1.14.4">
+<h3>
+<span class="header-section-number">1.14.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-6" class="section level3" number="1.14.5">
+<h3>
+<span class="header-section-number">1.14.5</span> Example<a class="anchor" aria-label="anchor" href="#example-6"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="serialvisawrite" class="section level2" number="1.15">
+<h2>
+<span class="header-section-number">1.15</span> SerialVISAWrite<a class="anchor" aria-label="anchor" href="#serialvisawrite"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-6" class="section level3" number="1.15.1">
+<h3>
+<span class="header-section-number">1.15.1</span> Header<a class="anchor" aria-label="anchor" href="#header-6"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-14" class="section level3" number="1.15.2">
+<h3>
+<span class="header-section-number">1.15.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-14"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-7" class="section level3" number="1.15.3">
+<h3>
+<span class="header-section-number">1.15.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-6" class="section level3" number="1.15.4">
+<h3>
+<span class="header-section-number">1.15.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-7" class="section level3" number="1.15.5">
+<h3>
+<span class="header-section-number">1.15.5</span> Example<a class="anchor" aria-label="anchor" href="#example-7"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="serialvisaread" class="section level2" number="1.16">
+<h2>
+<span class="header-section-number">1.16</span> SerialVISARead<a class="anchor" aria-label="anchor" href="#serialvisaread"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-7" class="section level3" number="1.16.1">
+<h3>
+<span class="header-section-number">1.16.1</span> Header<a class="anchor" aria-label="anchor" href="#header-7"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-15" class="section level3" number="1.16.2">
+<h3>
+<span class="header-section-number">1.16.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-15"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-8" class="section level3" number="1.16.3">
+<h3>
+<span class="header-section-number">1.16.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-7" class="section level3" number="1.16.4">
+<h3>
+<span class="header-section-number">1.16.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-8" class="section level3" number="1.16.5">
+<h3>
+<span class="header-section-number">1.16.5</span> Example<a class="anchor" aria-label="anchor" href="#example-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="serialvisacleanup" class="section level2" number="1.17">
+<h2>
+<span class="header-section-number">1.17</span> SerialVISACleanup<a class="anchor" aria-label="anchor" href="#serialvisacleanup"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-8" class="section level3" number="1.17.1">
+<h3>
+<span class="header-section-number">1.17.1</span> Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-16" class="section level3" number="1.17.2">
+<h3>
+<span class="header-section-number">1.17.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-16"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameters-9" class="section level3" number="1.17.3">
+<h3>
+<span class="header-section-number">1.17.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-8" class="section level3" number="1.17.4">
+<h3>
+<span class="header-section-number">1.17.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="example-9" class="section level3" number="1.17.5">
+<h3>
+<span class="header-section-number">1.17.5</span> Example<a class="anchor" aria-label="anchor" href="#example-9"><i class="fas fa-link"></i></a>
+</h3>
 
 </div>
+</div>
+</div>
   <div class="chapter-nav">
-<div class="prev"><a href="relay.html">Relay</a></div>
+<div class="empty"></div>
 <div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#serialuart">SerialUART</a></li></ul>
+      <div id="book-on-this-page"></div>
 
       <div class="book-extra">
         <ul class="list-unstyled">
