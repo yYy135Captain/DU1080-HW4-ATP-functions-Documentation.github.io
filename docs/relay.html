@@ -44,7 +44,23 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">Relay</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="" href="mux.html">MUX</a></li>
+<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="active" href="relay.html">Relay</a></li>
+<li><a class="" href="serialuart.html">SerialUART</a></li>
+</ul>
 
         <div class="book-extra">
           
@@ -54,32 +70,32 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="relay" class="section level1 unnumbered">
 <h1>Relay<a class="anchor" aria-label="anchor" href="#relay"><i class="fas fa-link"></i></a>
 </h1>
-<div id="overview-3" class="section level2 unnumbered">
+<div id="overview-6" class="section level2 unnumbered">
 <h2>
-<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-3"><i class="fas fa-link"></i></a>
+<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-6"><i class="fas fa-link"></i></a>
 </h2>
 <p>The Relay library provides functions for controlling NI switch hardware used in the DU1080 HW4 ATP system.</p>
 <p>It supports initialization, relay switching, signal routing, and discuss signal control.</p>
 </div>
-<div id="relayinitialize" class="section level2" number="1.35">
+<div id="relayinitialize" class="section level2" number="1.45">
 <h2>
-<span class="header-section-number">1.35</span> <strong>RelayInitialize</strong><a class="anchor" aria-label="anchor" href="#relayinitialize"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45</span> <strong>RelayInitialize</strong><a class="anchor" aria-label="anchor" href="#relayinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-34" class="section level3" number="1.35.1">
+<div id="header-44" class="section level3" number="1.45.1">
 <h3>
-<span class="header-section-number">1.35.1</span> Header<a class="anchor" aria-label="anchor" href="#header-34"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.1</span> Header<a class="anchor" aria-label="anchor" href="#header-44"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelayInitialize(char *resource_name, ViSession *session, ViBoolean *test_result, char *status_message);</code></p>
 </div>
-<div id="purpose-34" class="section level3" number="1.35.2">
+<div id="purpose-44" class="section level3" number="1.45.2">
 <h3>
-<span class="header-section-number">1.35.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-34"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-44"><i class="fas fa-link"></i></a>
 </h3>
 <p>Creates a switch session and initializes the relay module.</p>
 </div>
-<div id="parameter-21" class="section level3" number="1.35.3">
+<div id="parameter-29" class="section level3" number="1.45.3">
 <h3>
-<span class="header-section-number">1.35.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-21"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-29"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -111,9 +127,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-34" class="section level3" number="1.35.4">
+<div id="return-value-44" class="section level3" number="1.45.4">
 <h3>
-<span class="header-section-number">1.35.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-34"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-44"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -137,25 +153,25 @@
 </table></div>
 </div>
 </div>
-<div id="relayset" class="section level2" number="1.36">
+<div id="relayset" class="section level2" number="1.46">
 <h2>
-<span class="header-section-number">1.36</span> <strong>RelaySet</strong><a class="anchor" aria-label="anchor" href="#relayset"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46</span> <strong>RelaySet</strong><a class="anchor" aria-label="anchor" href="#relayset"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-35" class="section level3" number="1.36.1">
+<div id="header-45" class="section level3" number="1.46.1">
 <h3>
-<span class="header-section-number">1.36.1</span> Header<a class="anchor" aria-label="anchor" href="#header-35"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.1</span> Header<a class="anchor" aria-label="anchor" href="#header-45"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelaySet(ViSession session, char channel[], int operation);</code></p>
 </div>
-<div id="purpose-35" class="section level3" number="1.36.2">
+<div id="purpose-45" class="section level3" number="1.46.2">
 <h3>
-<span class="header-section-number">1.36.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-35"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-45"><i class="fas fa-link"></i></a>
 </h3>
 <p>Changes the state of a specified relay channel.</p>
 </div>
-<div id="parameters-13" class="section level3" number="1.36.3">
+<div id="parameters-13" class="section level3" number="1.46.3">
 <h3>
-<span class="header-section-number">1.36.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-13"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-13"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -182,9 +198,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-35" class="section level3" number="1.36.4">
+<div id="return-value-45" class="section level3" number="1.46.4">
 <h3>
-<span class="header-section-number">1.36.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-35"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-45"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -204,25 +220,25 @@
 </table></div>
 </div>
 </div>
-<div id="relayclose" class="section level2" number="1.37">
+<div id="relayclose" class="section level2" number="1.47">
 <h2>
-<span class="header-section-number">1.37</span> <strong>RelayClose</strong><a class="anchor" aria-label="anchor" href="#relayclose"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47</span> <strong>RelayClose</strong><a class="anchor" aria-label="anchor" href="#relayclose"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-36" class="section level3" number="1.37.1">
+<div id="header-46" class="section level3" number="1.47.1">
 <h3>
-<span class="header-section-number">1.37.1</span> Header<a class="anchor" aria-label="anchor" href="#header-36"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.1</span> Header<a class="anchor" aria-label="anchor" href="#header-46"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelayClose(ViSession session, char *status_message);</code></p>
 </div>
-<div id="purpose-36" class="section level3" number="1.37.2">
+<div id="purpose-46" class="section level3" number="1.47.2">
 <h3>
-<span class="header-section-number">1.37.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-36"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-46"><i class="fas fa-link"></i></a>
 </h3>
 <p>Resets the switch module and closes the active session.</p>
 </div>
-<div id="parameters-14" class="section level3" number="1.37.3">
+<div id="parameters-14" class="section level3" number="1.47.3">
 <h3>
-<span class="header-section-number">1.37.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-14"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-14"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -249,9 +265,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-36" class="section level3" number="1.37.4">
+<div id="return-value-46" class="section level3" number="1.47.4">
 <h3>
-<span class="header-section-number">1.37.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-36"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-46"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -271,25 +287,25 @@
 </table></div>
 </div>
 </div>
-<div id="replayopenall" class="section level2" number="1.38">
+<div id="replayopenall" class="section level2" number="1.48">
 <h2>
-<span class="header-section-number">1.38</span> <strong>ReplayOpenAll</strong><a class="anchor" aria-label="anchor" href="#replayopenall"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48</span> <strong>ReplayOpenAll</strong><a class="anchor" aria-label="anchor" href="#replayopenall"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-37" class="section level3" number="1.38.1">
+<div id="header-47" class="section level3" number="1.48.1">
 <h3>
-<span class="header-section-number">1.38.1</span> Header<a class="anchor" aria-label="anchor" href="#header-37"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.1</span> Header<a class="anchor" aria-label="anchor" href="#header-47"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelayOpenAll(ViSession session);</code></p>
 </div>
-<div id="purpose-37" class="section level3" number="1.38.2">
+<div id="purpose-47" class="section level3" number="1.48.2">
 <h3>
-<span class="header-section-number">1.38.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-37"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-47"><i class="fas fa-link"></i></a>
 </h3>
 <p>Disconnects all relay paths on the active switch module.</p>
 </div>
-<div id="parameters-15" class="section level3" number="1.38.3">
+<div id="parameters-15" class="section level3" number="1.48.3">
 <h3>
-<span class="header-section-number">1.38.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-15"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-15"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -304,9 +320,9 @@
 </tr></tbody>
 </table></div>
 </div>
-<div id="return-value-37" class="section level3" number="1.38.4">
+<div id="return-value-47" class="section level3" number="1.48.4">
 <h3>
-<span class="header-section-number">1.38.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-37"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-47"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -326,25 +342,25 @@
 </table></div>
 </div>
 </div>
-<div id="relaysignalset" class="section level2" number="1.39">
+<div id="relaysignalset" class="section level2" number="1.49">
 <h2>
-<span class="header-section-number">1.39</span> <strong>RelaySignalSet</strong><a class="anchor" aria-label="anchor" href="#relaysignalset"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49</span> <strong>RelaySignalSet</strong><a class="anchor" aria-label="anchor" href="#relaysignalset"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-38" class="section level3" number="1.39.1">
+<div id="header-48" class="section level3" number="1.49.1">
 <h3>
-<span class="header-section-number">1.39.1</span> Header<a class="anchor" aria-label="anchor" href="#header-38"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.1</span> Header<a class="anchor" aria-label="anchor" href="#header-48"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelaySignalSet(ViSession session, char *signal_name, void **signal_list, char *status_message);</code></p>
 </div>
-<div id="purpose-38" class="section level3" number="1.39.2">
+<div id="purpose-48" class="section level3" number="1.49.2">
 <h3>
-<span class="header-section-number">1.39.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-38"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-48"><i class="fas fa-link"></i></a>
 </h3>
 <p>Set the relay state for a specified signal in the signal list.</p>
 </div>
-<div id="parameters-16" class="section level3" number="1.39.3">
+<div id="parameters-16" class="section level3" number="1.49.3">
 <h3>
-<span class="header-section-number">1.39.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-16"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-16"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -376,9 +392,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-38" class="section level3" number="1.39.4">
+<div id="return-value-48" class="section level3" number="1.49.4">
 <h3>
-<span class="header-section-number">1.39.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-38"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-48"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -406,25 +422,25 @@
 </table></div>
 </div>
 </div>
-<div id="setnicdiscrete" class="section level2" number="1.40">
+<div id="setnicdiscrete" class="section level2" number="1.50">
 <h2>
-<span class="header-section-number">1.40</span> <strong>SetNICDiscrete</strong><a class="anchor" aria-label="anchor" href="#setnicdiscrete"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50</span> <strong>SetNICDiscrete</strong><a class="anchor" aria-label="anchor" href="#setnicdiscrete"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-39" class="section level3" number="1.40.1">
+<div id="header-49" class="section level3" number="1.50.1">
 <h3>
-<span class="header-section-number">1.40.1</span> Header<a class="anchor" aria-label="anchor" href="#header-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.1</span> Header<a class="anchor" aria-label="anchor" href="#header-49"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall SetNICDiscrete(ViSession *session, ViBoolean *test_result, char *status_message);</code></p>
 </div>
-<div id="purpose-39" class="section level3" number="1.40.2">
+<div id="purpose-49" class="section level3" number="1.50.2">
 <h3>
-<span class="header-section-number">1.40.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-49"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures relay settings for NIC ID.</p>
 </div>
-<div id="parameters-17" class="section level3" number="1.40.3">
+<div id="parameters-17" class="section level3" number="1.50.3">
 <h3>
-<span class="header-section-number">1.40.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-17"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -451,9 +467,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-39" class="section level3" number="1.40.4">
+<div id="return-value-49" class="section level3" number="1.50.4">
 <h3>
-<span class="header-section-number">1.40.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-49"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -473,25 +489,25 @@
 </table></div>
 </div>
 </div>
-<div id="setnicdiscretebydata" class="section level2" number="1.41">
+<div id="setnicdiscretebydata" class="section level2" number="1.51">
 <h2>
-<span class="header-section-number">1.41</span> <strong>SetNICDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setnicdiscretebydata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51</span> <strong>SetNICDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setnicdiscretebydata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-40" class="section level3" number="1.41.1">
+<div id="header-50" class="section level3" number="1.51.1">
 <h3>
-<span class="header-section-number">1.41.1</span> Header<a class="anchor" aria-label="anchor" href="#header-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.1</span> Header<a class="anchor" aria-label="anchor" href="#header-50"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall SetNICDiscreteByData(ViSession *session, uint8_t data, void **signal_list, char *status_message);</code></p>
 </div>
-<div id="purpose-40" class="section level3" number="1.41.2">
+<div id="purpose-50" class="section level3" number="1.51.2">
 <h3>
-<span class="header-section-number">1.41.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-50"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sets the NIC discrete signals based on the input data.</p>
 </div>
-<div id="parameters-18" class="section level3" number="1.41.3">
+<div id="parameters-18" class="section level3" number="1.51.3">
 <h3>
-<span class="header-section-number">1.41.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-18"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-18"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -523,9 +539,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-40" class="section level3" number="1.41.4">
+<div id="return-value-50" class="section level3" number="1.51.4">
 <h3>
-<span class="header-section-number">1.41.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-50"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -545,25 +561,25 @@
 </table></div>
 </div>
 </div>
-<div id="setprocdiscretebydata" class="section level2" number="1.42">
+<div id="setprocdiscretebydata" class="section level2" number="1.52">
 <h2>
-<span class="header-section-number">1.42</span> <strong>SetProcDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setprocdiscretebydata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52</span> <strong>SetProcDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setprocdiscretebydata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-41" class="section level3" number="1.42.1">
+<div id="header-51" class="section level3" number="1.52.1">
 <h3>
-<span class="header-section-number">1.42.1</span> Header<a class="anchor" aria-label="anchor" href="#header-41"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.1</span> Header<a class="anchor" aria-label="anchor" href="#header-51"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall SetProcDiscreteByData(ViSession *session, uint32_t data, void **signal_list, char *status_message);</code></p>
 </div>
-<div id="purpose-41" class="section level3" number="1.42.2">
+<div id="purpose-51" class="section level3" number="1.52.2">
 <h3>
-<span class="header-section-number">1.42.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-41"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-51"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures PROC discrete signals using the input data.</p>
 </div>
-<div id="parameters-19" class="section level3" number="1.42.3">
+<div id="parameters-19" class="section level3" number="1.52.3">
 <h3>
-<span class="header-section-number">1.42.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-19"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-19"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -595,9 +611,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-41" class="section level3" number="1.42.4">
+<div id="return-value-51" class="section level3" number="1.52.4">
 <h3>
-<span class="header-section-number">1.42.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-41"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-51"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -619,11 +635,78 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="powersupply.html">PowerSupply</a></div>
+<div class="next"><a href="serialuart.html">SerialUART</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#relay">Relay</a></li>
+<li><a class="nav-link" href="#overview-6">Overview</a></li>
+<li>
+<a class="nav-link" href="#relayinitialize"><span class="header-section-number">1.45</span> RelayInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-44"><span class="header-section-number">1.45.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-44"><span class="header-section-number">1.45.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-29"><span class="header-section-number">1.45.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-44"><span class="header-section-number">1.45.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relayset"><span class="header-section-number">1.46</span> RelaySet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-45"><span class="header-section-number">1.46.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-45"><span class="header-section-number">1.46.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-13"><span class="header-section-number">1.46.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-45"><span class="header-section-number">1.46.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relayclose"><span class="header-section-number">1.47</span> RelayClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-46"><span class="header-section-number">1.47.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-46"><span class="header-section-number">1.47.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-14"><span class="header-section-number">1.47.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-46"><span class="header-section-number">1.47.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#replayopenall"><span class="header-section-number">1.48</span> ReplayOpenAll</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-47"><span class="header-section-number">1.48.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-47"><span class="header-section-number">1.48.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-15"><span class="header-section-number">1.48.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-47"><span class="header-section-number">1.48.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relaysignalset"><span class="header-section-number">1.49</span> RelaySignalSet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-48"><span class="header-section-number">1.49.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-48"><span class="header-section-number">1.49.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-16"><span class="header-section-number">1.49.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-48"><span class="header-section-number">1.49.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscrete"><span class="header-section-number">1.50</span> SetNICDiscrete</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-49"><span class="header-section-number">1.50.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-49"><span class="header-section-number">1.50.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-17"><span class="header-section-number">1.50.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-49"><span class="header-section-number">1.50.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscretebydata"><span class="header-section-number">1.51</span> SetNICDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-50"><span class="header-section-number">1.51.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-50"><span class="header-section-number">1.51.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-18"><span class="header-section-number">1.51.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-50"><span class="header-section-number">1.51.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setprocdiscretebydata"><span class="header-section-number">1.52</span> SetProcDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-51"><span class="header-section-number">1.52.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-51"><span class="header-section-number">1.52.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-19"><span class="header-section-number">1.52.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-51"><span class="header-section-number">1.52.4</span> Return Value</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

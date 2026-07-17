@@ -21,9 +21,9 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="A book created with bookdown.">
-<meta property="og:description" content="A book created with bookdown.">
-<meta name="twitter:description" content="A book created with bookdown.">
+<meta name="description" content="Overview The GraphicsDiscreteIO module provides interfaces for reading and testing discrete input signals used by the DU1080 HW4 ATP software. It supports discrete status checks through external...">
+<meta property="og:description" content="Overview The GraphicsDiscreteIO module provides interfaces for reading and testing discrete input signals used by the DU1080 HW4 ATP software. It supports discrete status checks through external...">
+<meta name="twitter:description" content="Overview The GraphicsDiscreteIO module provides interfaces for reading and testing discrete input signals used by the DU1080 HW4 ATP software. It supports discrete status checks through external...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -70,14 +70,636 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="graphicsdiscreteio" class="section level1 unnumbered">
 <h1>GraphicsDiscreteIO<a class="anchor" aria-label="anchor" href="#graphicsdiscreteio"><i class="fas fa-link"></i></a>
 </h1>
-
+<div id="overview-2" class="section level2 unnumbered">
+<h2>
+<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-2"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <strong>GraphicsDiscreteIO</strong> module provides interfaces for reading and testing discrete input signals used by the DU1080 HW4 ATP software. It supports discrete status checks through external interfaces, including graphic-related discrete inputs, NIC discrete inputs, and digital signal logic verification.</p>
+</div>
+<div id="graphicsexternaldsistatus" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> <strong>GraphicsExternalDSIStatus</strong><a class="anchor" aria-label="anchor" href="#graphicsexternaldsistatus"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-4" class="section level3" number="1.5.1">
+<h3>
+<span class="header-section-number">1.5.1</span> Header<a class="anchor" aria-label="anchor" href="#header-4"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall GraphicsExternalDSIStatus(int telnet_handle, char *pin, int *data_out);</code></p>
+</div>
+<div id="purpose-4" class="section level3" number="1.5.2">
+<h3>
+<span class="header-section-number">1.5.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
+</h3>
+<p>Read the status of a graphics processor discrete input using the specified virtual pin name.</p>
+</div>
+<div id="parameter-1" class="section level3" number="1.5.3">
+<h3>
+<span class="header-section-number">1.5.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-1"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>telnet_handle</code></td>
+<td><code>int</code></td>
+<td>Telnet connection handle.</td>
+</tr>
+<tr class="even">
+<td><code>pin</code></td>
+<td><code>char *</code></td>
+<td>Virtual pin name.</td>
+</tr>
+<tr class="odd">
+<td><code>data_out</code></td>
+<td><code>int *</code></td>
+<td>Stores the discrete input value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-4" class="section level3" number="1.5.4">
+<h3>
+<span class="header-section-number">1.5.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><code>int</code></td>
+<td>Error code returned by the read operation.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="dsianalogresetlogictest" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> <strong>DSIAnalogResetLogicTest</strong><a class="anchor" aria-label="anchor" href="#dsianalogresetlogictest"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-5" class="section level3" number="1.6.1">
+<h3>
+<span class="header-section-number">1.6.1</span> Header<a class="anchor" aria-label="anchor" href="#header-5"><i class="fas fa-link"></i></a>
+</h3>
+<pre><code>int DLLEXPORT __stdcall DSIAnalogResetLogicTest(int telnet_handle, ViBoolean *bit_pass, char *status_message);</code></pre>
+</div>
+<div id="purpose-5" class="section level3" number="1.6.2">
+<h3>
+<span class="header-section-number">1.6.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
+</h3>
+<p>Performs the analog reset logic verification by controlling the AV reset signal and checking the corresponding discrete input and output states.</p>
+</div>
+<div id="parameter-2" class="section level3" number="1.6.3">
+<h3>
+<span class="header-section-number">1.6.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-2"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>telnet_handle</code></td>
+<td><code>int</code></td>
+<td>Telnet connection handle.</td>
+</tr>
+<tr class="even">
+<td><code>vi_result</code></td>
+<td><code>ViBoolean *</code></td>
+<td>Stores the overall test result.</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores detailed test messages.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-5" class="section level3" number="1.6.4">
+<h3>
+<span class="header-section-number">1.6.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><code>int</code></td>
+<td>Error code generated during the test.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="nicexternaldsistatus" class="section level2" number="1.7">
+<h2>
+<span class="header-section-number">1.7</span> <strong>NICExternalDSIStatus</strong><a class="anchor" aria-label="anchor" href="#nicexternaldsistatus"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-6" class="section level3" number="1.7.1">
+<h3>
+<span class="header-section-number">1.7.1</span> Header<a class="anchor" aria-label="anchor" href="#header-6"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall NICExternalDSIStatus(int telnet_handle, char *pin, int *data_out);</code></p>
+</div>
+<div id="purpose-6" class="section level3" number="1.7.2">
+<h3>
+<span class="header-section-number">1.7.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
+</h3>
+<p>Reads the status of a NIC discrete input using the specified virtual pin name.</p>
+</div>
+<div id="parameter-3" class="section level3" number="1.7.3">
+<h3>
+<span class="header-section-number">1.7.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-3"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>telnet_handle</code></td>
+<td><code>int</code></td>
+<td>Telnet connection handle.</td>
+</tr>
+<tr class="even">
+<td><code>pin</code></td>
+<td><code>char *</code></td>
+<td>Virtual pin name.</td>
+</tr>
+<tr class="odd">
+<td><code>data_out</code></td>
+<td><code>int *</code></td>
+<td>Stores the discrete input value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-6" class="section level3" number="1.7.4">
+<h3>
+<span class="header-section-number">1.7.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><code>int</code></td>
+<td>Error code returned by the read operation.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="pinstringtopinindex" class="section level2" number="1.8">
+<h2>
+<span class="header-section-number">1.8</span> <strong>PinStringToPinIndex</strong><a class="anchor" aria-label="anchor" href="#pinstringtopinindex"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-7" class="section level3" number="1.8.1">
+<h3>
+<span class="header-section-number">1.8.1</span> Header<a class="anchor" aria-label="anchor" href="#header-7"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int PinStringToPinIndex(char *pin_string);</code></p>
+</div>
+<div id="purpose-7" class="section level3" number="1.8.2">
+<h3>
+<span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
+</h3>
+<p>Converts a virtual pin name into its corresponding pin index. The function validates the input string format before extracting the numeric portion.</p>
+</div>
+<div id="parameter-4" class="section level3" number="1.8.3">
+<h3>
+<span class="header-section-number">1.8.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-4"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><code>pin_string</code></td>
+<td><code>char *</code></td>
+<td>Virtual pin name.</td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-7" class="section level3" number="1.8.4">
+<h3>
+<span class="header-section-number">1.8.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Parsed pin index.</td>
+</tr>
+<tr class="even">
+<td><code>-1</code></td>
+<td>NULL pointer.</td>
+</tr>
+<tr class="odd">
+<td><code>-2</code></td>
+<td>Invalid string length.</td>
+</tr>
+<tr class="even">
+<td><code>-3</code></td>
+<td>Missing <code>"DIN</code> prefix.</td>
+</tr>
+<tr class="odd">
+<td><code>-4</code></td>
+<td>Invalid numeric characters.</td>
+</tr>
+<tr class="even">
+<td><code>-5</code></td>
+<td>Invalid numeric format.</td>
+</tr>
+<tr class="odd">
+<td><code>-6</code></td>
+<td>Parsed value exceeds integer range.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div id="retrievedata" class="section level2" number="1.9">
+<h2>
+<span class="header-section-number">1.9</span> <strong>RetrieveData</strong><a class="anchor" aria-label="anchor" href="#retrievedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-8" class="section level3" number="1.9.1">
+<h3>
+<span class="header-section-number">1.9.1</span> Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int RetrieveData(int data, int bit_mask, int *final_data);</code></p>
+</div>
+<div id="purpose-8" class="section level3" number="1.9.2">
+<h3>
+<span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
+</h3>
+<p>Applies a bit mask to the input data and converts the result into a binary discrete value.</p>
+</div>
+<div id="parameter-5" class="section level3" number="1.9.3">
+<h3>
+<span class="header-section-number">1.9.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-5"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="31%">
+<col width="34%">
+<col width="34%">
+</colgroup>
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>data</code></td>
+<td><code>int</code></td>
+<td>Input register value.</td>
+</tr>
+<tr class="even">
+<td><code>bit_mask</code></td>
+<td><code>int</code></td>
+<td>Bit mask used to evaluate the input.</td>
+</tr>
+<tr class="odd">
+<td><code>final_data</code></td>
+<td><code>int *</code></td>
+<td>Stores the resulting discrete value (0 or 1).</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-8" class="section level3" number="1.9.4">
+<h3>
+<span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><code>0</code></td>
+<td>Function completed successfully.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="writediscretedata" class="section level2" number="1.10">
+<h2>
+<span class="header-section-number">1.10</span> <strong>WriteDiscreteData</strong><a class="anchor" aria-label="anchor" href="#writediscretedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-9" class="section level3" number="1.10.1">
+<h3>
+<span class="header-section-number">1.10.1</span> Header<a class="anchor" aria-label="anchor" href="#header-9"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int WriteDiscreteData(int telnet_handle, unsigned long address, uint32_t data, unsigned int bit_mask);</code></p>
+</div>
+<div id="purpose-9" class="section level3" number="1.10.2">
+<h3>
+<span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
+</h3>
+<p>Writes bit-masked discrete data to the specified device register and verifies that the write operation completed successfully.</p>
+</div>
+<div id="parameter-6" class="section level3" number="1.10.3">
+<h3>
+<span class="header-section-number">1.10.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="40%">
+<col width="29%">
+<col width="29%">
+</colgroup>
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>telnet_handle</code></td>
+<td><code>int</code></td>
+<td>Telnet connection handle.</td>
+</tr>
+<tr class="even">
+<td><code>address</code></td>
+<td><code>unsigned long</code></td>
+<td>Register address to write.</td>
+</tr>
+<tr class="odd">
+<td><code>data</code></td>
+<td><code>uint32_t</code></td>
+<td>Data to be written.</td>
+</tr>
+<tr class="even">
+<td><code>bit_mask</code></td>
+<td><code>unsigned int</code></td>
+<td>Bit mask indicating which bits will be updated.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-9" class="section level3" number="1.10.4">
+<h3>
+<span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Write completed successfully.</td>
+</tr>
+<tr class="even">
+<td><code>1</code></td>
+<td>Verification failed after writing.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div id="readdiscretedata" class="section level2" number="1.11">
+<h2>
+<span class="header-section-number">1.11</span> <strong>ReadDiscreteData</strong><a class="anchor" aria-label="anchor" href="#readdiscretedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-10" class="section level3" number="1.11.1">
+<h3>
+<span class="header-section-number">1.11.1</span> Header<a class="anchor" aria-label="anchor" href="#header-10"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int ReadDiscreteData(int telnet_handle, unsigned long address, uint32_t *final_data, int bit_mask);</code></p>
+</div>
+<div id="purpose-10" class="section level3" number="1.11.2">
+<h3>
+<span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
+</h3>
+<p>Reads discrete register data from the specified address and applies a bit mask before returning the result.</p>
+</div>
+<div id="parameter-7" class="section level3" number="1.11.3">
+<h3>
+<span class="header-section-number">1.11.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-7"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>telnet_handle</code></td>
+<td><code>int</code></td>
+<td>Telnet connection handle.</td>
+</tr>
+<tr class="even">
+<td><code>address</code></td>
+<td><code>unsigned long</code></td>
+<td>Register address to write.</td>
+</tr>
+<tr class="odd">
+<td><code>final_data</code></td>
+<td><code>uint32_t *</code></td>
+<td>Stores the masked register value.</td>
+</tr>
+<tr class="even">
+<td><code>bit_mask</code></td>
+<td><code>int</code></td>
+<td>Mask spplied to the returned data.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-10" class="section level3" number="1.11.4">
+<h3>
+<span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-10"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Read completed successfully.</td>
+</tr>
+<tr class="even">
+<td><code>1</code></td>
+<td>Read operation failed.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div id="readnicdiscretedata" class="section level2" number="1.12">
+<h2>
+<span class="header-section-number">1.12</span> <strong>ReadNICDiscreteData</strong><a class="anchor" aria-label="anchor" href="#readnicdiscretedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-11" class="section level3" number="1.12.1">
+<h3>
+<span class="header-section-number">1.12.1</span> Header<a class="anchor" aria-label="anchor" href="#header-11"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int ReadNICDiscreteData(int telnet_handle, unsigned long address, uint32_t *final_data, int bit_mask);</code></p>
+</div>
+<div id="purpose-11" class="section level3" number="1.12.2">
+<h3>
+<span class="header-section-number">1.12.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-11"><i class="fas fa-link"></i></a>
+</h3>
+<p>Reads discrete data from the Network Interface Card (NIC), extracts the returned register value from the HBIT response, applies the specified bit mask, and stores the masked result.</p>
+</div>
+<div id="parameter-8" class="section level3" number="1.12.3">
+<h3>
+<span class="header-section-number">1.12.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-8"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="40%">
+<col width="29%">
+<col width="29%">
+</colgroup>
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>telnet_handle</code></td>
+<td><code>int</code></td>
+<td>Telnet connection handle.</td>
+</tr>
+<tr class="even">
+<td><code>address</code></td>
+<td><code>unsigned long</code></td>
+<td>NIC register address to read.</td>
+</tr>
+<tr class="odd">
+<td><code>final_data</code></td>
+<td><code>uint32_t *</code></td>
+<td>Pointer used to stores the masked register value.</td>
+</tr>
+<tr class="even">
+<td><code>bit_mask</code></td>
+<td><code>int</code></td>
+<td>Bit mask applied to the returned register value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-11" class="section level3" number="1.12.4">
+<h3>
+<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-11"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Read completed successfully.</td>
+</tr>
+<tr class="even">
+<td><code>-1</code></td>
+<td>Failed to retrieve valid data from the HBIT response.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="dmm.html">DMM</a></div>
 <div class="next"><a href="interfacebox.html">InterfaceBox</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#graphicsdiscreteio">GraphicsDiscreteIO</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#graphicsdiscreteio">GraphicsDiscreteIO</a></li>
+<li><a class="nav-link" href="#overview-2">Overview</a></li>
+<li>
+<a class="nav-link" href="#graphicsexternaldsistatus"><span class="header-section-number">1.5</span> GraphicsExternalDSIStatus</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-4"><span class="header-section-number">1.5.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-4"><span class="header-section-number">1.5.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-1"><span class="header-section-number">1.5.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-4"><span class="header-section-number">1.5.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#dsianalogresetlogictest"><span class="header-section-number">1.6</span> DSIAnalogResetLogicTest</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-5"><span class="header-section-number">1.6.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-5"><span class="header-section-number">1.6.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-2"><span class="header-section-number">1.6.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-5"><span class="header-section-number">1.6.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#nicexternaldsistatus"><span class="header-section-number">1.7</span> NICExternalDSIStatus</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-6"><span class="header-section-number">1.7.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-6"><span class="header-section-number">1.7.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-3"><span class="header-section-number">1.7.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-6"><span class="header-section-number">1.7.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#pinstringtopinindex"><span class="header-section-number">1.8</span> PinStringToPinIndex</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-7"><span class="header-section-number">1.8.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-7"><span class="header-section-number">1.8.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-4"><span class="header-section-number">1.8.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-7"><span class="header-section-number">1.8.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#retrievedata"><span class="header-section-number">1.9</span> RetrieveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-8"><span class="header-section-number">1.9.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-8"><span class="header-section-number">1.9.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-5"><span class="header-section-number">1.9.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-8"><span class="header-section-number">1.9.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#writediscretedata"><span class="header-section-number">1.10</span> WriteDiscreteData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-9"><span class="header-section-number">1.10.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-9"><span class="header-section-number">1.10.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-6"><span class="header-section-number">1.10.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-9"><span class="header-section-number">1.10.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#readdiscretedata"><span class="header-section-number">1.11</span> ReadDiscreteData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-10"><span class="header-section-number">1.11.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-10"><span class="header-section-number">1.11.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-7"><span class="header-section-number">1.11.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-10"><span class="header-section-number">1.11.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#readnicdiscretedata"><span class="header-section-number">1.12</span> ReadNICDiscreteData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-11"><span class="header-section-number">1.12.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-11"><span class="header-section-number">1.12.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-8"><span class="header-section-number">1.12.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-11"><span class="header-section-number">1.12.4</span> Return Value</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

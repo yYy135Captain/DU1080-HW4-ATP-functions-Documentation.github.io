@@ -1,8 +1,100 @@
 # DAQ {-}
 ## **Overview** {-}
 
-## ****
+## **DAQInitialize**
 ### Header
+`int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);`
+
+### Purpose
+### Parameter
+|    Parameter     |     Type    | Description |
+|------------------|-------------|-------------|
+|
+
+### Return Value
+| Error | Description |
+|--------------|-------------|
+|
+
+## **DAQSetVoltage**
+### Header
+`int DLLEXPORT __stdcall DAQSetVoltage(char *resource_name, float64 voltage_level, char *status_message);`
+
+### Purpose
+### Parameter
+|    Parameter     |     Type    | Description |
+|------------------|-------------|-------------|
+|
+
+### Return Value
+| Error | Description |
+|--------------|-------------|
+|
+
+## **DAQClose**
+### Header
+`int DLLEXPORT __stdcall DAQClose(char *resource_name, char *status_message);`
+
+### Purpose
+### Parameter
+|    Parameter     |     Type    | Description |
+|------------------|-------------|-------------|
+|
+
+### Return Value
+| Error | Description |
+|--------------|-------------|
+|
+
+## **DAQCounterPulseGeneration**
+### Header
+`int DLLEXPORT __stdcall DAQCounterPulseGeneration(char *resource_name, float intial_delay, float on, float off, char *status_message);`
+
+### Purpose
+### Parameter
+|    Parameter     |     Type    | Description |
+|------------------|-------------|-------------|
+|
+
+### Return Value
+| Error | Description |
+|--------------|-------------|
+|
+
+## **DAQCounterPulseConfigStart**
+### Header
+`int DLLEXPORT __stdcall DAQCounterPulseConfigStart(char *resource_name, TaskHandle *daq_handle, float initial_delay, int initial_state, float frequency, float duty_cycle, char *status_message);`
+
+### Purpose
+### Parameter
+|    Parameter     |     Type    | Description |
+|------------------|-------------|-------------|
+|
+
+### Return Value
+| Error | Description |
+|--------------|-------------|
+|
+
+## **DAQCountPulseClearOff**
+### Header
+`int DLLEXPORT __stdcall DAQCountPulseClearOff(TaskHandle daq_task_handle, char *status_message);`
+
+### Purpose
+### Parameter
+|    Parameter     |     Type    | Description |
+|------------------|-------------|-------------|
+|
+
+### Return Value
+| Error | Description |
+|--------------|-------------|
+|
+
+## **DAQCounterStateGeneration**
+### Header
+`int DLLEXPORT __stdcall DAQCounterStateGeneration(char *resource_name, float intial_delay, int default_state, char *status_message);`
+
 ### Purpose
 ### Parameter
 |    Parameter     |     Type    | Description |

@@ -44,7 +44,23 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">MUX</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="active" href="mux.html">MUX</a></li>
+<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="" href="relay.html">Relay</a></li>
+<li><a class="" href="serialuart.html">SerialUART</a></li>
+</ul>
 
         <div class="book-extra">
           
@@ -54,30 +70,31 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="mux" class="section level1 unnumbered">
 <h1>MUX<a class="anchor" aria-label="anchor" href="#mux"><i class="fas fa-link"></i></a>
 </h1>
-<div id="overview-1" class="section level2 unnumbered">
+<div id="overview-3" class="section level2 unnumbered">
 <h2>
-<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-1"><i class="fas fa-link"></i></a>
+<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-3"><i class="fas fa-link"></i></a>
 </h2>
 <p>The MUX module controls the NI Switch hardware used in DU1080 HW4 ATP system. It manages switch initialization, relay control, signal routing, and session cleanup. The module provides a software interface for connecting and disconnecting signal paths required during automated testing.</p>
 </div>
-<div id="muxinitialize" class="section level2" number="1.4">
+<div id="muxinitialize" class="section level2" number="1.13">
 <h2>
-<span class="header-section-number">1.4</span> <strong>MUXInitialize</strong><a class="anchor" aria-label="anchor" href="#muxinitialize"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13</span> <strong>MUXInitialize</strong><a class="anchor" aria-label="anchor" href="#muxinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-3" class="section level3" number="1.4.1">
+<div id="header-12" class="section level3" number="1.13.1">
 <h3>
-<span class="header-section-number">1.4.1</span> Header<a class="anchor" aria-label="anchor" href="#header-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.1</span> Header<a class="anchor" aria-label="anchor" href="#header-12"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall MUXInitialize(char *resource_name, char *topology, ViSession *session, ViBoolean *test_result, char *status_message);</code></p>
 </div>
-<div id="purpose-3" class="section level3" number="1.4.2">
+<div id="purpose-12" class="section level3" number="1.13.2">
 <h3>
-<span class="header-section-number">1.4.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-12"><i class="fas fa-link"></i></a>
 </h3>
+<p>Initializes a NI Switch MUX device using the specified resource name and topology. The function returns the initialized switch session, reports whether initialization succeeded, and generates a status message describing the result.</p>
 </div>
-<div id="parameter" class="section level3" number="1.4.3">
+<div id="parameter-9" class="section level3" number="1.13.3">
 <h3>
-<span class="header-section-number">1.4.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-9"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -114,9 +131,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-3" class="section level3" number="1.4.4">
+<div id="return-value-12" class="section level3" number="1.13.4">
 <h3>
-<span class="header-section-number">1.4.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-12"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -130,19 +147,19 @@
 </table></div>
 </div>
 </div>
-<div id="muxset" class="section level2" number="1.5">
+<div id="muxset" class="section level2" number="1.14">
 <h2>
-<span class="header-section-number">1.5</span> <strong>MUXSet</strong><a class="anchor" aria-label="anchor" href="#muxset"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14</span> <strong>MUXSet</strong><a class="anchor" aria-label="anchor" href="#muxset"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-4" class="section level3" number="1.5.1">
+<div id="header-13" class="section level3" number="1.14.1">
 <h3>
-<span class="header-section-number">1.5.1</span> Header<a class="anchor" aria-label="anchor" href="#header-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14.1</span> Header<a class="anchor" aria-label="anchor" href="#header-13"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall MUXSet(ViSession session, char *channel_1, char *channel_2, int operation);</code></p>
 </div>
-<div id="purpose-4" class="section level3" number="1.5.2">
+<div id="purpose-13" class="section level3" number="1.14.2">
 <h3>
-<span class="header-section-number">1.5.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-13"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function controls the oopen or close state of the switch.
 ### Parameter
@@ -153,9 +170,9 @@
 | <code>*channel_2</code> | <code>char</code> |Second channel|
 | <code>operation</code> | <code>int</code> |operation in execution|</p>
 </div>
-<div id="return-value-4" class="section level3" number="1.5.3">
+<div id="return-value-13" class="section level3" number="1.14.3">
 <h3>
-<span class="header-section-number">1.5.3</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14.3</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-13"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -175,25 +192,25 @@
 </table></div>
 </div>
 </div>
-<div id="muxclose" class="section level2" number="1.6">
+<div id="muxclose" class="section level2" number="1.15">
 <h2>
-<span class="header-section-number">1.6</span> <strong>MUXClose</strong><a class="anchor" aria-label="anchor" href="#muxclose"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15</span> <strong>MUXClose</strong><a class="anchor" aria-label="anchor" href="#muxclose"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-5" class="section level3" number="1.6.1">
+<div id="header-14" class="section level3" number="1.15.1">
 <h3>
-<span class="header-section-number">1.6.1</span> Header<a class="anchor" aria-label="anchor" href="#header-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.1</span> Header<a class="anchor" aria-label="anchor" href="#header-14"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall MUXClose(ViSession session, char *status_message);</code></p>
 </div>
-<div id="purpose-5" class="section level3" number="1.6.2">
+<div id="purpose-14" class="section level3" number="1.15.2">
 <h3>
-<span class="header-section-number">1.6.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-14"><i class="fas fa-link"></i></a>
 </h3>
 <p>Resets the NI Switch device and closes the switch session.</p>
 </div>
-<div id="parameter-1" class="section level3" number="1.6.3">
+<div id="parameter-10" class="section level3" number="1.15.3">
 <h3>
-<span class="header-section-number">1.6.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-10"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -215,9 +232,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-5" class="section level3" number="1.6.4">
+<div id="return-value-14" class="section level3" number="1.15.4">
 <h3>
-<span class="header-section-number">1.6.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-14"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -231,25 +248,25 @@
 </table></div>
 </div>
 </div>
-<div id="muxopenallrelays" class="section level2" number="1.7">
+<div id="muxopenallrelays" class="section level2" number="1.16">
 <h2>
-<span class="header-section-number">1.7</span> <strong>MUXOpenAllRelays</strong><a class="anchor" aria-label="anchor" href="#muxopenallrelays"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16</span> <strong>MUXOpenAllRelays</strong><a class="anchor" aria-label="anchor" href="#muxopenallrelays"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-6" class="section level3" number="1.7.1">
+<div id="header-15" class="section level3" number="1.16.1">
 <h3>
-<span class="header-section-number">1.7.1</span> Header<a class="anchor" aria-label="anchor" href="#header-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.1</span> Header<a class="anchor" aria-label="anchor" href="#header-15"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall MUXOpenAllRelays(ViSession session);</code></p>
 </div>
-<div id="purpose-6" class="section level3" number="1.7.2">
+<div id="purpose-15" class="section level3" number="1.16.2">
 <h3>
-<span class="header-section-number">1.7.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-15"><i class="fas fa-link"></i></a>
 </h3>
 <p>Open all relays on the NI Switch module and resets the switch.</p>
 </div>
-<div id="parameter-2" class="section level3" number="1.7.3">
+<div id="parameter-11" class="section level3" number="1.16.3">
 <h3>
-<span class="header-section-number">1.7.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-11"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -264,9 +281,9 @@
 </tr></tbody>
 </table></div>
 </div>
-<div id="return-value-6" class="section level3" number="1.7.4">
+<div id="return-value-15" class="section level3" number="1.16.4">
 <h3>
-<span class="header-section-number">1.7.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-15"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -286,25 +303,25 @@
 </table></div>
 </div>
 </div>
-<div id="muxsignalset" class="section level2" number="1.8">
+<div id="muxsignalset" class="section level2" number="1.17">
 <h2>
-<span class="header-section-number">1.8</span> <strong>MUXSignalSet</strong><a class="anchor" aria-label="anchor" href="#muxsignalset"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17</span> <strong>MUXSignalSet</strong><a class="anchor" aria-label="anchor" href="#muxsignalset"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-7" class="section level3" number="1.8.1">
+<div id="header-16" class="section level3" number="1.17.1">
 <h3>
-<span class="header-section-number">1.8.1</span> Header<a class="anchor" aria-label="anchor" href="#header-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.1</span> Header<a class="anchor" aria-label="anchor" href="#header-16"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall MUXSignalSet(ViSession session, char *signal_name, void **signal_list, char *status_message);</code></p>
 </div>
-<div id="purpose-7" class="section level3" number="1.8.2">
+<div id="purpose-16" class="section level3" number="1.17.2">
 <h3>
-<span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-16"><i class="fas fa-link"></i></a>
 </h3>
 <p>Searches the signal list for the specified signal and executes the corresponding MUX switching operation.</p>
 </div>
-<div id="parameter-3" class="section level3" number="1.8.3">
+<div id="parameter-12" class="section level3" number="1.17.3">
 <h3>
-<span class="header-section-number">1.8.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-12"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -332,9 +349,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-7" class="section level3" number="1.8.4">
+<div id="return-value-16" class="section level3" number="1.17.4">
 <h3>
-<span class="header-section-number">1.8.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-16"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -368,11 +385,53 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="interfacebox.html">InterfaceBox</a></div>
+<div class="next"><a href="mxfoundation.html">MxFoundation</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#mux">MUX</a></li>
+<li><a class="nav-link" href="#overview-3">Overview</a></li>
+<li>
+<a class="nav-link" href="#muxinitialize"><span class="header-section-number">1.13</span> MUXInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-12"><span class="header-section-number">1.13.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-12"><span class="header-section-number">1.13.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-9"><span class="header-section-number">1.13.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-12"><span class="header-section-number">1.13.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#muxset"><span class="header-section-number">1.14</span> MUXSet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-13"><span class="header-section-number">1.14.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-13"><span class="header-section-number">1.14.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#return-value-13"><span class="header-section-number">1.14.3</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#muxclose"><span class="header-section-number">1.15</span> MUXClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-14"><span class="header-section-number">1.15.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-14"><span class="header-section-number">1.15.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-10"><span class="header-section-number">1.15.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-14"><span class="header-section-number">1.15.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#muxopenallrelays"><span class="header-section-number">1.16</span> MUXOpenAllRelays</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-15"><span class="header-section-number">1.16.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-15"><span class="header-section-number">1.16.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-11"><span class="header-section-number">1.16.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-15"><span class="header-section-number">1.16.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#muxsignalset"><span class="header-section-number">1.17</span> MUXSignalSet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-16"><span class="header-section-number">1.17.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-16"><span class="header-section-number">1.17.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-12"><span class="header-section-number">1.17.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-16"><span class="header-section-number">1.17.4</span> Return Value</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

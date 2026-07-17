@@ -21,9 +21,9 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="A book created with bookdown.">
-<meta property="og:description" content="A book created with bookdown.">
-<meta name="twitter:description" content="A book created with bookdown.">
+<meta name="description" content="Overview   1.4 DAQInitialize  1.4.1 Header int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);  1.4.2 Purpose   1.4.3 Parameter Parameter Type...">
+<meta property="og:description" content="Overview   1.4 DAQInitialize  1.4.1 Header int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);  1.4.2 Purpose   1.4.3 Parameter Parameter Type...">
+<meta name="twitter:description" content="Overview   1.4 DAQInitialize  1.4.1 Header int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);  1.4.2 Purpose   1.4.3 Parameter Parameter Type...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -44,23 +44,7 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Welcome</a></li>
-<li class="book-part">Instruments</li>
-<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
-<li><a class="" href="chroma2238.html">Chroma2238</a></li>
-<li><a class="active" href="daq.html">DAQ</a></li>
-<li><a class="" href="dmm.html">DMM</a></li>
-<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
-<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
-<li><a class="" href="mux.html">MUX</a></li>
-<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
-<li><a class="" href="photometer.html">Photometer</a></li>
-<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
-<li><a class="" href="powersupply.html">PowerSupply</a></li>
-<li><a class="" href="relay.html">Relay</a></li>
-<li><a class="" href="serialuart.html">SerialUART</a></li>
-</ul>
+        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">DAQ</a></li></ul>
 
         <div class="book-extra">
           
@@ -70,14 +54,354 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="daq" class="section level1 unnumbered">
 <h1>DAQ<a class="anchor" aria-label="anchor" href="#daq"><i class="fas fa-link"></i></a>
 </h1>
-
+<div id="overview-1" class="section level2 unnumbered">
+<h2>
+<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-1"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="daqinitialize" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> <strong>DAQInitialize</strong><a class="anchor" aria-label="anchor" href="#daqinitialize"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-3" class="section level3" number="1.4.1">
+<h3>
+<span class="header-section-number">1.4.1</span> Header<a class="anchor" aria-label="anchor" href="#header-3"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);</code></p>
+</div>
+<div id="purpose-3" class="section level3" number="1.4.2">
+<h3>
+<span class="header-section-number">1.4.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter" class="section level3" number="1.4.3">
+<h3>
+<span class="header-section-number">1.4.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-3" class="section level3" number="1.4.4">
+<h3>
+<span class="header-section-number">1.4.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-3"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="daqsetvoltage" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> <strong>DAQSetVoltage</strong><a class="anchor" aria-label="anchor" href="#daqsetvoltage"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-4" class="section level3" number="1.5.1">
+<h3>
+<span class="header-section-number">1.5.1</span> Header<a class="anchor" aria-label="anchor" href="#header-4"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall DAQSetVoltage(char *resource_name, float64 voltage_level, char *status_message);</code></p>
+</div>
+<div id="purpose-4" class="section level3" number="1.5.2">
+<h3>
+<span class="header-section-number">1.5.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-1" class="section level3" number="1.5.3">
+<h3>
+<span class="header-section-number">1.5.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-1"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-4" class="section level3" number="1.5.4">
+<h3>
+<span class="header-section-number">1.5.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="daqclose" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> <strong>DAQClose</strong><a class="anchor" aria-label="anchor" href="#daqclose"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-5" class="section level3" number="1.6.1">
+<h3>
+<span class="header-section-number">1.6.1</span> Header<a class="anchor" aria-label="anchor" href="#header-5"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall DAQClose(char *resource_name, char *status_message);</code></p>
+</div>
+<div id="purpose-5" class="section level3" number="1.6.2">
+<h3>
+<span class="header-section-number">1.6.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-2" class="section level3" number="1.6.3">
+<h3>
+<span class="header-section-number">1.6.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-2"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-5" class="section level3" number="1.6.4">
+<h3>
+<span class="header-section-number">1.6.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="daqcounterpulsegeneration" class="section level2" number="1.7">
+<h2>
+<span class="header-section-number">1.7</span> <strong>DAQCounterPulseGeneration</strong><a class="anchor" aria-label="anchor" href="#daqcounterpulsegeneration"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-6" class="section level3" number="1.7.1">
+<h3>
+<span class="header-section-number">1.7.1</span> Header<a class="anchor" aria-label="anchor" href="#header-6"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall DAQCounterPulseGeneration(char *resource_name, float intial_delay, float on, float off, char *status_message);</code></p>
+</div>
+<div id="purpose-6" class="section level3" number="1.7.2">
+<h3>
+<span class="header-section-number">1.7.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-3" class="section level3" number="1.7.3">
+<h3>
+<span class="header-section-number">1.7.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-3"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-6" class="section level3" number="1.7.4">
+<h3>
+<span class="header-section-number">1.7.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="daqcounterpulseconfigstart" class="section level2" number="1.8">
+<h2>
+<span class="header-section-number">1.8</span> <strong>DAQCounterPulseConfigStart</strong><a class="anchor" aria-label="anchor" href="#daqcounterpulseconfigstart"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-7" class="section level3" number="1.8.1">
+<h3>
+<span class="header-section-number">1.8.1</span> Header<a class="anchor" aria-label="anchor" href="#header-7"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall DAQCounterPulseConfigStart(char *resource_name, TaskHandle *daq_handle, float initial_delay, int initial_state, float frequency, float duty_cycle, char *status_message);</code></p>
+</div>
+<div id="purpose-7" class="section level3" number="1.8.2">
+<h3>
+<span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-4" class="section level3" number="1.8.3">
+<h3>
+<span class="header-section-number">1.8.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-4"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-7" class="section level3" number="1.8.4">
+<h3>
+<span class="header-section-number">1.8.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="daqcountpulseclearoff" class="section level2" number="1.9">
+<h2>
+<span class="header-section-number">1.9</span> <strong>DAQCountPulseClearOff</strong><a class="anchor" aria-label="anchor" href="#daqcountpulseclearoff"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-8" class="section level3" number="1.9.1">
+<h3>
+<span class="header-section-number">1.9.1</span> Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall DAQCountPulseClearOff(TaskHandle daq_task_handle, char *status_message);</code></p>
+</div>
+<div id="purpose-8" class="section level3" number="1.9.2">
+<h3>
+<span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-5" class="section level3" number="1.9.3">
+<h3>
+<span class="header-section-number">1.9.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-5"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-8" class="section level3" number="1.9.4">
+<h3>
+<span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="daqcounterstategeneration" class="section level2" number="1.10">
+<h2>
+<span class="header-section-number">1.10</span> <strong>DAQCounterStateGeneration</strong><a class="anchor" aria-label="anchor" href="#daqcounterstategeneration"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-9" class="section level3" number="1.10.1">
+<h3>
+<span class="header-section-number">1.10.1</span> Header<a class="anchor" aria-label="anchor" href="#header-9"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>int DLLEXPORT __stdcall DAQCounterStateGeneration(char *resource_name, float intial_delay, int default_state, char *status_message);</code></p>
+</div>
+<div id="purpose-9" class="section level3" number="1.10.2">
+<h3>
+<span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-6" class="section level3" number="1.10.3">
+<h3>
+<span class="header-section-number">1.10.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-9" class="section level3" number="1.10.4">
+<h3>
+<span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="chroma2238.html">Chroma2238</a></div>
-<div class="next"><a href="dmm.html">DMM</a></div>
+<div class="empty"></div>
+<div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#daq">DAQ</a></li></ul>
+      <div id="book-on-this-page"></div>
 
       <div class="book-extra">
         <ul class="list-unstyled">

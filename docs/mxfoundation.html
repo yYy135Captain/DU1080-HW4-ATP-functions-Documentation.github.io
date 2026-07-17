@@ -21,9 +21,9 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="Overview This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device. # MxFoundation Functions  1.9 MxFoundationInitialize  1.9.1 Header int DLLEXPORT __stdcall...">
-<meta property="og:description" content="Overview This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device. # MxFoundation Functions  1.9 MxFoundationInitialize  1.9.1 Header int DLLEXPORT __stdcall...">
-<meta name="twitter:description" content="Overview This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device. # MxFoundation Functions  1.9 MxFoundationInitialize  1.9.1 Header int DLLEXPORT __stdcall...">
+<meta name="description" content="Overview This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device. # MxFoundation Functions  1.18 MxFoundationInitialize  1.18.1 Header int DLLEXPORT __stdcall...">
+<meta property="og:description" content="Overview This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device. # MxFoundation Functions  1.18 MxFoundationInitialize  1.18.1 Header int DLLEXPORT __stdcall...">
+<meta name="twitter:description" content="Overview This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device. # MxFoundation Functions  1.18 MxFoundationInitialize  1.18.1 Header int DLLEXPORT __stdcall...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -44,7 +44,23 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">MxFoundation</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="" href="mux.html">MUX</a></li>
+<li><a class="active" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="" href="relay.html">Relay</a></li>
+<li><a class="" href="serialuart.html">SerialUART</a></li>
+</ul>
 
         <div class="book-extra">
           
@@ -54,39 +70,39 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="mxfoundation" class="section level1 unnumbered">
 <h1>MxFoundation<a class="anchor" aria-label="anchor" href="#mxfoundation"><i class="fas fa-link"></i></a>
 </h1>
-<div id="overview-2" class="section level2 unnumbered">
+<div id="overview-4" class="section level2 unnumbered">
 <h2>
-<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-2"><i class="fas fa-link"></i></a>
+<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-4"><i class="fas fa-link"></i></a>
 </h2>
 <p>This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># MxFoundation Functions</span></span></code></pre></div>
 </div>
-<div id="mxfoundationinitialize" class="section level2" number="1.9">
+<div id="mxfoundationinitialize" class="section level2" number="1.18">
 <h2>
-<span class="header-section-number">1.9</span> <strong>MxFoundationInitialize</strong><a class="anchor" aria-label="anchor" href="#mxfoundationinitialize"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18</span> <strong>MxFoundationInitialize</strong><a class="anchor" aria-label="anchor" href="#mxfoundationinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-8" class="section level3" number="1.9.1">
+<div id="header-17" class="section level3" number="1.18.1">
 <h3>
-<span class="header-section-number">1.9.1</span> Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.1</span> Header<a class="anchor" aria-label="anchor" href="#header-17"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall MxFoundationInitialize(void);</code></p>
 </div>
-<div id="purpose-8" class="section level3" number="1.9.2">
+<div id="purpose-17" class="section level3" number="1.18.2">
 <h3>
-<span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-17"><i class="fas fa-link"></i></a>
 </h3>
 <p>Initializes the MxFoundation system, obtains the device handle, configures the system time base, and initializes the ARINC 429 and ARINC 708 Channels.</p>
 </div>
-<div id="parameter-5" class="section level3" number="1.9.3">
+<div id="parameter-13" class="section level3" number="1.18.3">
 <h3>
-<span class="header-section-number">1.9.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-13"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function has no parameters.</p>
 </div>
-<div id="return-value-8" class="section level3" number="1.9.4">
+<div id="return-value-17" class="section level3" number="1.18.4">
 <h3>
-<span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-17"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -109,76 +125,76 @@
 </tbody>
 </table></div>
 </div>
-<div id="example" class="section level3" number="1.9.5">
+<div id="example" class="section level3" number="1.18.5">
 <h3>
-<span class="header-section-number">1.9.5</span> Example<a class="anchor" aria-label="anchor" href="#example"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.5</span> Example<a class="anchor" aria-label="anchor" href="#example"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int32 error = 0;</code>
 <code>error = ARINC429ChannelInitialize();</code></p>
 </div>
 </div>
-<div id="mxfoundationclose" class="section level2" number="1.10">
+<div id="mxfoundationclose" class="section level2" number="1.19">
 <h2>
-<span class="header-section-number">1.10</span> <strong>MxFoundationClose</strong><a class="anchor" aria-label="anchor" href="#mxfoundationclose"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.19</span> <strong>MxFoundationClose</strong><a class="anchor" aria-label="anchor" href="#mxfoundationclose"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-9" class="section level3" number="1.10.1">
+<div id="header-18" class="section level3" number="1.19.1">
 <h3>
-<span class="header-section-number">1.10.1</span> Header<a class="anchor" aria-label="anchor" href="#header-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.19.1</span> Header<a class="anchor" aria-label="anchor" href="#header-18"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>void DLLEXPORT __stdcall MxFoundationClose(void);</code></p>
 </div>
-<div id="purpose-9" class="section level3" number="1.10.2">
+<div id="purpose-18" class="section level3" number="1.19.2">
 <h3>
-<span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.19.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-18"><i class="fas fa-link"></i></a>
 </h3>
 <p>Terminates the MxFoundation system connection disconnects from the server, and resets the initialization status.</p>
 </div>
-<div id="parameter-6" class="section level3" number="1.10.3">
+<div id="parameter-14" class="section level3" number="1.19.3">
 <h3>
-<span class="header-section-number">1.10.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.19.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-14"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function has no parameters.</p>
 </div>
-<div id="return-value-9" class="section level3" number="1.10.4">
+<div id="return-value-18" class="section level3" number="1.19.4">
 <h3>
-<span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.19.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-18"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function does not return a value.</p>
 </div>
-<div id="example-1" class="section level3" number="1.10.5">
+<div id="example-1" class="section level3" number="1.19.5">
 <h3>
-<span class="header-section-number">1.10.5</span> Example<a class="anchor" aria-label="anchor" href="#example-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.19.5</span> Example<a class="anchor" aria-label="anchor" href="#example-1"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>MxFoundationClose();</code></p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># ARINC429 Functions</span></span></code></pre></div>
 </div>
 </div>
-<div id="arinc429channelinitialize" class="section level2" number="1.11">
+<div id="arinc429channelinitialize" class="section level2" number="1.20">
 <h2>
-<span class="header-section-number">1.11</span> <strong>ARINC429ChannelInitialize</strong><a class="anchor" aria-label="anchor" href="#arinc429channelinitialize"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.20</span> <strong>ARINC429ChannelInitialize</strong><a class="anchor" aria-label="anchor" href="#arinc429channelinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-10" class="section level3" number="1.11.1">
+<div id="header-19" class="section level3" number="1.20.1">
 <h3>
-<span class="header-section-number">1.11.1</span> Header<a class="anchor" aria-label="anchor" href="#header-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.20.1</span> Header<a class="anchor" aria-label="anchor" href="#header-19"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall ARINC429ChannelInitialize(void);</code></p>
 </div>
-<div id="purpose-10" class="section level3" number="1.11.2">
+<div id="purpose-19" class="section level3" number="1.20.2">
 <h3>
-<span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.20.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-19"><i class="fas fa-link"></i></a>
 </h3>
 <p>Initializes all ARINC 429 transmit and receive channels on the MxFoundation device. The function obtains the module handles, configures module attributes, retrieves channel handles, and prepares the channels for subsequent ARINC 429 transmit and receive operations.</p>
 </div>
-<div id="parameter-7" class="section level3" number="1.11.3">
+<div id="parameter-15" class="section level3" number="1.20.3">
 <h3>
-<span class="header-section-number">1.11.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.20.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-15"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function has no parameter.</p>
 </div>
-<div id="return-value-10" class="section level3" number="1.11.4">
+<div id="return-value-19" class="section level3" number="1.20.4">
 <h3>
-<span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.20.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-19"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -198,25 +214,25 @@
 </table></div>
 </div>
 </div>
-<div id="arinc429setupreceivedata" class="section level2" number="1.12">
+<div id="arinc429setupreceivedata" class="section level2" number="1.21">
 <h2>
-<span class="header-section-number">1.12</span> <strong>Arinc429SetupReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc429setupreceivedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.21</span> <strong>Arinc429SetupReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc429setupreceivedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-11" class="section level3" number="1.12.1">
+<div id="header-20" class="section level3" number="1.21.1">
 <h3>
-<span class="header-section-number">1.12.1</span> Header<a class="anchor" aria-label="anchor" href="#header-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.21.1</span> Header<a class="anchor" aria-label="anchor" href="#header-20"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc429SetupReceiveData(uint64 receive_channel, BOOL speed, int parity, uint64 count, HMXF_BUFFER *receive_buffer);</code></p>
 </div>
-<div id="purpose-11" class="section level3" number="1.12.2">
+<div id="purpose-20" class="section level3" number="1.21.2">
 <h3>
-<span class="header-section-number">1.12.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.21.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-20"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures an ARINC 429 receive channel by setting the receive speed and parity, allocating the receive buffer, and starting the receive acquisition process.</p>
 </div>
-<div id="parameter-8" class="section level3" number="1.12.3">
+<div id="parameter-16" class="section level3" number="1.21.3">
 <h3>
-<span class="header-section-number">1.12.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.21.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-16"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table style="width:100%;" class="table table-sm">
 <colgroup>
@@ -258,9 +274,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-11" class="section level3" number="1.12.4">
+<div id="return-value-20" class="section level3" number="1.21.4">
 <h3>
-<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.21.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-20"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -284,25 +300,25 @@
 </table></div>
 </div>
 </div>
-<div id="arinc429senddata" class="section level2" number="1.13">
+<div id="arinc429senddata" class="section level2" number="1.22">
 <h2>
-<span class="header-section-number">1.13</span> <strong>Arinc429SendData</strong><a class="anchor" aria-label="anchor" href="#arinc429senddata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.22</span> <strong>Arinc429SendData</strong><a class="anchor" aria-label="anchor" href="#arinc429senddata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-12" class="section level3" number="1.13.1">
+<div id="header-21" class="section level3" number="1.22.1">
 <h3>
-<span class="header-section-number">1.13.1</span> Header<a class="anchor" aria-label="anchor" href="#header-12"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.22.1</span> Header<a class="anchor" aria-label="anchor" href="#header-21"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc429SendData(HMXF_BUFFER *arinc429_transmit_buffer,  HMXF_SCHED *arinc429_schedule_handle, uint64 transmit_channel, int send_rate, BOOL speed, int parity, unsigned int transmit_data, unsigned int delay);</code></p>
 </div>
-<div id="purpose-12" class="section level3" number="1.13.2">
+<div id="purpose-21" class="section level3" number="1.22.2">
 <h3>
-<span class="header-section-number">1.13.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-12"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.22.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-21"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures an ARINC 429 transmit channel and sends data using a periodic transmission schedule.</p>
 </div>
-<div id="parameter-9" class="section level3" number="1.13.3">
+<div id="parameter-17" class="section level3" number="1.22.3">
 <h3>
-<span class="header-section-number">1.13.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.22.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-17"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -359,9 +375,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-12" class="section level3" number="1.13.4">
+<div id="return-value-21" class="section level3" number="1.22.4">
 <h3>
-<span class="header-section-number">1.13.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-12"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.22.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-21"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -385,25 +401,25 @@
 </table></div>
 </div>
 </div>
-<div id="arinc429receivedata" class="section level2" number="1.14">
+<div id="arinc429receivedata" class="section level2" number="1.23">
 <h2>
-<span class="header-section-number">1.14</span> <strong>Arinc429ReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc429receivedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.23</span> <strong>Arinc429ReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc429receivedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-13" class="section level3" number="1.14.1">
+<div id="header-22" class="section level3" number="1.23.1">
 <h3>
-<span class="header-section-number">1.14.1</span> Header<a class="anchor" aria-label="anchor" href="#header-13"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.23.1</span> Header<a class="anchor" aria-label="anchor" href="#header-22"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc429ReceiveData(uint64 count, HMXF_BUFFER receive_buffer, uint32 *received_data);</code></p>
 </div>
-<div id="purpose-13" class="section level3" number="1.14.2">
+<div id="purpose-22" class="section level3" number="1.23.2">
 <h3>
-<span class="header-section-number">1.14.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-13"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.23.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-22"><i class="fas fa-link"></i></a>
 </h3>
 <p>Reads ARINC 429 records from a receive a acquisition buffer and returns the data word from the first received record.</p>
 </div>
-<div id="parameter-10" class="section level3" number="1.14.3">
+<div id="parameter-18" class="section level3" number="1.23.3">
 <h3>
-<span class="header-section-number">1.14.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.23.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-18"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -435,9 +451,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-13" class="section level3" number="1.14.4">
+<div id="return-value-22" class="section level3" number="1.23.4">
 <h3>
-<span class="header-section-number">1.14.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-13"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.23.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-22"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -460,34 +476,34 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-2" class="section level3" number="1.14.5">
+<div id="example-2" class="section level3" number="1.23.5">
 <h3>
-<span class="header-section-number">1.14.5</span> Example<a class="anchor" aria-label="anchor" href="#example-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.23.5</span> Example<a class="anchor" aria-label="anchor" href="#example-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="mxfoundation.html#cb3-1" tabindex="-1"></a>uint32 received_data <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="mxfoundation.html#cb3-2" tabindex="-1"></a>HMXF_BUFFER receive_buffer <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="mxfoundation.html#cb3-3" tabindex="-1"></a>arinc429_error <span class="op">=</span> Arinc429SetupReceiveData<span class="op">(</span>receive_channel<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="op">&amp;</span>receive_buffer<span class="op">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="mxfoundation.html#cb4-1" tabindex="-1"></a>uint32 received_data <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="mxfoundation.html#cb4-2" tabindex="-1"></a>HMXF_BUFFER receive_buffer <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="mxfoundation.html#cb4-3" tabindex="-1"></a>arinc429_error <span class="op">=</span> Arinc429SetupReceiveData<span class="op">(</span>receive_channel<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="op">&amp;</span>receive_buffer<span class="op">);</span></span></code></pre></div>
 </div>
 </div>
-<div id="arinc429freebuffers" class="section level2" number="1.15">
+<div id="arinc429freebuffers" class="section level2" number="1.24">
 <h2>
-<span class="header-section-number">1.15</span> <strong>Arinc429FreeBuffers</strong><a class="anchor" aria-label="anchor" href="#arinc429freebuffers"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.24</span> <strong>Arinc429FreeBuffers</strong><a class="anchor" aria-label="anchor" href="#arinc429freebuffers"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-14" class="section level3" number="1.15.1">
+<div id="header-23" class="section level3" number="1.24.1">
 <h3>
-<span class="header-section-number">1.15.1</span> Header<a class="anchor" aria-label="anchor" href="#header-14"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.24.1</span> Header<a class="anchor" aria-label="anchor" href="#header-23"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>void DLLEXPORT __stdcall Arinc429FreeBuffers(HMXF_BUFFER arinc429_transmit_buffer, HMXF_BUFFER arinc429_receive_buffer, HMXF_SCHED arinc429_schedule_handle);</code></p>
 </div>
-<div id="purpose-14" class="section level3" number="1.15.2">
+<div id="purpose-23" class="section level3" number="1.24.2">
 <h3>
-<span class="header-section-number">1.15.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-14"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.24.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-23"><i class="fas fa-link"></i></a>
 </h3>
 <p>Releases the ARINC 429 periodic transmission schedule and transmit buffer. It also stops and closes the receive acquisition buffer.</p>
 </div>
-<div id="parameter-11" class="section level3" number="1.15.3">
+<div id="parameter-19" class="section level3" number="1.24.3">
 <h3>
-<span class="header-section-number">1.15.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.24.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-19"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -519,38 +535,38 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-14" class="section level3" number="1.15.4">
+<div id="return-value-23" class="section level3" number="1.24.4">
 <h3>
-<span class="header-section-number">1.15.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-14"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.24.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-23"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function does not return a value.</p>
 </div>
-<div id="example-3" class="section level3" number="1.15.5">
+<div id="example-3" class="section level3" number="1.24.5">
 <h3>
-<span class="header-section-number">1.15.5</span> Example<a class="anchor" aria-label="anchor" href="#example-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.24.5</span> Example<a class="anchor" aria-label="anchor" href="#example-3"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="mxfoundation.html#cb4-1" tabindex="-1"></a>Arinc429FreeBuffers<span class="op">(</span>transmit_buffer<span class="op">,</span> receive_buffer<span class="op">,</span> schedule_buffer<span class="op">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb5-1"><a href="mxfoundation.html#cb5-1" tabindex="-1"></a>Arinc429FreeBuffers<span class="op">(</span>transmit_buffer<span class="op">,</span> receive_buffer<span class="op">,</span> schedule_buffer<span class="op">);</span></span></code></pre></div>
 </div>
 </div>
-<div id="arinc429selftest" class="section level2" number="1.16">
+<div id="arinc429selftest" class="section level2" number="1.25">
 <h2>
-<span class="header-section-number">1.16</span> <strong>Arinc429SelfTest</strong><a class="anchor" aria-label="anchor" href="#arinc429selftest"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25</span> <strong>Arinc429SelfTest</strong><a class="anchor" aria-label="anchor" href="#arinc429selftest"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-15" class="section level3" number="1.16.1">
+<div id="header-24" class="section level3" number="1.25.1">
 <h3>
-<span class="header-section-number">1.16.1</span> Header<a class="anchor" aria-label="anchor" href="#header-15"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.1</span> Header<a class="anchor" aria-label="anchor" href="#header-24"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc429SelfTest(uint64 transmit_channel, uint64 receive_channel, unsigned int data);</code></p>
 </div>
-<div id="purpose-15" class="section level3" number="1.16.2">
+<div id="purpose-24" class="section level3" number="1.25.2">
 <h3>
-<span class="header-section-number">1.16.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-15"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-24"><i class="fas fa-link"></i></a>
 </h3>
 <p>Performs an ARINC 429 loopback self-test by transmitting a data word, receiving it on the specified channel, and releasing the allocated communication resources.</p>
 </div>
-<div id="parameter-12" class="section level3" number="1.16.3">
+<div id="parameter-20" class="section level3" number="1.25.3">
 <h3>
-<span class="header-section-number">1.16.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-12"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-20"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -582,9 +598,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-15" class="section level3" number="1.16.4">
+<div id="return-value-24" class="section level3" number="1.25.4">
 <h3>
-<span class="header-section-number">1.16.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-15"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-24"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -606,35 +622,35 @@
 </tr>
 </tbody>
 </table></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># ARINC708 Functions </span></span></code></pre></div>
 </div>
 </div>
-<div id="arinc708channelinitialize" class="section level2" number="1.17">
+<div id="arinc708channelinitialize" class="section level2" number="1.26">
 <h2>
-<span class="header-section-number">1.17</span> <strong>ARINC708ChannelInitialize</strong><a class="anchor" aria-label="anchor" href="#arinc708channelinitialize"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26</span> <strong>ARINC708ChannelInitialize</strong><a class="anchor" aria-label="anchor" href="#arinc708channelinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-16" class="section level3" number="1.17.1">
+<div id="header-25" class="section level3" number="1.26.1">
 <h3>
-<span class="header-section-number">1.17.1</span> Header<a class="anchor" aria-label="anchor" href="#header-16"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.1</span> Header<a class="anchor" aria-label="anchor" href="#header-25"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall ARINC708ChannelInitialize(void);</code></p>
 </div>
-<div id="purpose-16" class="section level3" number="1.17.2">
+<div id="purpose-25" class="section level3" number="1.26.2">
 <h3>
-<span class="header-section-number">1.17.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-16"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-25"><i class="fas fa-link"></i></a>
 </h3>
 <p>Initializes the ARINC 708 modules and retrieves the transmit and receive handles required for ARINC 708 communication.</p>
 </div>
-<div id="parameter-13" class="section level3" number="1.17.3">
+<div id="parameter-21" class="section level3" number="1.26.3">
 <h3>
-<span class="header-section-number">1.17.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-13"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-21"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function has no parameters.</p>
 </div>
-<div id="return-value-16" class="section level3" number="1.17.4">
+<div id="return-value-25" class="section level3" number="1.26.4">
 <h3>
-<span class="header-section-number">1.17.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-16"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-25"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -657,32 +673,32 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-4" class="section level3" number="1.17.5">
+<div id="example-4" class="section level3" number="1.26.5">
 <h3>
-<span class="header-section-number">1.17.5</span> Example<a class="anchor" aria-label="anchor" href="#example-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.5</span> Example<a class="anchor" aria-label="anchor" href="#example-4"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb6-1"><a href="mxfoundation.html#cb6-1" tabindex="-1"></a>error <span class="op">=</span> ARINC708ChannelInitialize<span class="op">();</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb7-1"><a href="mxfoundation.html#cb7-1" tabindex="-1"></a>error <span class="op">=</span> ARINC708ChannelInitialize<span class="op">();</span></span></code></pre></div>
 </div>
 </div>
-<div id="arinc708setupreceivedata" class="section level2" number="1.18">
+<div id="arinc708setupreceivedata" class="section level2" number="1.27">
 <h2>
-<span class="header-section-number">1.18</span> <strong>Arinc708SetupReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc708setupreceivedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27</span> <strong>Arinc708SetupReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc708setupreceivedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-17" class="section level3" number="1.18.1">
+<div id="header-26" class="section level3" number="1.27.1">
 <h3>
-<span class="header-section-number">1.18.1</span> Header<a class="anchor" aria-label="anchor" href="#header-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.1</span> Header<a class="anchor" aria-label="anchor" href="#header-26"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc708SetupReceiveData(uint64 receive_channel, HMXF_BUFFER *receive_buffer);</code></p>
 </div>
-<div id="purpose-17" class="section level3" number="1.18.2">
+<div id="purpose-26" class="section level3" number="1.27.2">
 <h3>
-<span class="header-section-number">1.18.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-26"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures and ARINC 708 receive channel by allocating a receive acquisition buffer and starting the receive acquisition process.</p>
 </div>
-<div id="parameter-14" class="section level3" number="1.18.3">
+<div id="parameter-22" class="section level3" number="1.27.3">
 <h3>
-<span class="header-section-number">1.18.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-14"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-22"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table style="width:100%;" class="table table-sm">
 <colgroup>
@@ -709,9 +725,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-17" class="section level3" number="1.18.4">
+<div id="return-value-26" class="section level3" number="1.27.4">
 <h3>
-<span class="header-section-number">1.18.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-26"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -734,33 +750,33 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-5" class="section level3" number="1.18.5">
+<div id="example-5" class="section level3" number="1.27.5">
 <h3>
-<span class="header-section-number">1.18.5</span> Example<a class="anchor" aria-label="anchor" href="#example-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.5</span> Example<a class="anchor" aria-label="anchor" href="#example-5"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb7-1"><a href="mxfoundation.html#cb7-1" tabindex="-1"></a>HMXF_BUFFER  receive_buffer <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-2"><a href="mxfoundation.html#cb7-2" tabindex="-1"></a>arinc708_error <span class="op">=</span> Arinc708SetupReceiveData<span class="op">(</span>receive_channel<span class="op">,</span> <span class="op">&amp;</span>receive_buffer<span class="op">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb8-1"><a href="mxfoundation.html#cb8-1" tabindex="-1"></a>HMXF_BUFFER  receive_buffer <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="mxfoundation.html#cb8-2" tabindex="-1"></a>arinc708_error <span class="op">=</span> Arinc708SetupReceiveData<span class="op">(</span>receive_channel<span class="op">,</span> <span class="op">&amp;</span>receive_buffer<span class="op">);</span></span></code></pre></div>
 </div>
 </div>
-<div id="arinc708senddata" class="section level2" number="1.19">
+<div id="arinc708senddata" class="section level2" number="1.28">
 <h2>
-<span class="header-section-number">1.19</span> <strong>Arinc708SendData</strong><a class="anchor" aria-label="anchor" href="#arinc708senddata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28</span> <strong>Arinc708SendData</strong><a class="anchor" aria-label="anchor" href="#arinc708senddata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-18" class="section level3" number="1.19.1">
+<div id="header-27" class="section level3" number="1.28.1">
 <h3>
-<span class="header-section-number">1.19.1</span> Header<a class="anchor" aria-label="anchor" href="#header-18"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.1</span> Header<a class="anchor" aria-label="anchor" href="#header-27"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc708SendData(HMXF_BUFFER *arinc708_transmit_buffer, HMXF_SCHED *arinc708_schedule_handle, uint64 transmit_channel, int send_rate, unsigned int transmit_data);</code></p>
 </div>
-<div id="purpose-18" class="section level3" number="1.19.2">
+<div id="purpose-27" class="section level3" number="1.28.2">
 <h3>
-<span class="header-section-number">1.19.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-18"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-27"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures an ARINC 708 transmit channel, creates a periodic transmission schedule, prepares the transmit records, and states periodic data transmission.</p>
 </div>
-<div id="parameter-15" class="section level3" number="1.19.3">
+<div id="parameter-23" class="section level3" number="1.28.3">
 <h3>
-<span class="header-section-number">1.19.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-15"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-23"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table style="width:100%;" class="table table-sm">
 <colgroup>
@@ -802,9 +818,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-18" class="section level3" number="1.19.4">
+<div id="return-value-27" class="section level3" number="1.28.4">
 <h3>
-<span class="header-section-number">1.19.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-18"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-27"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -827,31 +843,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-6" class="section level3" number="1.19.5">
+<div id="example-6" class="section level3" number="1.28.5">
 <h3>
-<span class="header-section-number">1.19.5</span> Example<a class="anchor" aria-label="anchor" href="#example-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.5</span> Example<a class="anchor" aria-label="anchor" href="#example-6"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="arinc708receivedata" class="section level2" number="1.20">
+<div id="arinc708receivedata" class="section level2" number="1.29">
 <h2>
-<span class="header-section-number">1.20</span> <strong>Arinc708ReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc708receivedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29</span> <strong>Arinc708ReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc708receivedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-19" class="section level3" number="1.20.1">
+<div id="header-28" class="section level3" number="1.29.1">
 <h3>
-<span class="header-section-number">1.20.1</span> Header<a class="anchor" aria-label="anchor" href="#header-19"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.1</span> Header<a class="anchor" aria-label="anchor" href="#header-28"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc708ReceiveData(uint64 count, HMXF_BUFFER receive_buffer, uint32 *received_data);</code></p>
 </div>
-<div id="purpose-19" class="section level3" number="1.20.2">
+<div id="purpose-28" class="section level3" number="1.29.2">
 <h3>
-<span class="header-section-number">1.20.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-19"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-28"><i class="fas fa-link"></i></a>
 </h3>
 <p>Reads ARINC 708 records from a receive acquisition buffer and returns a data value from the first received record.</p>
 </div>
-<div id="parameter-16" class="section level3" number="1.20.3">
+<div id="parameter-24" class="section level3" number="1.29.3">
 <h3>
-<span class="header-section-number">1.20.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-16"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-24"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table style="width:100%;" class="table table-sm">
 <colgroup>
@@ -883,9 +899,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-19" class="section level3" number="1.20.4">
+<div id="return-value-28" class="section level3" number="1.29.4">
 <h3>
-<span class="header-section-number">1.20.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-19"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-28"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -908,31 +924,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-7" class="section level3" number="1.20.5">
+<div id="example-7" class="section level3" number="1.29.5">
 <h3>
-<span class="header-section-number">1.20.5</span> Example<a class="anchor" aria-label="anchor" href="#example-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.5</span> Example<a class="anchor" aria-label="anchor" href="#example-7"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="arinc708freebuffers" class="section level2" number="1.21">
+<div id="arinc708freebuffers" class="section level2" number="1.30">
 <h2>
-<span class="header-section-number">1.21</span> <strong>Arinc708FreeBuffers</strong><a class="anchor" aria-label="anchor" href="#arinc708freebuffers"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30</span> <strong>Arinc708FreeBuffers</strong><a class="anchor" aria-label="anchor" href="#arinc708freebuffers"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-20" class="section level3" number="1.21.1">
+<div id="header-29" class="section level3" number="1.30.1">
 <h3>
-<span class="header-section-number">1.21.1</span> Header<a class="anchor" aria-label="anchor" href="#header-20"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.1</span> Header<a class="anchor" aria-label="anchor" href="#header-29"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>void DLLEXPORT __stdcall Arinc708FreeBuffers(HMXF_BUFFER arinc708_transmit_buffer, HMXF_BUFFER arinc708_receive_buffer, HMXF_SCHED arinc708_schedule_handle);</code></p>
 </div>
-<div id="purpose-20" class="section level3" number="1.21.2">
+<div id="purpose-29" class="section level3" number="1.30.2">
 <h3>
-<span class="header-section-number">1.21.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-20"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-29"><i class="fas fa-link"></i></a>
 </h3>
 <p>Releases the ARINC 708 periodic transmission schedule and transmit buffer. It also stops and closes the receive acquisition buffer.</p>
 </div>
-<div id="parameter-17" class="section level3" number="1.21.3">
+<div id="parameter-25" class="section level3" number="1.30.3">
 <h3>
-<span class="header-section-number">1.21.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-25"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -964,36 +980,36 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-20" class="section level3" number="1.21.4">
+<div id="return-value-29" class="section level3" number="1.30.4">
 <h3>
-<span class="header-section-number">1.21.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-20"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-29"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function does not return a value.</p>
 </div>
-<div id="example-8" class="section level3" number="1.21.5">
+<div id="example-8" class="section level3" number="1.30.5">
 <h3>
-<span class="header-section-number">1.21.5</span> Example<a class="anchor" aria-label="anchor" href="#example-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.5</span> Example<a class="anchor" aria-label="anchor" href="#example-8"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="arinc708selftest" class="section level2" number="1.22">
+<div id="arinc708selftest" class="section level2" number="1.31">
 <h2>
-<span class="header-section-number">1.22</span> <strong>Arinc708SelfTest</strong><a class="anchor" aria-label="anchor" href="#arinc708selftest"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31</span> <strong>Arinc708SelfTest</strong><a class="anchor" aria-label="anchor" href="#arinc708selftest"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-21" class="section level3" number="1.22.1">
+<div id="header-30" class="section level3" number="1.31.1">
 <h3>
-<span class="header-section-number">1.22.1</span> Header<a class="anchor" aria-label="anchor" href="#header-21"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.1</span> Header<a class="anchor" aria-label="anchor" href="#header-30"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall Arinc708SelfTest(uint64 transmit_channel, uint64 receive_channel, unsigned int data);</code></p>
 </div>
-<div id="purpose-21" class="section level3" number="1.22.2">
+<div id="purpose-30" class="section level3" number="1.31.2">
 <h3>
-<span class="header-section-number">1.22.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-21"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-30"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="parameter-18" class="section level3" number="1.22.3">
+<div id="parameter-26" class="section level3" number="1.31.3">
 <h3>
-<span class="header-section-number">1.22.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-18"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-26"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -1025,9 +1041,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-21" class="section level3" number="1.22.4">
+<div id="return-value-30" class="section level3" number="1.31.4">
 <h3>
-<span class="header-section-number">1.22.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-21"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-30"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -1040,25 +1056,25 @@
 </tr></tbody>
 </table></div>
 </div>
-<div id="example-9" class="section level3" number="1.22.5">
+<div id="example-9" class="section level3" number="1.31.5">
 <h3>
-<span class="header-section-number">1.22.5</span> Example<a class="anchor" aria-label="anchor" href="#example-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.5</span> Example<a class="anchor" aria-label="anchor" href="#example-9"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="arinc708displaydataarray" class="section level2" number="1.23">
+<div id="arinc708displaydataarray" class="section level2" number="1.32">
 <h2>
-<span class="header-section-number">1.23</span> <strong>Arinc708DisplayDataArray</strong><a class="anchor" aria-label="anchor" href="#arinc708displaydataarray"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32</span> <strong>Arinc708DisplayDataArray</strong><a class="anchor" aria-label="anchor" href="#arinc708displaydataarray"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-22" class="section level3" number="1.23.1">
+<div id="header-31" class="section level3" number="1.32.1">
 <h3>
-<span class="header-section-number">1.23.1</span> Header<a class="anchor" aria-label="anchor" href="#header-22"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.1</span> Header<a class="anchor" aria-label="anchor" href="#header-31"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>void Arinc708DisplayDataArray(uint64 record_number, MXF_A708_DATAREC* record);</code></p>
 </div>
-<div id="purpose-22" class="section level3" number="1.23.2">
+<div id="purpose-31" class="section level3" number="1.32.2">
 <h3>
-<span class="header-section-number">1.23.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-22"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-31"><i class="fas fa-link"></i></a>
 </h3>
 <p>Displays the contents of one or more ARINC 708 data records for debugging and verification.
 ### Parameter
@@ -1067,39 +1083,39 @@
 | <code>record_number</code> | <code>uint64</code> | Number of ARINC 708 records to display.|
 | <code>rec</code> | <code>MXF_A708_DATAREC *</code> | Pointer to the first ARINC 708 data record.|</p>
 </div>
-<div id="return-value-22" class="section level3" number="1.23.3">
+<div id="return-value-31" class="section level3" number="1.32.3">
 <h3>
-<span class="header-section-number">1.23.3</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-22"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.3</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-31"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function doesn’t return a value.</p>
 </div>
-<div id="example-10" class="section level3" number="1.23.4">
+<div id="example-10" class="section level3" number="1.32.4">
 <h3>
-<span class="header-section-number">1.23.4</span> Example<a class="anchor" aria-label="anchor" href="#example-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.4</span> Example<a class="anchor" aria-label="anchor" href="#example-10"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># MISC Helper</span></span></code></pre></div>
 </div>
 </div>
-<div id="setparitybit" class="section level2" number="1.24">
+<div id="setparitybit" class="section level2" number="1.33">
 <h2>
-<span class="header-section-number">1.24</span> <strong>SetParityBit</strong><a class="anchor" aria-label="anchor" href="#setparitybit"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.33</span> <strong>SetParityBit</strong><a class="anchor" aria-label="anchor" href="#setparitybit"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-23" class="section level3" number="1.24.1">
+<div id="header-32" class="section level3" number="1.33.1">
 <h3>
-<span class="header-section-number">1.24.1</span> Header<a class="anchor" aria-label="anchor" href="#header-23"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.33.1</span> Header<a class="anchor" aria-label="anchor" href="#header-32"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT SetParityBit(unsigned int arinc_word, unsigned int *result, int parity);</code></p>
 </div>
-<div id="purpose-23" class="section level3" number="1.24.2">
+<div id="purpose-32" class="section level3" number="1.33.2">
 <h3>
-<span class="header-section-number">1.24.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-23"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.33.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-32"><i class="fas fa-link"></i></a>
 </h3>
 <p>Calculates and sets the Most Significant Bit (MSB) parity bit for a 32-bit ARINC 429 word based on the selected parity mode.</p>
 </div>
-<div id="parameter-19" class="section level3" number="1.24.3">
+<div id="parameter-27" class="section level3" number="1.33.3">
 <h3>
-<span class="header-section-number">1.24.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-19"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.33.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-27"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -1131,9 +1147,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-23" class="section level3" number="1.24.4">
+<div id="return-value-32" class="section level3" number="1.33.4">
 <h3>
-<span class="header-section-number">1.24.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-23"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.33.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-32"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -1149,11 +1165,152 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="mux.html">MUX</a></div>
+<div class="next"><a href="photometer.html">Photometer</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#mxfoundation">MxFoundation</a></li>
+<li><a class="nav-link" href="#overview-4">Overview</a></li>
+<li>
+<a class="nav-link" href="#mxfoundationinitialize"><span class="header-section-number">1.18</span> MxFoundationInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-17"><span class="header-section-number">1.18.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-17"><span class="header-section-number">1.18.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-13"><span class="header-section-number">1.18.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-17"><span class="header-section-number">1.18.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example"><span class="header-section-number">1.18.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#mxfoundationclose"><span class="header-section-number">1.19</span> MxFoundationClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-18"><span class="header-section-number">1.19.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-18"><span class="header-section-number">1.19.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-14"><span class="header-section-number">1.19.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-18"><span class="header-section-number">1.19.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-1"><span class="header-section-number">1.19.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429channelinitialize"><span class="header-section-number">1.20</span> ARINC429ChannelInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-19"><span class="header-section-number">1.20.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-19"><span class="header-section-number">1.20.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-15"><span class="header-section-number">1.20.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-19"><span class="header-section-number">1.20.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429setupreceivedata"><span class="header-section-number">1.21</span> Arinc429SetupReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-20"><span class="header-section-number">1.21.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-20"><span class="header-section-number">1.21.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-16"><span class="header-section-number">1.21.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-20"><span class="header-section-number">1.21.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429senddata"><span class="header-section-number">1.22</span> Arinc429SendData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-21"><span class="header-section-number">1.22.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-21"><span class="header-section-number">1.22.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-17"><span class="header-section-number">1.22.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-21"><span class="header-section-number">1.22.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429receivedata"><span class="header-section-number">1.23</span> Arinc429ReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-22"><span class="header-section-number">1.23.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-22"><span class="header-section-number">1.23.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-18"><span class="header-section-number">1.23.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-22"><span class="header-section-number">1.23.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-2"><span class="header-section-number">1.23.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429freebuffers"><span class="header-section-number">1.24</span> Arinc429FreeBuffers</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-23"><span class="header-section-number">1.24.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-23"><span class="header-section-number">1.24.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-19"><span class="header-section-number">1.24.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-23"><span class="header-section-number">1.24.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-3"><span class="header-section-number">1.24.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429selftest"><span class="header-section-number">1.25</span> Arinc429SelfTest</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-24"><span class="header-section-number">1.25.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-24"><span class="header-section-number">1.25.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-20"><span class="header-section-number">1.25.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-24"><span class="header-section-number">1.25.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708channelinitialize"><span class="header-section-number">1.26</span> ARINC708ChannelInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-25"><span class="header-section-number">1.26.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-25"><span class="header-section-number">1.26.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-21"><span class="header-section-number">1.26.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-25"><span class="header-section-number">1.26.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-4"><span class="header-section-number">1.26.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708setupreceivedata"><span class="header-section-number">1.27</span> Arinc708SetupReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-26"><span class="header-section-number">1.27.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-26"><span class="header-section-number">1.27.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-22"><span class="header-section-number">1.27.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-26"><span class="header-section-number">1.27.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-5"><span class="header-section-number">1.27.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708senddata"><span class="header-section-number">1.28</span> Arinc708SendData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-27"><span class="header-section-number">1.28.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-27"><span class="header-section-number">1.28.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-23"><span class="header-section-number">1.28.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-27"><span class="header-section-number">1.28.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-6"><span class="header-section-number">1.28.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708receivedata"><span class="header-section-number">1.29</span> Arinc708ReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-28"><span class="header-section-number">1.29.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-28"><span class="header-section-number">1.29.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-24"><span class="header-section-number">1.29.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-28"><span class="header-section-number">1.29.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-7"><span class="header-section-number">1.29.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708freebuffers"><span class="header-section-number">1.30</span> Arinc708FreeBuffers</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-29"><span class="header-section-number">1.30.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-29"><span class="header-section-number">1.30.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-25"><span class="header-section-number">1.30.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-29"><span class="header-section-number">1.30.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-8"><span class="header-section-number">1.30.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708selftest"><span class="header-section-number">1.31</span> Arinc708SelfTest</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-30"><span class="header-section-number">1.31.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-30"><span class="header-section-number">1.31.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-26"><span class="header-section-number">1.31.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-30"><span class="header-section-number">1.31.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-9"><span class="header-section-number">1.31.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708displaydataarray"><span class="header-section-number">1.32</span> Arinc708DisplayDataArray</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-31"><span class="header-section-number">1.32.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-31"><span class="header-section-number">1.32.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#return-value-31"><span class="header-section-number">1.32.3</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-10"><span class="header-section-number">1.32.4</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setparitybit"><span class="header-section-number">1.33</span> SetParityBit</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-32"><span class="header-section-number">1.33.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-32"><span class="header-section-number">1.33.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-27"><span class="header-section-number">1.33.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-32"><span class="header-section-number">1.33.4</span> Return Value</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
