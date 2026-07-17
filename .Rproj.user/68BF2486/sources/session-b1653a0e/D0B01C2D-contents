@@ -12,6 +12,7 @@ This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 D
 
 ### Purpose
 Initializes the MxFoundation system, obtains the device handle, configures the system time base, and initializes the ARINC 429 and ARINC 708 Channels.
+
 ### Parameter
 This function has no parameters.
 
@@ -61,11 +62,6 @@ This function has no parameter.
 |   `0`   |All ARINC 429 channels were initialized successfully. |
 | Non-zero|One or more ARINC 429 initialization operations failed.|
 
-### Example
-```c
-error = ARINC429ChannelInitialize();
-```
-
 ## **Arinc429SetupReceiveData**
 ### Header
 `int DLLEXPORT __stdcall Arinc429SetupReceiveData(uint64 receive_channel, BOOL speed, int parity, uint64 count, HMXF_BUFFER *receive_buffer);`
@@ -86,12 +82,7 @@ Configures an ARINC 429 receive channel by setting the receive speed and parity,
 | Error | Description |
 |---------|-------------|
 |   `0`   | Receive channel configured successfully.|
-| Non-Zero| Failed toconfigure the receive channel or allocate/start the receive buffer.|
-
-### Example
-``` c
-return arinc429_error;
-```
+| Non-Zero| Failed to configure the receive channel or allocate/start the receive buffer.|
 
 ## **Arinc429SendData**
 ### Header
@@ -117,9 +108,6 @@ Configures an ARINC 429 transmit channel and sends data using a periodic transmi
 |---------|-------------|
 |   `0`   | Data transmission setup completed successfully.|
 |Non-Zero | An error occurred while configuring or starting transmission.|
-
-### Example
-No direct call to `Arinc429SendData()`.
 
 ## **Arinc429ReceiveData**
 ### Header
@@ -180,16 +168,15 @@ Performs an ARINC 429 loopback self-test by transmitting a data word, receiving 
 ### Parameter
 |     Parameter     |      Type    | Description |
 |-------------------|--------------|-------------|
-| `transmit_channel`|    `uint64`  |
-| `receive_channel` |    `uint64`  |
-|       `data`      |`unsigned int`|       
+| `transmit_channel`|    `uint64`  | ARINC 429 transmit channel used for the self-test.|
+| `receive_channel` |    `uint64`  | ARINC 429 receive channel used for the self-test. |
+|       `data`      |`unsigned int`| ARINC 429 data word transmitted during the self-test. |
 
 ### Return Value
 | Error | Description |
-|--------------|-------------|
-|
-
-### Example
+|---------|-------------|
+|   `0`   | The ARINC 429 self-test completed successfully. |
+| Non-Zero| One or more ARINC 429 data word transmitted during the self-test. |
 
 ```{r} 
 # ARINC708 Functions 
@@ -227,7 +214,7 @@ Configures and ARINC 708 receive channel by allocating a receive acquisition buf
 |     Parameter     |     Type    | Description |
 |-------------------|-------------|-------------|
 |`receive_channel`  | `uint64`    | Index of the ARINC 708 receive channel to configure.|
-|` *receive_buffer` |`HMXF_BUFFER`| Pointer that receives the allocated receive buffer handle. |
+|`receive_buffer` |`HMXF_BUFFER *`| Pointer that receives the allocated receive buffer handle. |
 
 ### Return Value
 | Error | Description |
@@ -251,8 +238,8 @@ Configures an ARINC 708 transmit channel, creates a periodic transmission schedu
 ### Parameter
 |        Parameter           |     Type     | Description |
 |----------------------------|--------------|-------------|
-|` *arinc708_transmit_buffer`| `HMXF_BUFFER`| Pointer that receive the transmit buffer handle.|
-|` *arinc708_schedule_handle`| `HMXF_SCHED` | Pointer the receives the periodic schedule handle.|
+|`arinc708_transmit_buffer`| `HMXF_BUFFER *`| Pointer that receive the transmit buffer handle.|
+|`arinc708_schedule_handle`| `HMXF_SCHED *` | Pointer the receives the periodic schedule handle.|
 |     `transmit_channel`     |   `uint64`   | Index of the ARINC 708 transmit channel.|
 |       `send_rate`          |     `int`    | Periodic transmission rate.|
 |     `transmit_data`        |`unsigned int`| Data value written into the transmit records.
@@ -314,14 +301,14 @@ This function does not return a value.
 ### Parameter
 |     Parameter    |     Type     | Description |
 |------------------|--------------|-------------|
-|`transmit_channel`|    `uint64`  |
-| `receive_channel`|    `uint64`  |
-|       `data`     |`unsigned int`|
+|`transmit_channel`|    `uint64`  | ARINC 708 transmit channel used for the self-test. |
+| `receive_channel`|    `uint64`  | ARINC 708 receive channel used for the self-test. |
+|       `data`     |`unsigned int`| Data value transmitted during the self-test. |
 
 ### Return Value
 | Error | Description |
-|--------------|-------------|
-|
+|-------|-------------|
+|   `0` | The ARINC 708 self-test completed successfully. |
 
 ### Example
 
@@ -351,20 +338,16 @@ This function doesn't return a value.
 `int DLLEXPORT SetParityBit(unsigned int arinc_word, unsigned int *result, int parity);`
 
 ### Purpose
+Calculates and sets the Most Significant Bit (MSB) parity bit for a 32-bit ARINC 429 word based on the selected parity mode.
 
 ### Parameter
 |     Parameter     |     Type     | Description |
 | ------------------|--------------|-------------|
-|   `arinc_word`    |`unsigned int`| 
-|     ` *result`    |`unsigned int`|
-|     `parity`      |    `int`     |
+|   `arinc_word`    |`unsigned int`| The 32-bit input word (with or without a pre-existing parity bit). |
+|     ` *result`    |`unsigned int`| The expected ARINC word with parity. |
+|     `parity`      |    `int`     | The parity type selection (ARINC_PARITY_EVEN, ODD, or NONE). |
 
 ### Return Value
 | Error | Description |
-|--------------|-------------|
-|
-
-### Example
-
-
-
+|-------|-------------|
+|   `0` | The parity bit was calculated successfully. |

@@ -8,6 +8,9 @@
 ### Header
 `int DLLEXPORT _stdcall RelayInitialize(char *resource_name, ViSession *session, ViBoolean *test_result, char *status_message);`
 
+### Purpose
+  Creates a switch session and initializes the relay module.
+  
 ### Parameter
 |  Parameter |     Type    | Purpose |
 | -----------|-------------|-------------|
@@ -16,10 +19,6 @@
 | `test_result`|    `ViBoolean`    | Indicates success or failure.|
 |`status_message`| `char *` | Returns status messages. |
 
-
-### Purpose
-  Creates a switch session and initializes the relay module.
-
 ### Return Value
 | Error | Description |
 |--------------|-------------|
@@ -27,16 +26,12 @@
 | 1 | Failed to open VISA resource manager. |
 | 2 | Failed to open VISA resource.         |
 
-### Example
-
-
 ## **RelaySet**
 ### Header
 `int DLLEXPORT _stdcall RelaySet(ViSession session, char channel[], int operation);`
 
 ### Purpose
   Changes the state of a specified relay channel.
-
 
 ### Parameters
 |  Parameter |     Type    | Purpose |
@@ -50,11 +45,6 @@
 |--------------|-------------|
 |  0 | Relay state changed successfully.|
 | <0 | NI Switch API error. |
-
-
-
-### Example
-
   
 ## **RelayClose**
 ### Header
@@ -67,15 +57,13 @@ Resets the switch module and closes the active session.
 |  Parameter |     Type    | Purpose |
 | -----------|-------------|-------------|
 |  `session` | `ViSession` | Active NI Switch session to be closed. |
-|  `status_message` |   `char *`  | Output buffer used to store status and error messages generated during the reset and close operations. |
+|  `status_message` |   `char *`  | status message represented by string. |
 
 ### Return Value
 | Error | Description |
 |-------|-------------|
 |  0 | Session closed successfully.|
 | <0 | Failed to reset or close the session. |
-
-### Example
 
 ## **ReplayOpenAll**
 ### Header
@@ -94,8 +82,6 @@ Resets the switch module and closes the active session.
 |-------|-------------|
 |  0 | All relays opened successfully.|
 | <0 | Failed to open all relays. |
-
-### Example
 
 ## **RelaySignalSet**
 ### Header
@@ -120,8 +106,6 @@ Set the relay state for a specified signal in the signal list.
 | -2  | Invalid relay operation.|
 | -3  | Signal was not found.|
 
-### Example
-
 ## **SetNICDiscrete**
 ### Header
 `int DLLEXPORT __stdcall SetNICDiscrete(ViSession *session, ViBoolean *test_result, char *status_message);`
@@ -141,8 +125,6 @@ Configures relay settings for NIC ID.
 |-------|-------------|
 |  0 | NIC discrete configured successfully.|
 | <0 | Failed to configure NIC discrete settings. |
-
-### Example
 
 ## **SetNICDiscreteByData**
 ### Header
@@ -164,8 +146,6 @@ Sets the NIC discrete signals based on the input data.
 |  0 | NIC discrete signals configured successfully.|
 | <0 | Failed to configure NIC discrete signals. |
 
-### Example
-
 ## **SetProcDiscreteByData**
 ### Header
 `int DLLEXPORT __stdcall SetProcDiscreteByData(ViSession *session, uint32_t data, void **signal_list, char *status_message);`
@@ -181,11 +161,8 @@ Configures PROC discrete signals using the input data.
 | `signal_list` | `void **` | List of relay signals. |
 | `status_message` | `char *` | Stores status message.|
 
-
 ### Return Value
 | Error | Description |
 |-------|-------------|
 |  0 | PROC discrete signals configured successfully.|
 | <0 | Failed to configure PROC discrete signals. |
-
-### Example

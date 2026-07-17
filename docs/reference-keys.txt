@@ -293,3 +293,15 @@ purpose-48
 parameters-26
 return-value-48
 example-48
+photometermeasure
+photometerinitialize
+header-49
+purpose-49
+parameters-27
+return-value-49
+example-49
+header-50
+purpose-50
+parameters-28
+return-value-50
+example-50

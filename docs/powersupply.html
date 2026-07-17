@@ -1,35 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>PowerSupply | DU1080 HW4 ATP Function Documentation</title>
-<meta name="author" content="">
-<meta name="generator" content="bookdown 0.47 with bs4_book()">
-<meta property="og:title" content="PowerSupply | DU1080 HW4 ATP Function Documentation">
-<meta property="og:type" content="book">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PowerSupply | DU1080 HW4 ATP Function Documentation">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Sen-0.4.10/font.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
-<link href="libs/Bitter-0.4.10/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>PowerSupply | DU1080 HW4 ATP Function Documentation</title>
+
+    <meta name="author" content="" />
+  
+   
+   <meta name="generator" content="placeholder" />
+  <meta property="og:title" content="PowerSupply | DU1080 HW4 ATP Function Documentation" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PowerSupply | DU1080 HW4 ATP Function Documentation" />
+  
+  
+  
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+    <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+    <link href="libs/Sen-0.4.10/font.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet"/>
+    <link href="libs/Bitter-0.4.10/font.css" rel="stylesheet" />
+    <script src="libs/bs3compat-0.11.0/transition.js"></script>
+    <script src="libs/bs3compat-0.11.0/tabs.js"></script>
+    <script src="libs/bs3compat-0.11.0/bs3compat.js"></script>
+    <link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet" />
+    <script src="libs/bs4_book-1.0.0/bs4_book.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="1.25 PowerSupplyInitialize  1.25.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
-<meta property="og:description" content="1.25 PowerSupplyInitialize  1.25.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
-<meta name="twitter:description" content="1.25 PowerSupplyInitialize  1.25.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
+    
 </head>
+
 <body data-spy="scroll" data-target="#toc">
 
 <div class="container-fluid">
 <div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
@@ -41,45 +65,42 @@
     <div id="main-nav" class="collapse-lg">
       <form role="search">
         <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
+      </form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">PowerSupply</a></li></ul>
+      <nav aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <div id="book-toc"></div>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="#">View book source <i class="fab fa-github"></i></a></li></p>
         </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="powersupply" class="section level1 unnumbered">
-<h1>PowerSupply<a class="anchor" aria-label="anchor" href="#powersupply"><i class="fas fa-link"></i></a>
-</h1>
-<div id="powersupplyinitialize" class="section level2" number="1.25">
-<h2>
-<span class="header-section-number">1.25</span> PowerSupplyInitialize<a class="anchor" aria-label="anchor" href="#powersupplyinitialize"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-24" class="section level3" number="1.25.1">
-<h3>
-<span class="header-section-number">1.25.1</span> Header<a class="anchor" aria-label="anchor" href="#header-24"><i class="fas fa-link"></i></a>
-</h3>
+    </div>
+  </header>
+
+  <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div id="powersupply" class="section level1 unnumbered">
+<h1>PowerSupply</h1>
+<div id="powersupplyinitialize" class="section level2" number="1.27">
+<h2><span class="header-section-number">1.27</span> PowerSupplyInitialize</h2>
+<div id="header-26" class="section level3" number="1.27.1">
+<h3><span class="header-section-number">1.27.1</span> Header</h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char *status_message)</code></pre>
 </div>
-<div id="purpose-24" class="section level3" number="1.25.2">
-<h3>
-<span class="header-section-number">1.25.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-24"><i class="fas fa-link"></i></a>
-</h3>
+<div id="purpose-26" class="section level3" number="1.27.2">
+<h3><span class="header-section-number">1.27.2</span> Purpose</h3>
 <p>Initializes the DC Power Supply</p>
 </div>
-<div id="parameters-3" class="section level3" number="1.25.3">
-<h3>
-<span class="header-section-number">1.25.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-3"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="parameters-5" class="section level3" number="1.27.3">
+<h3><span class="header-section-number">1.27.3</span> Parameters</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Purpose</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>resource_name</code></td>
@@ -107,17 +128,17 @@
 <td>status message</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="return-value-24" class="section level3" number="1.25.4">
-<h3>
-<span class="header-section-number">1.25.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-24"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="return-value-26" class="section level3" number="1.27.4">
+<h3><span class="header-section-number">1.27.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Error Code</th>
 <th>Error</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>0</code></td>
@@ -128,40 +149,32 @@
 <td>Couldn’t send the command</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="example-24" class="section level3" number="1.25.5">
-<h3>
-<span class="header-section-number">1.25.5</span> Example<a class="anchor" aria-label="anchor" href="#example-24"><i class="fas fa-link"></i></a>
-</h3>
+<div id="example-26" class="section level3" number="1.27.5">
+<h3><span class="header-section-number">1.27.5</span> Example</h3>
 </div>
 </div>
-<div id="powersupplyoutputstate" class="section level2" number="1.26">
-<h2>
-<span class="header-section-number">1.26</span> PowerSupplyOutputState<a class="anchor" aria-label="anchor" href="#powersupplyoutputstate"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-25" class="section level3" number="1.26.1">
-<h3>
-<span class="header-section-number">1.26.1</span> Header<a class="anchor" aria-label="anchor" href="#header-25"><i class="fas fa-link"></i></a>
-</h3>
+<div id="powersupplyoutputstate" class="section level2" number="1.28">
+<h2><span class="header-section-number">1.28</span> PowerSupplyOutputState</h2>
+<div id="header-27" class="section level3" number="1.28.1">
+<h3><span class="header-section-number">1.28.1</span> Header</h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyOutputState(ViSession *power_supply_handle, int power_supply_output_state, char *status_message)</code></pre>
 </div>
-<div id="purpose-25" class="section level3" number="1.26.2">
-<h3>
-<span class="header-section-number">1.26.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-25"><i class="fas fa-link"></i></a>
-</h3>
+<div id="purpose-27" class="section level3" number="1.28.2">
+<h3><span class="header-section-number">1.28.2</span> Purpose</h3>
 <p>This function enable/disable the DC Power Supply output based on power_supply_output_state parameter value.</p>
 </div>
-<div id="parameters-4" class="section level3" number="1.26.3">
-<h3>
-<span class="header-section-number">1.26.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-4"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="parameters-6" class="section level3" number="1.28.3">
+<h3><span class="header-section-number">1.28.3</span> Parameters</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Purpose</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td>power_supply_handle</td>
@@ -179,17 +192,17 @@
 <td>error message</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="return-value-25" class="section level3" number="1.26.4">
-<h3>
-<span class="header-section-number">1.26.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-25"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="return-value-27" class="section level3" number="1.28.4">
+<h3><span class="header-section-number">1.28.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Error Code</th>
 <th>Error</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>0</code></td>
@@ -200,40 +213,32 @@
 <td>Error in viWrite function</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="example-25" class="section level3" number="1.26.5">
-<h3>
-<span class="header-section-number">1.26.5</span> Example<a class="anchor" aria-label="anchor" href="#example-25"><i class="fas fa-link"></i></a>
-</h3>
+<div id="example-27" class="section level3" number="1.28.5">
+<h3><span class="header-section-number">1.28.5</span> Example</h3>
 </div>
 </div>
-<div id="powersupplysetvoltagecurrent" class="section level2" number="1.27">
-<h2>
-<span class="header-section-number">1.27</span> PowerSupplySetVoltageCurrent<a class="anchor" aria-label="anchor" href="#powersupplysetvoltagecurrent"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-26" class="section level3" number="1.27.1">
-<h3>
-<span class="header-section-number">1.27.1</span> Header<a class="anchor" aria-label="anchor" href="#header-26"><i class="fas fa-link"></i></a>
-</h3>
+<div id="powersupplysetvoltagecurrent" class="section level2" number="1.29">
+<h2><span class="header-section-number">1.29</span> PowerSupplySetVoltageCurrent</h2>
+<div id="header-28" class="section level3" number="1.29.1">
+<h3><span class="header-section-number">1.29.1</span> Header</h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplySetVoltageCurrent(ViSession *power_supply_handle, double voltage, double current, char *status_message)</code></pre>
 </div>
-<div id="purpose-26" class="section level3" number="1.27.2">
-<h3>
-<span class="header-section-number">1.27.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-26"><i class="fas fa-link"></i></a>
-</h3>
+<div id="purpose-28" class="section level3" number="1.29.2">
+<h3><span class="header-section-number">1.29.2</span> Purpose</h3>
 <p>Configures voltage and current value as supplied in respective parameters.</p>
 </div>
-<div id="parameters-5" class="section level3" number="1.27.3">
-<h3>
-<span class="header-section-number">1.27.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-5"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="parameters-7" class="section level3" number="1.29.3">
+<h3><span class="header-section-number">1.29.3</span> Parameters</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Purpose</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>power_supply_handle</code></td>
@@ -256,17 +261,17 @@
 <td>error status message</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="return-value-26" class="section level3" number="1.27.4">
-<h3>
-<span class="header-section-number">1.27.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-26"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="return-value-28" class="section level3" number="1.29.4">
+<h3><span class="header-section-number">1.29.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Error Code</th>
 <th>Error</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>0</code></td>
@@ -277,45 +282,37 @@
 <td>Error in viWrite function</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="example-26" class="section level3" number="1.27.5">
-<h3>
-<span class="header-section-number">1.27.5</span> Example<a class="anchor" aria-label="anchor" href="#example-26"><i class="fas fa-link"></i></a>
-</h3>
+<div id="example-28" class="section level3" number="1.29.5">
+<h3><span class="header-section-number">1.29.5</span> Example</h3>
 </div>
 </div>
-<div id="powersupplypoweroff" class="section level2" number="1.28">
-<h2>
-<span class="header-section-number">1.28</span> PowerSupplyPowerOff<a class="anchor" aria-label="anchor" href="#powersupplypoweroff"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-27" class="section level3" number="1.28.1">
-<h3>
-<span class="header-section-number">1.28.1</span> Header<a class="anchor" aria-label="anchor" href="#header-27"><i class="fas fa-link"></i></a>
-</h3>
+<div id="powersupplypoweroff" class="section level2" number="1.30">
+<h2><span class="header-section-number">1.30</span> PowerSupplyPowerOff</h2>
+<div id="header-29" class="section level3" number="1.30.1">
+<h3><span class="header-section-number">1.30.1</span> Header</h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyPowerOff(ViSession *power_supply_handle, char *status_message)</code></pre>
 </div>
-<div id="purpose-27" class="section level3" number="1.28.2">
-<h3>
-<span class="header-section-number">1.28.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-27"><i class="fas fa-link"></i></a>
-</h3>
+<div id="purpose-29" class="section level3" number="1.30.2">
+<h3><span class="header-section-number">1.30.2</span> Purpose</h3>
 <p>Disable the supply output and reset handle.</p>
 </div>
-<div id="parameters-6" class="section level3" number="1.28.3">
-<h3>
-<span class="header-section-number">1.28.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
+<div id="parameters-8" class="section level3" number="1.30.3">
+<h3><span class="header-section-number">1.30.3</span> Parameters</h3>
+<table>
 <colgroup>
-<col width="33%">
-<col width="20%">
-<col width="46%">
+<col width="33%" />
+<col width="20%" />
+<col width="46%" />
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Purpose</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>power_supply_handle</code></td>
@@ -328,17 +325,17 @@
 <td>status message of power supply</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="return-value-27" class="section level3" number="1.28.4">
-<h3>
-<span class="header-section-number">1.28.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-27"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="return-value-29" class="section level3" number="1.30.4">
+<h3><span class="header-section-number">1.30.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Error Code</th>
 <th>Error</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>0</code></td>
@@ -349,40 +346,32 @@
 <td>Error in viWrite function</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="example-27" class="section level3" number="1.28.5">
-<h3>
-<span class="header-section-number">1.28.5</span> Example<a class="anchor" aria-label="anchor" href="#example-27"><i class="fas fa-link"></i></a>
-</h3>
+<div id="example-29" class="section level3" number="1.30.5">
+<h3><span class="header-section-number">1.30.5</span> Example</h3>
 </div>
 </div>
-<div id="powersupplyshutdown" class="section level2" number="1.29">
-<h2>
-<span class="header-section-number">1.29</span> PowerSupplyShutDown<a class="anchor" aria-label="anchor" href="#powersupplyshutdown"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-28" class="section level3" number="1.29.1">
-<h3>
-<span class="header-section-number">1.29.1</span> Header<a class="anchor" aria-label="anchor" href="#header-28"><i class="fas fa-link"></i></a>
-</h3>
+<div id="powersupplyshutdown" class="section level2" number="1.31">
+<h2><span class="header-section-number">1.31</span> PowerSupplyShutDown</h2>
+<div id="header-30" class="section level3" number="1.31.1">
+<h3><span class="header-section-number">1.31.1</span> Header</h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyShutDown(ViSession *power_supply_handle, char *status_message)</code></pre>
 </div>
-<div id="purpose-28" class="section level3" number="1.29.2">
-<h3>
-<span class="header-section-number">1.29.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-28"><i class="fas fa-link"></i></a>
-</h3>
+<div id="purpose-30" class="section level3" number="1.31.2">
+<h3><span class="header-section-number">1.31.2</span> Purpose</h3>
 <p>Shuts down the power supply.</p>
 </div>
-<div id="parameters-7" class="section level3" number="1.29.3">
-<h3>
-<span class="header-section-number">1.29.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="parameters-9" class="section level3" number="1.31.3">
+<h3><span class="header-section-number">1.31.3</span> Parameters</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Purpose</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>power_supply_handle</code></td>
@@ -395,17 +384,17 @@
 <td>status message</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="return-value-28" class="section level3" number="1.29.4">
-<h3>
-<span class="header-section-number">1.29.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-28"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="return-value-30" class="section level3" number="1.31.4">
+<h3><span class="header-section-number">1.31.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Error Code</th>
 <th>Error</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>0</code></td>
@@ -416,40 +405,32 @@
 <td>Error in viClose function or viWrite function</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="example-28" class="section level3" number="1.29.5">
-<h3>
-<span class="header-section-number">1.29.5</span> Example<a class="anchor" aria-label="anchor" href="#example-28"><i class="fas fa-link"></i></a>
-</h3>
+<div id="example-30" class="section level3" number="1.31.5">
+<h3><span class="header-section-number">1.31.5</span> Example</h3>
 </div>
 </div>
-<div id="powersupplymeasurevoltage" class="section level2" number="1.30">
-<h2>
-<span class="header-section-number">1.30</span> PowerSupplyMeasureVoltage<a class="anchor" aria-label="anchor" href="#powersupplymeasurevoltage"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-29" class="section level3" number="1.30.1">
-<h3>
-<span class="header-section-number">1.30.1</span> Header<a class="anchor" aria-label="anchor" href="#header-29"><i class="fas fa-link"></i></a>
-</h3>
+<div id="powersupplymeasurevoltage" class="section level2" number="1.32">
+<h2><span class="header-section-number">1.32</span> PowerSupplyMeasureVoltage</h2>
+<div id="header-31" class="section level3" number="1.32.1">
+<h3><span class="header-section-number">1.32.1</span> Header</h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyMeasureVoltage(ViSession *power_supply_handle, double *voltage, char *status_message)</code></pre>
 </div>
-<div id="purpose-29" class="section level3" number="1.30.2">
-<h3>
-<span class="header-section-number">1.30.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-29"><i class="fas fa-link"></i></a>
-</h3>
+<div id="purpose-31" class="section level3" number="1.32.2">
+<h3><span class="header-section-number">1.32.2</span> Purpose</h3>
 <p>Measures the power supply voltage value</p>
 </div>
-<div id="parameters-8" class="section level3" number="1.30.3">
-<h3>
-<span class="header-section-number">1.30.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="parameters-10" class="section level3" number="1.32.3">
+<h3><span class="header-section-number">1.32.3</span> Parameters</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Purpose</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>power_supply_handle</code></td>
@@ -467,17 +448,17 @@
 <td>status message</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
-<div id="return-value-29" class="section level3" number="1.30.4">
-<h3>
-<span class="header-section-number">1.30.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-29"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
+<div id="return-value-31" class="section level3" number="1.32.4">
+<h3><span class="header-section-number">1.32.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
 <th>Error Code</th>
 <th>Error</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><code>0</code></td>
@@ -488,97 +469,173 @@
 <td>Error in viRead/viWrite functions</td>
 </tr>
 </tbody>
-</table></div>
-</div>
-<div id="example-29" class="section level3" number="1.30.5">
-<h3>
-<span class="header-section-number">1.30.5</span> Example<a class="anchor" aria-label="anchor" href="#example-29"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="powersupplymeasurecurrent" class="section level2" number="1.31">
-<h2>
-<span class="header-section-number">1.31</span> PowerSupplyMeasureCurrent<a class="anchor" aria-label="anchor" href="#powersupplymeasurecurrent"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-30" class="section level3" number="1.31.1">
-<h3>
-<span class="header-section-number">1.31.1</span> Header<a class="anchor" aria-label="anchor" href="#header-30"><i class="fas fa-link"></i></a>
-</h3>
-<pre><code>int DLLEXPORT _stdcall PowerSupplyMeasureVoltage(ViSession *power_supply_handle, double *voltage, char *status_message)</code></pre>
-</div>
-<div id="purpose-30" class="section level3" number="1.31.2">
-<h3>
-<span class="header-section-number">1.31.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-30"><i class="fas fa-link"></i></a>
-</h3>
-<p>Measures the power supply voltage value.</p>
-</div>
-<div id="parameters-9" class="section level3" number="1.31.3">
-<h3>
-<span class="header-section-number">1.31.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="return-value-30" class="section level3" number="1.31.4">
-<h3>
-<span class="header-section-number">1.31.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-30"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="example-30" class="section level3" number="1.31.5">
-<h3>
-<span class="header-section-number">1.31.5</span> Example<a class="anchor" aria-label="anchor" href="#example-30"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="powersupplyinitializevoltagecurrent" class="section level2" number="1.32">
-<h2>
-<span class="header-section-number">1.32</span> PowerSupplyInitializeVoltageCurrent<a class="anchor" aria-label="anchor" href="#powersupplyinitializevoltagecurrent"><i class="fas fa-link"></i></a>
-</h2>
-<div id="header-31" class="section level3" number="1.32.1">
-<h3>
-<span class="header-section-number">1.32.1</span> Header<a class="anchor" aria-label="anchor" href="#header-31"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="purpose-31" class="section level3" number="1.32.2">
-<h3>
-<span class="header-section-number">1.32.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-31"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="parameters-10" class="section level3" number="1.32.3">
-<h3>
-<span class="header-section-number">1.32.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-10"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="return-value-31" class="section level3" number="1.32.4">
-<h3>
-<span class="header-section-number">1.32.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-31"><i class="fas fa-link"></i></a>
-</h3>
+</table>
 </div>
 <div id="example-31" class="section level3" number="1.32.5">
-<h3>
-<span class="header-section-number">1.32.5</span> Example<a class="anchor" aria-label="anchor" href="#example-31"><i class="fas fa-link"></i></a>
-</h3>
+<h3><span class="header-section-number">1.32.5</span> Example</h3>
+</div>
+</div>
+<div id="powersupplymeasurecurrent" class="section level2" number="1.33">
+<h2><span class="header-section-number">1.33</span> PowerSupplyMeasureCurrent</h2>
+<div id="header-32" class="section level3" number="1.33.1">
+<h3><span class="header-section-number">1.33.1</span> Header</h3>
+<pre><code>int DLLEXPORT _stdcall PowerSupplyMeasureVoltage(ViSession *power_supply_handle, double *voltage, char *status_message)</code></pre>
+</div>
+<div id="purpose-32" class="section level3" number="1.33.2">
+<h3><span class="header-section-number">1.33.2</span> Purpose</h3>
+<p>Measures the power supply voltage value.</p>
+</div>
+<div id="parameters-11" class="section level3" number="1.33.3">
+<h3><span class="header-section-number">1.33.3</span> Parameters</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>power_supply_handle</code></td>
+<td>ViSession *</td>
+<td>power supply handle</td>
+</tr>
+<tr class="even">
+<td><code>current</code></td>
+<td>double *</td>
+<td>buffer to put current value</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td>char *</td>
+<td>status message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="return-value-32" class="section level3" number="1.33.4">
+<h3><span class="header-section-number">1.33.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Error Code</th>
+<th>Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Success</td>
+</tr>
+<tr class="even">
+<td><code>!=0</code></td>
+<td>Error in viRead or viWrite function</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="example-32" class="section level3" number="1.33.5">
+<h3><span class="header-section-number">1.33.5</span> Example</h3>
+</div>
+</div>
+<div id="powersupplyinitializevoltagecurrent" class="section level2" number="1.34">
+<h2><span class="header-section-number">1.34</span> PowerSupplyInitializeVoltageCurrent</h2>
+<div id="header-33" class="section level3" number="1.34.1">
+<h3><span class="header-section-number">1.34.1</span> Header</h3>
+<pre><code>int DLLEXPORT _stdcall PowerSupplyInitializeVoltageCurrent(char *resource_name, double voltage, double current, ViSession *power_supply_handle, char *status_message)</code></pre>
+</div>
+<div id="purpose-33" class="section level3" number="1.34.2">
+<h3><span class="header-section-number">1.34.2</span> Purpose</h3>
+<p>Initializes and set voltage &amp; current value to the power supply</p>
+</div>
+<div id="parameters-12" class="section level3" number="1.34.3">
+<h3><span class="header-section-number">1.34.3</span> Parameters</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>resource_name</code></td>
+<td>char *</td>
+<td>resource name</td>
+</tr>
+<tr class="even">
+<td><code>voltage</code></td>
+<td>double</td>
+<td>voltage to be initialized</td>
+</tr>
+<tr class="odd">
+<td><code>current</code></td>
+<td>double</td>
+<td>current to be initialized</td>
+</tr>
+<tr class="even">
+<td><code>power_supply_handle</code></td>
+<td>ViSession *</td>
+<td>power supply handle</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td>char *</td>
+<td>status message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="return-value-33" class="section level3" number="1.34.4">
+<h3><span class="header-section-number">1.34.4</span> Return Value</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Error Code</th>
+<th>Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Success</td>
+</tr>
+<tr class="even">
+<td><code>!=0</code></td>
+<td>Error in one of the called functions</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="example-33" class="section level3" number="1.34.5">
+<h3><span class="header-section-number">1.34.5</span> Example</h3>
 
 </div>
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+  </main>
+
+  <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page">
+      <h2>On this page</h2>
       <div id="book-on-this-page"></div>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+          <li><a id="book-source" href="#">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="#">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
-</div>
+      </div>
     </nav>
-</div>
+  </div>
 
 </div>
 </div> <!-- .container -->
 
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+<footer class="bg-primary text-light mt-5">
+  <div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
     <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-17.</p>
@@ -590,5 +647,8 @@
 
 </div></div>
 </footer>
+
+
 </body>
+
 </html>

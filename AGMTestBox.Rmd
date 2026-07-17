@@ -28,8 +28,6 @@ Send a control packet to the AGM Test Box through an RS-232 COM port and reads t
 |       `AGM_ERR_TIMEOUT`    |    No response was received before timeout.     |
 |   `AGM_ERR_READ_FAILURE`   |The response could not be read from the COM port.|
 
-### Example
-
 ## **RIBVideoControl**
 ### Header
 `int DLLEXPORT __stdcall RIBVideoControl(int enable, char *port, int baud, char *status_message)`
@@ -50,8 +48,6 @@ Enables or disables the RIB video output on the AGM Test Box by sending the appr
 |-----------------------------|-----------------------------------------------------------------------|
 |        `AGM_SUCCESS`        |               Video control command completed successfully.           |
 | `AGM_ERR_INVALID_PARAMETER` | The `enable` value is not `0` or `1`, or another parameter is invalid.|
-
-### Example
 
 ## **AGMPowerControl**
 ### Header
@@ -75,5 +71,3 @@ Controls the power state of the AGM Test Box through the WTI Power Plug using an
 |  `1`  |       Invalid power state.           |
 |  `2`  |       Invalid plug number.           |
 |  `3`  |       Invalid IP address.            |
-
-### Example
