@@ -91,66 +91,27 @@
 <h3>
 <span class="header-section-number">1.4.2</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>resource_name</code></td>
-<td><code>char *</code></td>
-<td>Switch resource name.</td>
-</tr>
-<tr class="even">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Returns the switch session.</td>
-</tr>
-<tr class="odd">
-<td><code>test_result</code></td>
-<td><code>ViBoolean</code></td>
-<td>Indicates success or failure.</td>
-</tr>
-<tr class="even">
-<td><code>status_message</code></td>
-<td><code>char *</code></td>
-<td>Returns status messages.</td>
-</tr>
-</tbody>
-</table></div>
+<p><code>resource_name</code></p>
+<p><code>session</code></p>
+<p><code>test_result</code></p>
+<p><code>status_message</code></p>
 </div>
 <div id="purpose-3" class="section level3" number="1.4.3">
 <h3>
 <span class="header-section-number">1.4.3</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
 </h3>
-<p>Creates a switch session and initializes the relay module.</p>
+<p>Initialize the NI switch module and establish a communication session with the switch hardware.</p>
+<p>If initialization succeeds, a valid NI Switch session is returned. Otherwise, an error message is generated and stored in status_message.</p>
 </div>
 <div id="return-value-3" class="section level3" number="1.4.4">
 <h3>
 <span class="header-section-number">1.4.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-3"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>Initialization completed successfully.</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>Failed to open VISA resource manager.</td>
-</tr>
-<tr class="odd">
-<td>2</td>
-<td>Failed to open VISA resource.</td>
-</tr>
-</tbody>
-</table></div>
+<p>Returns an integer status code.</p>
+<ul>
+<li>0 indicates the operation completed successfully.</li>
+<li>A non-zero value indicates a NI Switch or VISA error occurred during initialization.</li>
+</ul>
 </div>
 <div id="example-3" class="section level3" number="1.4.5">
 <h3>
@@ -172,57 +133,37 @@
 <h3>
 <span class="header-section-number">1.5.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
 </h3>
-<p>Changes the state of a specified relay channel.</p>
+<p>Controls the open and closed state of specified relay channel.</p>
+<p>The function first checks whether each requested connection path already exists. It disconnect the existing path when necessary and then establishes the path required for the selected operation.</p>
 </div>
 <div id="parameters-3" class="section level3" number="1.5.3">
 <h3>
 <span class="header-section-number">1.5.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-3"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Active switch session.</td>
-</tr>
-<tr class="even">
-<td><code>channel</code></td>
-<td><code>char[]</code></td>
-<td>Relay channel number.</td>
-</tr>
-<tr class="odd">
-<td><code>operation</code></td>
-<td><code>int</code></td>
-<td>Relay state (NC OR NO).</td>
-</tr>
-</tbody>
-</table></div>
+<ul>
+<li>
+<code>session</code>
+An active NI Switch session established by <code>RelayInitialize</code>.</li>
+<li>
+<code>channel</code>
+The relay channel to control. The function uses this value to identify the corresponding common (<code>com</code>), normally closed (<code>nc</code>), and normally</li>
+<li>
+<code>operation</code>
+Specifies the requested relay state:
+<ul>
+<li><p>‘0’ opens the switch by disconnecting the normally open connection and connecting the normally closed connection.</p></li>
+<li><p>Any non-zero value closes the switch by disconnecting the normally closed connection and connecting the normally open connection.</p></li>
+</ul>
+</li>
+</ul>
 </div>
 <div id="return-value-4" class="section level3" number="1.5.4">
 <h3>
 <span class="header-section-number">1.5.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>Relay state changed successfully.</td>
-</tr>
-<tr class="even">
-<td>&lt;0</td>
-<td>NI Switch API error.</td>
-</tr>
-</tbody>
-</table></div>
+<p>Return 0: errors
+Return -1:
+Return -2:</p>
 </div>
 <div id="example-4" class="section level3" number="1.5.5">
 <h3>
@@ -244,57 +185,16 @@
 <h3>
 <span class="header-section-number">1.6.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
 </h3>
-<p>Resets the switch module and closes the active session.</p>
 </div>
 <div id="parameters-4" class="section level3" number="1.6.3">
 <h3>
 <span class="header-section-number">1.6.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-4"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<colgroup>
-<col width="29%">
-<col width="35%">
-<col width="35%">
-</colgroup>
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Active NI Switch session to be closed.</td>
-</tr>
-<tr class="even">
-<td><code>status_message</code></td>
-<td><code>char *</code></td>
-<td>Output buffer used to store status and error messages generated during the reset and close operations.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-5" class="section level3" number="1.6.4">
 <h3>
 <span class="header-section-number">1.6.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>Session closed successfully.</td>
-</tr>
-<tr class="even">
-<td>&lt;0</td>
-<td>Failed to reset or close the session.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-5" class="section level3" number="1.6.5">
 <h3>
@@ -316,45 +216,16 @@
 <h3>
 <span class="header-section-number">1.7.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
 </h3>
-<p>Disconnects all relay paths on the active switch module.</p>
 </div>
 <div id="parameters-5" class="section level3" number="1.7.3">
 <h3>
 <span class="header-section-number">1.7.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-5"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tbody><tr class="odd">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Active switch session.</td>
-</tr></tbody>
-</table></div>
 </div>
 <div id="return-value-6" class="section level3" number="1.7.4">
 <h3>
 <span class="header-section-number">1.7.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>All relays opened successfully.</td>
-</tr>
-<tr class="even">
-<td>&lt;0</td>
-<td>Failed to open all relays.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-6" class="section level3" number="1.7.5">
 <h3>
@@ -376,70 +247,16 @@
 <h3>
 <span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
 </h3>
-<p>Set the relay state for a specified signal in the signal list.</p>
 </div>
 <div id="parameters-6" class="section level3" number="1.8.3">
 <h3>
 <span class="header-section-number">1.8.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Active switch session.</td>
-</tr>
-<tr class="even">
-<td><code>signal_name</code></td>
-<td><code>char *</code></td>
-<td>Name of the signal to change.</td>
-</tr>
-<tr class="odd">
-<td><code>signal_list</code></td>
-<td><code>void **</code></td>
-<td>List of available relay signals.</td>
-</tr>
-<tr class="even">
-<td><code>status_message</code></td>
-<td><code>char *</code></td>
-<td>Stores the operation status message.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-7" class="section level3" number="1.8.4">
 <h3>
 <span class="header-section-number">1.8.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>Signal state updated successfully.</td>
-</tr>
-<tr class="even">
-<td>-1</td>
-<td>Signal list has not been loaded.</td>
-</tr>
-<tr class="odd">
-<td>-2</td>
-<td>Invalid relay operation.</td>
-</tr>
-<tr class="even">
-<td>-3</td>
-<td>Signal was not found.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-7" class="section level3" number="1.8.5">
 <h3>
@@ -461,57 +278,16 @@
 <h3>
 <span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
 </h3>
-<p>Configures relay settings for NIC ID.</p>
 </div>
 <div id="parameters-7" class="section level3" number="1.9.3">
 <h3>
 <span class="header-section-number">1.9.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Active switch session.</td>
-</tr>
-<tr class="even">
-<td><code>test_result</code></td>
-<td><code>ViBoolean *</code></td>
-<td>Return test status.</td>
-</tr>
-<tr class="odd">
-<td><code>status_message</code></td>
-<td><code>char *</code></td>
-<td>Stores status message.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-8" class="section level3" number="1.9.4">
 <h3>
 <span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>NIC discrete configured successfully.</td>
-</tr>
-<tr class="even">
-<td>&lt;0</td>
-<td>Failed to configure NIC discrete settings.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-8" class="section level3" number="1.9.5">
 <h3>
@@ -533,62 +309,16 @@
 <h3>
 <span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
 </h3>
-<p>Sets the NIC discrete signals based on the input data.</p>
 </div>
 <div id="parameters-8" class="section level3" number="1.10.3">
 <h3>
 <span class="header-section-number">1.10.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<colgroup>
-<col width="29%">
-<col width="35%">
-<col width="35%">
-</colgroup>
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Active switch session.</td>
-</tr>
-<tr class="even">
-<td><code>data</code></td>
-<td><code>char *</code></td>
-<td>Input data used to configure NIC discrete signals.</td>
-</tr>
-<tr class="odd">
-<td><code>status_message</code></td>
-<td><code>char *</code></td>
-<td>Stores status message.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-9" class="section level3" number="1.10.4">
 <h3>
 <span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>NIC discrete signals configured successfully.</td>
-</tr>
-<tr class="even">
-<td>&lt;0</td>
-<td>Failed to configure NIC discrete signals.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-9" class="section level3" number="1.10.5">
 <h3>
@@ -610,62 +340,16 @@
 <h3>
 <span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
 </h3>
-<p>Configures PROC discrete signals using the input data.</p>
 </div>
 <div id="parameters-9" class="section level3" number="1.11.3">
 <h3>
 <span class="header-section-number">1.11.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session</code></td>
-<td><code>ViSession</code></td>
-<td>Active switch session.</td>
-</tr>
-<tr class="even">
-<td><code>data</code></td>
-<td><code>unit32_t *</code></td>
-<td>Input data for PROC DISCRETE SIGNALS.</td>
-</tr>
-<tr class="odd">
-<td><code>signal_list</code></td>
-<td><code>void **</code></td>
-<td>List of relay signals.</td>
-</tr>
-<tr class="even">
-<td><code>status_message</code></td>
-<td><code>char *</code></td>
-<td>Stores status message.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-10" class="section level3" number="1.11.4">
 <h3>
 <span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-10"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>PROC discrete signals configured successfully.</td>
-</tr>
-<tr class="even">
-<td>&lt;0</td>
-<td>Failed to configure PROC discrete signals.</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-10" class="section level3" number="1.11.5">
 <h3>
