@@ -21,9 +21,9 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="A book created with bookdown.">
-<meta property="og:description" content="A book created with bookdown.">
-<meta name="twitter:description" content="A book created with bookdown.">
+<meta name="description" content="1.25 PhotometerMeasure  1.25.1 Header int DLLEXPORT __stdcall PhotometerMeasure(unsigned int com_port, double *luminance, double *chromaticity_x, double *chromaticity_y, double *u_prime, double...">
+<meta property="og:description" content="1.25 PhotometerMeasure  1.25.1 Header int DLLEXPORT __stdcall PhotometerMeasure(unsigned int com_port, double *luminance, double *chromaticity_x, double *chromaticity_y, double *u_prime, double...">
+<meta name="twitter:description" content="1.25 PhotometerMeasure  1.25.1 Header int DLLEXPORT __stdcall PhotometerMeasure(unsigned int com_port, double *luminance, double *chromaticity_x, double *chromaticity_y, double *u_prime, double...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -70,14 +70,174 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="photometer" class="section level1 unnumbered">
 <h1>Photometer<a class="anchor" aria-label="anchor" href="#photometer"><i class="fas fa-link"></i></a>
 </h1>
-
+<div id="photometermeasure" class="section level2" number="1.25">
+<h2>
+<span class="header-section-number">1.25</span> PhotometerMeasure<a class="anchor" aria-label="anchor" href="#photometermeasure"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-24" class="section level3" number="1.25.1">
+<h3>
+<span class="header-section-number">1.25.1</span> Header<a class="anchor" aria-label="anchor" href="#header-24"><i class="fas fa-link"></i></a>
+</h3>
+<pre><code>int DLLEXPORT __stdcall PhotometerMeasure(unsigned int com_port, double *luminance, double *chromaticity_x, double *chromaticity_y, double *u_prime, double *v_prime)</code></pre>
+</div>
+<div id="purpose-24" class="section level3" number="1.25.2">
+<h3>
+<span class="header-section-number">1.25.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-24"><i class="fas fa-link"></i></a>
+</h3>
+<p>Measure luminance, chromaticity x&amp;y, u/v prime and display on photometer.</p>
+</div>
+<div id="parameters-3" class="section level3" number="1.25.3">
+<h3>
+<span class="header-section-number">1.25.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-3"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>com_part</code></td>
+<td>unsigned int</td>
+<td>port to measure from</td>
+</tr>
+<tr class="even">
+<td><code>luminance</code></td>
+<td>double *</td>
+<td>luminance value (Lv)</td>
+</tr>
+<tr class="odd">
+<td><code>chromaticity_x</code></td>
+<td>double *</td>
+<td>chromaticity x coordinate</td>
+</tr>
+<tr class="even">
+<td><code>chromaticity_y</code></td>
+<td>double *</td>
+<td>chromaticity y coordinate</td>
+</tr>
+<tr class="odd">
+<td><code>u_prime</code></td>
+<td>double *</td>
+<td>scaled factor of chromaticity_x</td>
+</tr>
+<tr class="even">
+<td><code>v_prime</code></td>
+<td>double *</td>
+<td>scaled factor of chromaticity_y</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-24" class="section level3" number="1.25.4">
+<h3>
+<span class="header-section-number">1.25.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-24"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error Code</th>
+<th>Error</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Success</td>
+</tr>
+<tr class="even">
+<td><code>!=0</code></td>
+<td>Error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div id="photometerinitialize" class="section level2" number="1.26">
+<h2>
+<span class="header-section-number">1.26</span> PhotometerInitialize<a class="anchor" aria-label="anchor" href="#photometerinitialize"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-25" class="section level3" number="1.26.1">
+<h3>
+<span class="header-section-number">1.26.1</span> Header<a class="anchor" aria-label="anchor" href="#header-25"><i class="fas fa-link"></i></a>
+</h3>
+<pre><code>int DLLEXPORT __stdcall PhotometerInitialize(unsigned int com_port, ViBoolean *test_result, char *status_message)</code></pre>
+</div>
+<div id="purpose-25" class="section level3" number="1.26.2">
+<h3>
+<span class="header-section-number">1.26.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-25"><i class="fas fa-link"></i></a>
+</h3>
+<p>Initialize photometer with parameter values</p>
+</div>
+<div id="parameters-4" class="section level3" number="1.26.3">
+<h3>
+<span class="header-section-number">1.26.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-4"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>com_part</code></td>
+<td>unsigned int</td>
+<td>Communication port</td>
+</tr>
+<tr class="even">
+<td><code>test_result</code></td>
+<td>ViBoolean *</td>
+<td>test result</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td>char *</td>
+<td>status message</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-25" class="section level3" number="1.26.4">
+<h3>
+<span class="header-section-number">1.26.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-25"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error Code</th>
+<th>Error</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><code>0</code></td>
+<td>Success</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="mxfoundation.html">MxFoundation</a></div>
 <div class="next"><a href="pickeringrelay.html">PickeringRelay</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#photometer">Photometer</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#photometer">Photometer</a></li>
+<li>
+<a class="nav-link" href="#photometermeasure"><span class="header-section-number">1.25</span> PhotometerMeasure</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-24"><span class="header-section-number">1.25.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-24"><span class="header-section-number">1.25.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-3"><span class="header-section-number">1.25.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-24"><span class="header-section-number">1.25.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#photometerinitialize"><span class="header-section-number">1.26</span> PhotometerInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-25"><span class="header-section-number">1.26.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-25"><span class="header-section-number">1.26.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-4"><span class="header-section-number">1.26.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-25"><span class="header-section-number">1.26.4</span> Return Value</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

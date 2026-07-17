@@ -29,8 +29,6 @@ Initializes the DC Power Supply
 | `0`        | Success                   |
 | `!=0`      | Couldn't send the command |
 
-### Example
-
 ## PowerSupplyOutputState
 
 ### Header
@@ -57,8 +55,6 @@ This function enable/disable the DC Power Supply output based on power_supply_ou
 |------------|---------------------------|
 | `0`        | Success                   |
 | `!=0`      | Error in viWrite function |
-
-### Example
 
 ## PowerSupplySetVoltageCurrent
 
@@ -88,8 +84,6 @@ Configures voltage and current value as supplied in respective parameters.
 | `0`        | Success                   |
 | `!=0`      | Error in viWrite function |
 
-### Example
-
 ## PowerSupplyPowerOff
 
 ### Header
@@ -116,8 +110,6 @@ Disable the supply output and reset handle.
 | `0`        | Success                   |
 | `!=0`      | Error in viWrite function |
 
-### Example
-
 ## PowerSupplyShutDown
 
 ### Header
@@ -143,8 +135,6 @@ Shuts down the power supply.
 |------------|-----------------------------------------------|
 | `0`        | Success                                       |
 | `!=0`      | Error in viClose function or viWrite function |
-
-### Example
 
 ## PowerSupplyMeasureVoltage
 
@@ -173,8 +163,6 @@ Measures the power supply voltage value
 | `0`        | Success                           |
 | `!=0`      | Error in viRead/viWrite functions |
 
-### Example
-
 ## PowerSupplyMeasureCurrent
 
 ### Header
@@ -201,8 +189,6 @@ Measures the power supply voltage value.
 |------------|-------------------------------------|
 | `0`        | Success                             |
 | `!=0`      | Error in viRead or viWrite function |
-
-### Example
 
 ## PowerSupplyInitializeVoltageCurrent
 
@@ -233,4 +219,3 @@ Initializes and set voltage & current value to the power supply
 | `0`        | Success                              |
 | `!=0`      | Error in one of the called functions |
 
-### Example

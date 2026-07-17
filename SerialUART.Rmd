@@ -31,8 +31,6 @@ Initializes SerialUART communication between two serial ports that transmit data
 | `-1`       | VISA cannot open resource handle manager |
 | `-2`       | VISA cannot open port                    |
 
-### Example
-
 ## UARTSetting
 
 ### Header
@@ -43,7 +41,7 @@ int DLLEXPORT __stdcall UARTSetting(ViSession *session_handle, ViUInt32 baud_rat
 
 ### Purpose
 
-Sets serial port of a VISA session handle
+This function configures the port settings of a serial port given a session handle and baud rate.
 
 ### Parameters
 
@@ -59,8 +57,6 @@ Sets serial port of a VISA session handle
 |-------|----------------------------|
 | `0`   | Success                    |
 | `-1`  | Serial port setting failed |
-
-### Example
 
 ## ReadUART
 
@@ -87,8 +83,6 @@ Read UART data from session handle
 |-------|----------------|
 | `0`   | Success        |
 | `-1`  | VISA read fail |
-
-### Example
 
 ## ReplyUART
 
@@ -144,8 +138,6 @@ Close UART through session handle
 |-------|------------|
 | `0`   | Success    |
 
-### Example
-
 ## SerialVISAInit
 
 ### Header
@@ -156,7 +148,7 @@ int DLLEXPORT __stdcall SerialVISAInit(const char *port_name, int baud_rate, int
 
 ### Purpose
 
-RS-232 and RS-422 send and read verification
+RS-232 and RS-422 send and read verification based on user configured serial settings.
 
 ### Parameters
 
@@ -177,8 +169,6 @@ RS-232 and RS-422 send and read verification
 | `0`   | Success                                     |
 | `-1`  | Could not open VISA resource_handle manager |
 | `-2`  | Could not open VISA port                    |
-
-### Example
 
 ## SerialVISAWrite
 
@@ -206,8 +196,6 @@ Write test_data into serial port
 | `-1`  | RS 232 is not initialized                           |
 | `-3`  | If test_data was not written to the serial properly |
 
-### Example
-
 ## SerialVISARead
 
 ### Header
@@ -234,8 +222,6 @@ Read from receive_buffer
 | `-1`  | Rs232 did not initialize                       |
 | `-2`  | Chceks if the parameters have an invalid value |
 
-### Example
-
 ## SerialVISACleanup
 
 ### Header
@@ -259,5 +245,3 @@ Void
 | `0`        | Success                                   |
 | `-1`       | RS232 port did not initialize             |
 | `-2`       | RS232 resource manager did not initialize |
-
-### Example

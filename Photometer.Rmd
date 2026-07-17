@@ -30,8 +30,6 @@ Measure luminance, chromaticity x&y, u/v prime and display on photometer.
 | `0`        | Success |
 | `!=0`      | Error   |
 
-### Example
-
 ## PhotometerInitialize
 
 ### Header
@@ -57,5 +55,3 @@ Initialize photometer with parameter values
 | Error Code | Error   |
 |------------|---------|
 | `0`        | Success |
-
-### Example
