@@ -1,78 +1,105 @@
 # MxFoundation {-}
 ## **Overview** {-}
+This module is designed to drive ARINC429 and ARINC708 functions in MaxT FM429 Device.
 
-
-//MxFoundation Functions
+```{r}
+# MxFoundation Functions
+```
 
 ## **MxFoundationInitialize**
 ### Header
+`int DLLEXPORT __stdcall MxFoundationInitialize(void);`
+
 ### Purpose
+Initializes the MxFoundation system, obtains the device handle, configures the system time base, and initializes the ARINC 429 and ARINC 708 Channels.
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+This function has no parameters.
 
 ### Return Value
 | Error | Description |
-|--------------|-------------|
-|
+|-----------|-------------|
+| `0` | Initialization completed successfully.|
+| Non-zero | An MxFoundation, device, ARINC 429, OR ARINC 708 initialization operation failed.|
 
 ### Example
+`int32 error = 0;`
+`error = ARINC429ChannelInitialize();`
 
 ## **MxFoundationClose**
 ### Header
+`void DLLEXPORT __stdcall MxFoundationClose(void);`
+
 ### Purpose
+Terminates the MxFoundation system connection disconnects from the server, and resets the initialization status.
+
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+This function has no parameters.
 
 ### Return Value
-| Error | Description |
-|--------------|-------------|
-|
+This function does not return a value.
 
 ### Example
+`MxFoundationClose();`
 
-//ARINC429 Functions
+```{r}
+# ARINC429 Functions
+```
 
 ## **ARINC429ChannelInitialize**
 ### Header
+`int DLLEXPORT __stdcall ARINC429ChannelInitialize(void);`
+
 ### Purpose
+Initializes all ARINC 429 transmit and receive channels on the MxFoundation device. The function obtains the module handles, configures module attributes, retrieves channel handles, and prepares the channels for subsequent ARINC 429 transmit and receive operations.
+
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+This function has no parameter.
 
 ### Return Value
 | Error | Description |
 |--------------|-------------|
-|
+|   `0`   |All ARINC 429 channels were initialized successfully. |
+| Non-zero|One or more ARINC 429 initialization operations failed.|
 
 ### Example
+```c
+error = ARINC429ChannelInitialize();
+```
 
 ## **Arinc429SetupReceiveData**
 ### Header
+`int DLLEXPORT __stdcall Arinc429SetupReceiveData(uint64 receive_channel, BOOL speed, int parity, uint64 count, HMXF_BUFFER *receive_buffer);`
+
 ### Purpose
+Configures an ARINC 429 receive channel by setting the receive speed and parity, allocating the receive buffer, and starting the receive acquisition process.
+
 ### Parameter
 |     Parameter     |     Type    | Description |
 |-------------------|-------------|-------------|
-|  `receive_channel`|  `uint64`   |
-|  `speed`          | `BOOL`      |
-|   `parity`        |   `int`     |
-|     `count`       |   `uint64`  |
-|  `*receive_buffer`|`HMXF_BUFFER`|
+|  `receive_channel`|  `uint64`   | Receive channel index to configure.|
+|  `speed`          | `BOOL`      | Receive speed selection (`0` = 12.5 kbps, non-zero = 100 kbps).|
+|   `parity`        |   `int`     | Parity mode (`0` = even, `1` = odd).|
+|     `count`       |   `uint64`  | Number of ARINC 429 data records to allocate.|
+|  `*receive_buffer`|`HMXF_BUFFER`|Pointer that receives the allocated receive buffer handle.|
 
 ### Return Value
 | Error | Description |
-|--------------|-------------|
-|
+|---------|-------------|
+|   `0`   | Receive channel configured successfully.|
+| Non-Zero| Failed toconfigure the receive channel or allocate/start the receive buffer.|
 
 ### Example
+``` c
+return arinc429_error;
+```
 
 ## **Arinc429SendData**
 ### Header
+`int DLLEXPORT __stdcall Arinc429SendData(HMXF_BUFFER *arinc429_transmit_buffer,  HMXF_SCHED *arinc429_schedule_handle, uint64 transmit_channel, int send_rate, BOOL speed, int parity, unsigned int transmit_data, unsigned int delay);`
+
 ### Purpose
+Configures an ARINC 429 transmit channel and sends data using a periodic transmission schedule.
+
 ### Parameter
 |           Parameter         |      Type    | Description |
 |-----------------------------|--------------|-------------|
@@ -94,6 +121,8 @@
 
 ## **Arinc429ReceiveData**
 ### Header
+`int DLLEXPORT __stdcall Arinc429ReceiveData(uint64 count, HMXF_BUFFER receive_buffer, uint32 *received_data);`
+
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
@@ -111,6 +140,8 @@
 
 ## **Arinc429FreeBuffers**
 ### Header
+`void DLLEXPORT __stdcall Arinc429FreeBuffers(HMXF_BUFFER arinc429_transmit_buffer, HMXF_BUFFER arinc429_receive_buffer, HMXF_SCHED arinc429_schedule_handle);`
+
 ### Purpose
 ### Parameter
 |        Parameter         |     Type    | Description |
@@ -128,6 +159,8 @@
 
 ## **Arinc429SelfTest**
 ### Header
+`int DLLEXPORT __stdcall Arinc429SelfTest(uint64 transmit_channel, uint64 receive_channel, unsigned int data);`
+
 ### Purpose
 ### Parameter
 |     Parameter     |      Type    | Description |
@@ -143,10 +176,14 @@
 
 ### Example
 
-//ARINC708 Functions
+```{r} 
+# ARINC708 Functions 
+```
 
 ## **ARINC708ChannelInitialize**
 ### Header
+`int DLLEXPORT __stdcall ARINC708ChannelInitialize(void);`
+
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
@@ -162,6 +199,8 @@
 
 ## **Arinc708SetupReceiveData**
 ### Header
+`int DLLEXPORT __stdcall Arinc708SetupReceiveData(uint64 receive_channel, HMXF_BUFFER *receive_buffer);`
+
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
@@ -178,6 +217,8 @@
 
 ## **Arinc708SendData**
 ### Header
+`int DLLEXPORT __stdcall Arinc708SendData(HMXF_BUFFER *arinc708_transmit_buffer, HMXF_SCHED *arinc708_schedule_handle, uint64 transmit_channel, int send_rate, unsigned int transmit_data);`
+
 ### Purpose
 ### Parameter
 |        Parameter           |     Type     | Description |
@@ -197,6 +238,8 @@
 
 ## **Arinc708ReceiveData**
 ### Header
+`int DLLEXPORT __stdcall Arinc708ReceiveData(uint64 count, HMXF_BUFFER receive_buffer, uint32 *received_data);`
+
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
@@ -214,6 +257,8 @@
 
 ## **Arinc708FreeBuffers**
 ### Header
+`void DLLEXPORT __stdcall Arinc708FreeBuffers(HMXF_BUFFER arinc708_transmit_buffer, HMXF_BUFFER arinc708_receive_buffer, HMXF_SCHED arinc708_schedule_handle);`
+
 ### Purpose
 ### Parameter
 |         Parameter        |     Type    | Description |
@@ -231,6 +276,8 @@
 
 ## **Arinc708SelfTest**
 ### Header
+`int DLLEXPORT __stdcall Arinc708SelfTest(uint64 transmit_channel, uint64 receive_channel, unsigned int data);`
+
 ### Purpose
 ### Parameter
 |     Parameter    |     Type     | Description |
@@ -248,6 +295,8 @@
 
 ## **Arinc708DisplayDataArray**
 ### Header
+`void Arinc708DisplayDataArray(uint64 record_number, MXF_A708_DATAREC* record);`
+
 ### Purpose
 ### Parameter
 |     Parameter     |     Type    | Description |
@@ -261,10 +310,14 @@
 
 ### Example
 
-//MISC Helper
+```{r}
+# MISC Helper
+```
 
 ## **SetParityBit**
 ### Header
+`int DLLEXPORT SetParityBit(unsigned int arinc_word, unsigned int *result, int parity);`
+
 ### Purpose
 ### Parameter
 |     Parameter     |     Type     | Description |
