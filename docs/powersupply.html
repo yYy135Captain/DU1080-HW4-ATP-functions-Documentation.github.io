@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>PowerSupply | DU1080 HW4 ATP Function Documentation</title>
-<meta name="author" content="">
+<meta name="author" content="Tiffany Jia / Yuxuan Sun">
 <meta name="generator" content="bookdown 0.47 with bs4_book()">
 <meta property="og:title" content="PowerSupply | DU1080 HW4 ATP Function Documentation">
 <meta property="og:type" content="book">
@@ -13,17 +13,16 @@
 <meta name="twitter:title" content="PowerSupply | DU1080 HW4 ATP Function Documentation">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Sen-0.4.10/font.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
-<link href="libs/Bitter-0.4.10/font.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
 <script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="1.43 PowerSupplyInitialize  1.43.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
-<meta property="og:description" content="1.43 PowerSupplyInitialize  1.43.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
-<meta name="twitter:description" content="1.43 PowerSupplyInitialize  1.43.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="1.45 PowerSupplyInitialize  1.45.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
+<meta property="og:description" content="1.45 PowerSupplyInitialize  1.45.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
+<meta name="twitter:description" content="1.45 PowerSupplyInitialize  1.45.1 Header int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -70,25 +69,25 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="powersupply" class="section level1 unnumbered">
 <h1>PowerSupply<a class="anchor" aria-label="anchor" href="#powersupply"><i class="fas fa-link"></i></a>
 </h1>
-<div id="powersupplyinitialize" class="section level2" number="1.43">
+<div id="powersupplyinitialize" class="section level2" number="1.45">
 <h2>
-<span class="header-section-number">1.43</span> PowerSupplyInitialize<a class="anchor" aria-label="anchor" href="#powersupplyinitialize"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45</span> PowerSupplyInitialize<a class="anchor" aria-label="anchor" href="#powersupplyinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-42" class="section level3" number="1.43.1">
+<div id="header-44" class="section level3" number="1.45.1">
 <h3>
-<span class="header-section-number">1.43.1</span> Header<a class="anchor" aria-label="anchor" href="#header-42"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.1</span> Header<a class="anchor" aria-label="anchor" href="#header-44"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char *status_message)</code></pre>
 </div>
-<div id="purpose-42" class="section level3" number="1.43.2">
+<div id="purpose-44" class="section level3" number="1.45.2">
 <h3>
-<span class="header-section-number">1.43.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-42"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-44"><i class="fas fa-link"></i></a>
 </h3>
 <p>Initializes the DC Power Supply</p>
 </div>
-<div id="parameters-5" class="section level3" number="1.43.3">
+<div id="parameters-5" class="section level3" number="1.45.3">
 <h3>
-<span class="header-section-number">1.43.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-5"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -125,9 +124,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-42" class="section level3" number="1.43.4">
+<div id="return-value-44" class="section level3" number="1.45.4">
 <h3>
-<span class="header-section-number">1.43.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-42"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.45.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-44"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -147,25 +146,25 @@
 </table></div>
 </div>
 </div>
-<div id="powersupplyoutputstate" class="section level2" number="1.44">
+<div id="powersupplyoutputstate" class="section level2" number="1.46">
 <h2>
-<span class="header-section-number">1.44</span> PowerSupplyOutputState<a class="anchor" aria-label="anchor" href="#powersupplyoutputstate"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46</span> PowerSupplyOutputState<a class="anchor" aria-label="anchor" href="#powersupplyoutputstate"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-43" class="section level3" number="1.44.1">
+<div id="header-45" class="section level3" number="1.46.1">
 <h3>
-<span class="header-section-number">1.44.1</span> Header<a class="anchor" aria-label="anchor" href="#header-43"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.1</span> Header<a class="anchor" aria-label="anchor" href="#header-45"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyOutputState(ViSession *power_supply_handle, int power_supply_output_state, char *status_message)</code></pre>
 </div>
-<div id="purpose-43" class="section level3" number="1.44.2">
+<div id="purpose-45" class="section level3" number="1.46.2">
 <h3>
-<span class="header-section-number">1.44.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-43"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-45"><i class="fas fa-link"></i></a>
 </h3>
 <p>This function enable/disable the DC Power Supply output based on power_supply_output_state parameter value.</p>
 </div>
-<div id="parameters-6" class="section level3" number="1.44.3">
+<div id="parameters-6" class="section level3" number="1.46.3">
 <h3>
-<span class="header-section-number">1.44.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -192,9 +191,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-43" class="section level3" number="1.44.4">
+<div id="return-value-45" class="section level3" number="1.46.4">
 <h3>
-<span class="header-section-number">1.44.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-43"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.46.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-45"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -214,25 +213,25 @@
 </table></div>
 </div>
 </div>
-<div id="powersupplysetvoltagecurrent" class="section level2" number="1.45">
+<div id="powersupplysetvoltagecurrent" class="section level2" number="1.47">
 <h2>
-<span class="header-section-number">1.45</span> PowerSupplySetVoltageCurrent<a class="anchor" aria-label="anchor" href="#powersupplysetvoltagecurrent"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47</span> PowerSupplySetVoltageCurrent<a class="anchor" aria-label="anchor" href="#powersupplysetvoltagecurrent"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-44" class="section level3" number="1.45.1">
+<div id="header-46" class="section level3" number="1.47.1">
 <h3>
-<span class="header-section-number">1.45.1</span> Header<a class="anchor" aria-label="anchor" href="#header-44"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.1</span> Header<a class="anchor" aria-label="anchor" href="#header-46"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplySetVoltageCurrent(ViSession *power_supply_handle, double voltage, double current, char *status_message)</code></pre>
 </div>
-<div id="purpose-44" class="section level3" number="1.45.2">
+<div id="purpose-46" class="section level3" number="1.47.2">
 <h3>
-<span class="header-section-number">1.45.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-44"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-46"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures voltage and current value as supplied in respective parameters.</p>
 </div>
-<div id="parameters-7" class="section level3" number="1.45.3">
+<div id="parameters-7" class="section level3" number="1.47.3">
 <h3>
-<span class="header-section-number">1.45.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -264,9 +263,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-44" class="section level3" number="1.45.4">
+<div id="return-value-46" class="section level3" number="1.47.4">
 <h3>
-<span class="header-section-number">1.45.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-44"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.47.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-46"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -286,25 +285,25 @@
 </table></div>
 </div>
 </div>
-<div id="powersupplypoweroff" class="section level2" number="1.46">
+<div id="powersupplypoweroff" class="section level2" number="1.48">
 <h2>
-<span class="header-section-number">1.46</span> PowerSupplyPowerOff<a class="anchor" aria-label="anchor" href="#powersupplypoweroff"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48</span> PowerSupplyPowerOff<a class="anchor" aria-label="anchor" href="#powersupplypoweroff"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-45" class="section level3" number="1.46.1">
+<div id="header-47" class="section level3" number="1.48.1">
 <h3>
-<span class="header-section-number">1.46.1</span> Header<a class="anchor" aria-label="anchor" href="#header-45"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.1</span> Header<a class="anchor" aria-label="anchor" href="#header-47"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyPowerOff(ViSession *power_supply_handle, char *status_message)</code></pre>
 </div>
-<div id="purpose-45" class="section level3" number="1.46.2">
+<div id="purpose-47" class="section level3" number="1.48.2">
 <h3>
-<span class="header-section-number">1.46.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-45"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-47"><i class="fas fa-link"></i></a>
 </h3>
 <p>Disable the supply output and reset handle.</p>
 </div>
-<div id="parameters-8" class="section level3" number="1.46.3">
+<div id="parameters-8" class="section level3" number="1.48.3">
 <h3>
-<span class="header-section-number">1.46.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -331,9 +330,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-45" class="section level3" number="1.46.4">
+<div id="return-value-47" class="section level3" number="1.48.4">
 <h3>
-<span class="header-section-number">1.46.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-45"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.48.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-47"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -353,25 +352,25 @@
 </table></div>
 </div>
 </div>
-<div id="powersupplyshutdown" class="section level2" number="1.47">
+<div id="powersupplyshutdown" class="section level2" number="1.49">
 <h2>
-<span class="header-section-number">1.47</span> PowerSupplyShutDown<a class="anchor" aria-label="anchor" href="#powersupplyshutdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49</span> PowerSupplyShutDown<a class="anchor" aria-label="anchor" href="#powersupplyshutdown"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-46" class="section level3" number="1.47.1">
+<div id="header-48" class="section level3" number="1.49.1">
 <h3>
-<span class="header-section-number">1.47.1</span> Header<a class="anchor" aria-label="anchor" href="#header-46"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.1</span> Header<a class="anchor" aria-label="anchor" href="#header-48"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyShutDown(ViSession *power_supply_handle, char *status_message)</code></pre>
 </div>
-<div id="purpose-46" class="section level3" number="1.47.2">
+<div id="purpose-48" class="section level3" number="1.49.2">
 <h3>
-<span class="header-section-number">1.47.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-46"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-48"><i class="fas fa-link"></i></a>
 </h3>
 <p>Shuts down the power supply.</p>
 </div>
-<div id="parameters-9" class="section level3" number="1.47.3">
+<div id="parameters-9" class="section level3" number="1.49.3">
 <h3>
-<span class="header-section-number">1.47.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -393,9 +392,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-46" class="section level3" number="1.47.4">
+<div id="return-value-48" class="section level3" number="1.49.4">
 <h3>
-<span class="header-section-number">1.47.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-46"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.49.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-48"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -415,25 +414,25 @@
 </table></div>
 </div>
 </div>
-<div id="powersupplymeasurevoltage" class="section level2" number="1.48">
+<div id="powersupplymeasurevoltage" class="section level2" number="1.50">
 <h2>
-<span class="header-section-number">1.48</span> PowerSupplyMeasureVoltage<a class="anchor" aria-label="anchor" href="#powersupplymeasurevoltage"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50</span> PowerSupplyMeasureVoltage<a class="anchor" aria-label="anchor" href="#powersupplymeasurevoltage"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-47" class="section level3" number="1.48.1">
+<div id="header-49" class="section level3" number="1.50.1">
 <h3>
-<span class="header-section-number">1.48.1</span> Header<a class="anchor" aria-label="anchor" href="#header-47"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.1</span> Header<a class="anchor" aria-label="anchor" href="#header-49"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyMeasureVoltage(ViSession *power_supply_handle, double *voltage, char *status_message)</code></pre>
 </div>
-<div id="purpose-47" class="section level3" number="1.48.2">
+<div id="purpose-49" class="section level3" number="1.50.2">
 <h3>
-<span class="header-section-number">1.48.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-47"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-49"><i class="fas fa-link"></i></a>
 </h3>
 <p>Measures the power supply voltage value</p>
 </div>
-<div id="parameters-10" class="section level3" number="1.48.3">
+<div id="parameters-10" class="section level3" number="1.50.3">
 <h3>
-<span class="header-section-number">1.48.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-10"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -460,9 +459,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-47" class="section level3" number="1.48.4">
+<div id="return-value-49" class="section level3" number="1.50.4">
 <h3>
-<span class="header-section-number">1.48.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-47"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.50.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-49"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -482,25 +481,25 @@
 </table></div>
 </div>
 </div>
-<div id="powersupplymeasurecurrent" class="section level2" number="1.49">
+<div id="powersupplymeasurecurrent" class="section level2" number="1.51">
 <h2>
-<span class="header-section-number">1.49</span> PowerSupplyMeasureCurrent<a class="anchor" aria-label="anchor" href="#powersupplymeasurecurrent"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51</span> PowerSupplyMeasureCurrent<a class="anchor" aria-label="anchor" href="#powersupplymeasurecurrent"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-48" class="section level3" number="1.49.1">
+<div id="header-50" class="section level3" number="1.51.1">
 <h3>
-<span class="header-section-number">1.49.1</span> Header<a class="anchor" aria-label="anchor" href="#header-48"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.1</span> Header<a class="anchor" aria-label="anchor" href="#header-50"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyMeasureVoltage(ViSession *power_supply_handle, double *voltage, char *status_message)</code></pre>
 </div>
-<div id="purpose-48" class="section level3" number="1.49.2">
+<div id="purpose-50" class="section level3" number="1.51.2">
 <h3>
-<span class="header-section-number">1.49.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-48"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-50"><i class="fas fa-link"></i></a>
 </h3>
 <p>Measures the power supply voltage value.</p>
 </div>
-<div id="parameters-11" class="section level3" number="1.49.3">
+<div id="parameters-11" class="section level3" number="1.51.3">
 <h3>
-<span class="header-section-number">1.49.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-11"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -527,9 +526,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-48" class="section level3" number="1.49.4">
+<div id="return-value-50" class="section level3" number="1.51.4">
 <h3>
-<span class="header-section-number">1.49.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-48"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.51.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-50"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -549,25 +548,25 @@
 </table></div>
 </div>
 </div>
-<div id="powersupplyinitializevoltagecurrent" class="section level2" number="1.50">
+<div id="powersupplyinitializevoltagecurrent" class="section level2" number="1.52">
 <h2>
-<span class="header-section-number">1.50</span> PowerSupplyInitializeVoltageCurrent<a class="anchor" aria-label="anchor" href="#powersupplyinitializevoltagecurrent"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52</span> PowerSupplyInitializeVoltageCurrent<a class="anchor" aria-label="anchor" href="#powersupplyinitializevoltagecurrent"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-49" class="section level3" number="1.50.1">
+<div id="header-51" class="section level3" number="1.52.1">
 <h3>
-<span class="header-section-number">1.50.1</span> Header<a class="anchor" aria-label="anchor" href="#header-49"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.1</span> Header<a class="anchor" aria-label="anchor" href="#header-51"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT _stdcall PowerSupplyInitializeVoltageCurrent(char *resource_name, double voltage, double current, ViSession *power_supply_handle, char *status_message)</code></pre>
 </div>
-<div id="purpose-49" class="section level3" number="1.50.2">
+<div id="purpose-51" class="section level3" number="1.52.2">
 <h3>
-<span class="header-section-number">1.50.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-49"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-51"><i class="fas fa-link"></i></a>
 </h3>
 <p>Initializes and set voltage &amp; current value to the power supply</p>
 </div>
-<div id="parameters-12" class="section level3" number="1.50.3">
+<div id="parameters-12" class="section level3" number="1.52.3">
 <h3>
-<span class="header-section-number">1.50.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-12"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-12"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -604,9 +603,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-49" class="section level3" number="1.50.4">
+<div id="return-value-51" class="section level3" number="1.52.4">
 <h3>
-<span class="header-section-number">1.50.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-49"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.52.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-51"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -635,67 +634,67 @@
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#powersupply">PowerSupply</a></li>
 <li>
-<a class="nav-link" href="#powersupplyinitialize"><span class="header-section-number">1.43</span> PowerSupplyInitialize</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-42"><span class="header-section-number">1.43.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-42"><span class="header-section-number">1.43.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-5"><span class="header-section-number">1.43.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-42"><span class="header-section-number">1.43.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#powersupplyoutputstate"><span class="header-section-number">1.44</span> PowerSupplyOutputState</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-43"><span class="header-section-number">1.44.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-43"><span class="header-section-number">1.44.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-6"><span class="header-section-number">1.44.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-43"><span class="header-section-number">1.44.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#powersupplysetvoltagecurrent"><span class="header-section-number">1.45</span> PowerSupplySetVoltageCurrent</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#powersupplyinitialize"><span class="header-section-number">1.45</span> PowerSupplyInitialize</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-44"><span class="header-section-number">1.45.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-44"><span class="header-section-number">1.45.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-7"><span class="header-section-number">1.45.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#parameters-5"><span class="header-section-number">1.45.3</span> Parameters</a></li>
 <li><a class="nav-link" href="#return-value-44"><span class="header-section-number">1.45.4</span> Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#powersupplypoweroff"><span class="header-section-number">1.46</span> PowerSupplyPowerOff</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#powersupplyoutputstate"><span class="header-section-number">1.46</span> PowerSupplyOutputState</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-45"><span class="header-section-number">1.46.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-45"><span class="header-section-number">1.46.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-8"><span class="header-section-number">1.46.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#parameters-6"><span class="header-section-number">1.46.3</span> Parameters</a></li>
 <li><a class="nav-link" href="#return-value-45"><span class="header-section-number">1.46.4</span> Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#powersupplyshutdown"><span class="header-section-number">1.47</span> PowerSupplyShutDown</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#powersupplysetvoltagecurrent"><span class="header-section-number">1.47</span> PowerSupplySetVoltageCurrent</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-46"><span class="header-section-number">1.47.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-46"><span class="header-section-number">1.47.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-9"><span class="header-section-number">1.47.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#parameters-7"><span class="header-section-number">1.47.3</span> Parameters</a></li>
 <li><a class="nav-link" href="#return-value-46"><span class="header-section-number">1.47.4</span> Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#powersupplymeasurevoltage"><span class="header-section-number">1.48</span> PowerSupplyMeasureVoltage</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#powersupplypoweroff"><span class="header-section-number">1.48</span> PowerSupplyPowerOff</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-47"><span class="header-section-number">1.48.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-47"><span class="header-section-number">1.48.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-10"><span class="header-section-number">1.48.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#parameters-8"><span class="header-section-number">1.48.3</span> Parameters</a></li>
 <li><a class="nav-link" href="#return-value-47"><span class="header-section-number">1.48.4</span> Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#powersupplymeasurecurrent"><span class="header-section-number">1.49</span> PowerSupplyMeasureCurrent</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#powersupplyshutdown"><span class="header-section-number">1.49</span> PowerSupplyShutDown</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-48"><span class="header-section-number">1.49.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-48"><span class="header-section-number">1.49.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-11"><span class="header-section-number">1.49.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#parameters-9"><span class="header-section-number">1.49.3</span> Parameters</a></li>
 <li><a class="nav-link" href="#return-value-48"><span class="header-section-number">1.49.4</span> Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#powersupplyinitializevoltagecurrent"><span class="header-section-number">1.50</span> PowerSupplyInitializeVoltageCurrent</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#powersupplymeasurevoltage"><span class="header-section-number">1.50</span> PowerSupplyMeasureVoltage</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-49"><span class="header-section-number">1.50.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-49"><span class="header-section-number">1.50.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-12"><span class="header-section-number">1.50.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#parameters-10"><span class="header-section-number">1.50.3</span> Parameters</a></li>
 <li><a class="nav-link" href="#return-value-49"><span class="header-section-number">1.50.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#powersupplymeasurecurrent"><span class="header-section-number">1.51</span> PowerSupplyMeasureCurrent</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-50"><span class="header-section-number">1.51.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-50"><span class="header-section-number">1.51.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-11"><span class="header-section-number">1.51.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-50"><span class="header-section-number">1.51.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#powersupplyinitializevoltagecurrent"><span class="header-section-number">1.52</span> PowerSupplyInitializeVoltageCurrent</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-51"><span class="header-section-number">1.52.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-51"><span class="header-section-number">1.52.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-12"><span class="header-section-number">1.52.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-51"><span class="header-section-number">1.52.4</span> Return Value</a></li>
 </ul>
 </li>
 </ul>
@@ -714,7 +713,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-20.</p>
+    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by Tiffany Jia / Yuxuan Sun. It was last built on 2026-07-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

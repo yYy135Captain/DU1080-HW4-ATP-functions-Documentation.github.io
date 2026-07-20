@@ -1,0 +1,103 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+
+/* =============================================================================
+  DU1080 HW4 ATP Function Documentation Custom Stylesheet
+  
+  Purpose:
+  - Customize the Bookdown bs4_book website
+  - Define reusable colors, typography, spacing, and components
+  - Prepare the website for future Figma, Javascript, and React work
+  =========================================================================== */
+
+/* =============================================================================
+  1. DESIGN TOKENS
+  ------------------------------------------------------------------------------
+  This section stores Main design value used throughout the website.
+  =========================================================================== */
+  
+:root {
+  /*------Brand Colors------*/
+  /* Main website accent color. */
+  --color-primary: #ff4400;
+  
+  /* Used when hovering over primary-color links or buttons. */
+  --color-primary-hover: #cc3600;
+  
+  
+  
+  /*------Light mode Colors------*/
+  /* Main website accent color.*/
+  --color-page-bg: #ffffff;
+  
+  /* Background for cards, panels, tables, and content areas. */
+  --color-surface: #ffffff;
+  
+  /* Secondary background used for table headers and subtle areas. */
+  --color-surface-secondary: #f5f6f8;
+  
+  /* Main body text color. */
+  --color-text: #1e1e25;
+  
+  /* Muted text, descriptions, captions, and secondary labels. */
+  --color-text-muted: #667085;
+  
+  /* Borders around tables, cards, code blocks, and inputs. */
+  --color-border: #dfe3e8;
+  
+  /* Background used for code blocks. */
+  --color-code-bg: #f5f6f8;
+  
+  /*------Typography------*/
+  /* BOFY FONT: used for paragraph, tables, and descriptions. */
+  --font-body: "Aptos", Arial, sans-serif;
+  
+  /* HEADING FONT: used for h1, h2, h3, navigation titles, and major section labels.*/
+  --font-heading: "Aptos Display", Arial, sans-serif;
+  
+  /* CODE FONT */
+  --font-code: "DM Mono", Consolas, "Courier New", monospace;
+  
+  
+  /*------Font Sizes------*/
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.35rem;
+  --font-size-h4: 1.1rem;
+  
+  /*------Spacing------*/
+  /* Used for consistent margins and padding.*/
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
