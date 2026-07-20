@@ -47,23 +47,23 @@ pre code {
   --color-surface: #ffffff;
   
   /* Secondary background used for table headers and subtle areas. */
-  --color-surface-secondary: #f5f6f8;
+  --color-surface-secondary: #D5D7D8;
   
   /* Main body text color. */
   --color-text: #1e1e25;
   
   /* Muted text, descriptions, captions, and secondary labels. */
-  --color-text-muted: #667085;
+  --color-text-muted: #384348;
   
   /* Borders around tables, cards, code blocks, and inputs. */
-  --color-border: #dfe3e8;
+  --color-border: #A9ADAE;
   
   /* Background used for code blocks. */
-  --color-code-bg: #f5f6f8;
+  --color-code-bg: #D5D7D8;
   
   /*------Typography------*/
   /* BOFY FONT: used for paragraph, tables, and descriptions. */
-  --font-body: "Aptos", Arial, sans-serif;
+  --font-body: Aptos, Arial, sans-serif;
   
   /* HEADING FONT: used for h1, h2, h3, navigation titles, and major section labels.*/
   --font-heading: "Aptos Display", Arial, sans-serif;
