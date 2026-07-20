@@ -21,9 +21,9 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="Overview   1.4 DAQInitialize  1.4.1 Header int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);  1.4.2 Purpose   1.4.3 Parameter Parameter Type...">
-<meta property="og:description" content="Overview   1.4 DAQInitialize  1.4.1 Header int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);  1.4.2 Purpose   1.4.3 Parameter Parameter Type...">
-<meta name="twitter:description" content="Overview   1.4 DAQInitialize  1.4.1 Header int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);  1.4.2 Purpose   1.4.3 Parameter Parameter Type...">
+<meta name="description" content="Overview The DAQ module provides interfaces for controlling the NI DATA Acquisition device used by the DU1080 HW4 ATP software. It supports analog voltage output, counter pulse generation, pulse...">
+<meta property="og:description" content="Overview The DAQ module provides interfaces for controlling the NI DATA Acquisition device used by the DU1080 HW4 ATP software. It supports analog voltage output, counter pulse generation, pulse...">
+<meta name="twitter:description" content="Overview The DAQ module provides interfaces for controlling the NI DATA Acquisition device used by the DU1080 HW4 ATP software. It supports analog voltage output, counter pulse generation, pulse...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -44,7 +44,23 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">DAQ</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="active" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="" href="mux.html">MUX</a></li>
+<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="" href="relay.html">Relay</a></li>
+<li><a class="" href="serialuart.html">SerialUART</a></li>
+</ul>
 
         <div class="book-extra">
           
@@ -58,6 +74,8 @@
 <h2>
 <strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-1"><i class="fas fa-link"></i></a>
 </h2>
+<p>The <strong>DAQ</strong> module provides interfaces for controlling the NI DATA Acquisition device used by the DU1080 HW4 ATP software.
+It supports analog voltage output, counter pulse generation, pulse configuration, task control, and device cleanup through the NI-DAQmx library.</p>
 </div>
 <div id="daqinitialize" class="section level2" number="1.4">
 <h2>
@@ -73,6 +91,7 @@
 <h3>
 <span class="header-section-number">1.4.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
 </h3>
+<p>Initializes a DAQ analog output channel and writes an initial voltage value to verify that the DAQ Resource is available.</p>
 </div>
 <div id="parameter" class="section level3" number="1.4.3">
 <h3>
@@ -84,11 +103,23 @@
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>resource_name</code></td>
+<td><code>char *</code></td>
+<td>DAQ card resource name.</td>
+</tr>
+<tr class="even">
+<td><code>test_result</code></td>
+<td><code>ViBoolean *</code></td>
+<td>Stores the initialization result.</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-3" class="section level3" number="1.4.4">
@@ -101,8 +132,8 @@
 <th>Description</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td></td>
-<td></td>
+<td><code>0</code></td>
+<td>DAQ initialization completed successfully.</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -121,22 +152,40 @@
 <h3>
 <span class="header-section-number">1.5.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
 </h3>
+<p>Sets the specified analog output voltage on a DAQ channel.</p>
 </div>
 <div id="parameter-1" class="section level3" number="1.5.3">
 <h3>
 <span class="header-section-number">1.5.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-1"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="40%">
+<col width="29%">
+<col width="29%">
+</colgroup>
 <thead><tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>resource_name</code></td>
+<td><code>char *</code></td>
+<td>DAQ card resource name.</td>
+</tr>
+<tr class="even">
+<td><code>voltage_level</code></td>
+<td><code>float64</code></td>
+<td>voltage level to be set represented as float64.</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-4" class="section level3" number="1.5.4">
@@ -149,8 +198,8 @@
 <th>Description</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td></td>
-<td></td>
+<td><code>0</code></td>
+<td>Voltage was set successfully.</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -169,6 +218,7 @@
 <h3>
 <span class="header-section-number">1.6.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
 </h3>
+<p>Closes the DAQ analog output channel by writing a zero voltage to the specified resource and releasing the associated DAQ task.</p>
 </div>
 <div id="parameter-2" class="section level3" number="1.6.3">
 <h3>
@@ -180,11 +230,18 @@
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>resource_name</code></td>
+<td><code>char *</code></td>
+<td>DAQ card resource name.</td>
+</tr>
+<tr class="even">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-5" class="section level3" number="1.6.4">
@@ -197,8 +254,8 @@
 <th>Description</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td></td>
-<td></td>
+<td><code>0</code></td>
+<td>DAQ task was closed successfully.</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -217,6 +274,7 @@
 <h3>
 <span class="header-section-number">1.7.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
 </h3>
+<p>Generates a finite counter pulse using the specified initial delay, ON time, and OFF time.</p>
 </div>
 <div id="parameter-3" class="section level3" number="1.7.3">
 <h3>
@@ -228,11 +286,33 @@
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>resource_name</code></td>
+<td><code>char *</code></td>
+<td>DAQ card resource name.</td>
+</tr>
+<tr class="even">
+<td><code>intial_delay</code></td>
+<td><code>float</code></td>
+<td>Delay before pulse generation.</td>
+</tr>
+<tr class="odd">
+<td><code>on</code></td>
+<td><code>float</code></td>
+<td>Pulse ON duration in seconds.</td>
+</tr>
+<tr class="even">
+<td><code>off</code></td>
+<td><code>float</code></td>
+<td>Pulse OFF duration in seconds.</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-6" class="section level3" number="1.7.4">
@@ -245,8 +325,8 @@
 <th>Description</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td></td>
-<td></td>
+<td><code>0</code></td>
+<td>Pulse generation completed successfully.</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -265,22 +345,60 @@
 <h3>
 <span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
 </h3>
+<p>Creates and starts a continuous counter pulse output task using the specified frequency, duty cycle, initial delay, and output idle state. The created task handle is returned so that pulse generation can continue until it is explicitly stopped.</p>
 </div>
 <div id="parameter-4" class="section level3" number="1.8.3">
 <h3>
 <span class="header-section-number">1.8.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-4"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="40%">
+<col width="31%">
+<col width="28%">
+</colgroup>
 <thead><tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>resource_name</code></td>
+<td><code>char *</code></td>
+<td>DAQ card resource name.</td>
+</tr>
+<tr class="even">
+<td><code>daq_handle</code></td>
+<td><code>TaskHandle *</code></td>
+<td>Returns the created DAQ task handle.</td>
+</tr>
+<tr class="odd">
+<td><code>intial_delay</code></td>
+<td><code>float</code></td>
+<td>Delay before pulse generation starts (seconds).</td>
+</tr>
+<tr class="even">
+<td><code>initial_state</code></td>
+<td><code>int</code></td>
+<td>Initial output state.</td>
+</tr>
+<tr class="odd">
+<td><code>frequency</code></td>
+<td><code>float</code></td>
+<td>Pulse frequency in Hz.</td>
+</tr>
+<tr class="even">
+<td><code>duty_cycle</code></td>
+<td><code>float</code></td>
+<td>width of the pulse / pulse period (seconds/pulse) in float.</td>
+</tr>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-7" class="section level3" number="1.8.4">
@@ -293,8 +411,8 @@
 <th>Description</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td></td>
-<td></td>
+<td><code>0</code></td>
+<td>Counter pulse task created successfully.</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -313,6 +431,7 @@
 <h3>
 <span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
 </h3>
+<p>Clear off pulse count for daq_task_handle.</p>
 </div>
 <div id="parameter-5" class="section level3" number="1.9.3">
 <h3>
@@ -324,11 +443,18 @@
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
+<tbody>
+<tr class="odd">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>DAQ card resource name.</td>
+</tr>
+<tr class="even">
+<td><code>dap_task_handle</code></td>
+<td><code>TaskHandle</code></td>
 <td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-8" class="section level3" number="1.9.4">
@@ -341,8 +467,8 @@
 <th>Description</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td></td>
-<td></td>
+<td><code>0</code></td>
+<td>Task stopped and cleared successfully.</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -361,22 +487,45 @@
 <h3>
 <span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
 </h3>
+<p>Generates a counter output with a specified default idle state after an initial delay.</p>
 </div>
 <div id="parameter-6" class="section level3" number="1.10.3">
 <h3>
 <span class="header-section-number">1.10.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="40%">
+<col width="29%">
+<col width="29%">
+</colgroup>
 <thead><tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>resource_name</code></td>
+<td><code>char *</code></td>
+<td>DAQ card resource name.</td>
+</tr>
+<tr class="even">
+<td><code>initial_delay</code></td>
+<td><code>float</code></td>
+<td>Delay before the counter output is generated (seconds).</td>
+</tr>
+<tr class="odd">
+<td><code>default_state</code></td>
+<td><code>int</code></td>
+<td>Specifies the default output state. <code>0</code> = Low (Powered On), <code>1</code> = High (Powered Off).</td>
+</tr>
+<tr class="even">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores status or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-9" class="section level3" number="1.10.4">
@@ -389,19 +538,78 @@
 <th>Description</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td></td>
-<td></td>
+<td><code>0</code></td>
+<td>Counter state generated successfully.</td>
 </tr></tbody>
 </table></div>
 </div>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="chroma2238.html">Chroma2238</a></div>
+<div class="next"><a href="dmm.html">DMM</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#daq">DAQ</a></li>
+<li><a class="nav-link" href="#overview-1">Overview</a></li>
+<li>
+<a class="nav-link" href="#daqinitialize"><span class="header-section-number">1.4</span> DAQInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-3"><span class="header-section-number">1.4.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-3"><span class="header-section-number">1.4.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter"><span class="header-section-number">1.4.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-3"><span class="header-section-number">1.4.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#daqsetvoltage"><span class="header-section-number">1.5</span> DAQSetVoltage</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-4"><span class="header-section-number">1.5.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-4"><span class="header-section-number">1.5.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-1"><span class="header-section-number">1.5.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-4"><span class="header-section-number">1.5.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#daqclose"><span class="header-section-number">1.6</span> DAQClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-5"><span class="header-section-number">1.6.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-5"><span class="header-section-number">1.6.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-2"><span class="header-section-number">1.6.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-5"><span class="header-section-number">1.6.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#daqcounterpulsegeneration"><span class="header-section-number">1.7</span> DAQCounterPulseGeneration</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-6"><span class="header-section-number">1.7.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-6"><span class="header-section-number">1.7.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-3"><span class="header-section-number">1.7.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-6"><span class="header-section-number">1.7.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#daqcounterpulseconfigstart"><span class="header-section-number">1.8</span> DAQCounterPulseConfigStart</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-7"><span class="header-section-number">1.8.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-7"><span class="header-section-number">1.8.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-4"><span class="header-section-number">1.8.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-7"><span class="header-section-number">1.8.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#daqcountpulseclearoff"><span class="header-section-number">1.9</span> DAQCountPulseClearOff</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-8"><span class="header-section-number">1.9.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-8"><span class="header-section-number">1.9.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-5"><span class="header-section-number">1.9.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-8"><span class="header-section-number">1.9.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#daqcounterstategeneration"><span class="header-section-number">1.10</span> DAQCounterStateGeneration</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-9"><span class="header-section-number">1.10.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-9"><span class="header-section-number">1.10.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-6"><span class="header-section-number">1.10.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-9"><span class="header-section-number">1.10.4</span> Return Value</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
@@ -417,7 +625,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-17.</p>
+    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

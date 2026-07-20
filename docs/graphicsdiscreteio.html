@@ -76,25 +76,25 @@
 </h2>
 <p>The <strong>GraphicsDiscreteIO</strong> module provides interfaces for reading and testing discrete input signals used by the DU1080 HW4 ATP software. It supports discrete status checks through external interfaces, including graphic-related discrete inputs, NIC discrete inputs, and digital signal logic verification.</p>
 </div>
-<div id="graphicsexternaldsistatus" class="section level2" number="1.5">
+<div id="graphicsexternaldsistatus" class="section level2" number="1.11">
 <h2>
-<span class="header-section-number">1.5</span> <strong>GraphicsExternalDSIStatus</strong><a class="anchor" aria-label="anchor" href="#graphicsexternaldsistatus"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.11</span> <strong>GraphicsExternalDSIStatus</strong><a class="anchor" aria-label="anchor" href="#graphicsexternaldsistatus"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-4" class="section level3" number="1.5.1">
+<div id="header-10" class="section level3" number="1.11.1">
 <h3>
-<span class="header-section-number">1.5.1</span> Header<a class="anchor" aria-label="anchor" href="#header-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.11.1</span> Header<a class="anchor" aria-label="anchor" href="#header-10"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall GraphicsExternalDSIStatus(int telnet_handle, char *pin, int *data_out);</code></p>
 </div>
-<div id="purpose-4" class="section level3" number="1.5.2">
+<div id="purpose-10" class="section level3" number="1.11.2">
 <h3>
-<span class="header-section-number">1.5.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
 </h3>
 <p>Read the status of a graphics processor discrete input using the specified virtual pin name.</p>
 </div>
-<div id="parameter-1" class="section level3" number="1.5.3">
+<div id="parameter-7" class="section level3" number="1.11.3">
 <h3>
-<span class="header-section-number">1.5.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.11.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-7"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -121,9 +121,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-4" class="section level3" number="1.5.4">
+<div id="return-value-10" class="section level3" number="1.11.4">
 <h3>
-<span class="header-section-number">1.5.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-10"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -137,25 +137,25 @@
 </table></div>
 </div>
 </div>
-<div id="dsianalogresetlogictest" class="section level2" number="1.6">
+<div id="dsianalogresetlogictest" class="section level2" number="1.12">
 <h2>
-<span class="header-section-number">1.6</span> <strong>DSIAnalogResetLogicTest</strong><a class="anchor" aria-label="anchor" href="#dsianalogresetlogictest"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.12</span> <strong>DSIAnalogResetLogicTest</strong><a class="anchor" aria-label="anchor" href="#dsianalogresetlogictest"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-5" class="section level3" number="1.6.1">
+<div id="header-11" class="section level3" number="1.12.1">
 <h3>
-<span class="header-section-number">1.6.1</span> Header<a class="anchor" aria-label="anchor" href="#header-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.12.1</span> Header<a class="anchor" aria-label="anchor" href="#header-11"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>int DLLEXPORT __stdcall DSIAnalogResetLogicTest(int telnet_handle, ViBoolean *bit_pass, char *status_message);</code></pre>
 </div>
-<div id="purpose-5" class="section level3" number="1.6.2">
+<div id="purpose-11" class="section level3" number="1.12.2">
 <h3>
-<span class="header-section-number">1.6.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.12.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-11"><i class="fas fa-link"></i></a>
 </h3>
 <p>Performs the analog reset logic verification by controlling the AV reset signal and checking the corresponding discrete input and output states.</p>
 </div>
-<div id="parameter-2" class="section level3" number="1.6.3">
+<div id="parameter-8" class="section level3" number="1.12.3">
 <h3>
-<span class="header-section-number">1.6.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.12.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-8"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -182,9 +182,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-5" class="section level3" number="1.6.4">
+<div id="return-value-11" class="section level3" number="1.12.4">
 <h3>
-<span class="header-section-number">1.6.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-11"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -198,25 +198,25 @@
 </table></div>
 </div>
 </div>
-<div id="nicexternaldsistatus" class="section level2" number="1.7">
+<div id="nicexternaldsistatus" class="section level2" number="1.13">
 <h2>
-<span class="header-section-number">1.7</span> <strong>NICExternalDSIStatus</strong><a class="anchor" aria-label="anchor" href="#nicexternaldsistatus"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13</span> <strong>NICExternalDSIStatus</strong><a class="anchor" aria-label="anchor" href="#nicexternaldsistatus"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-6" class="section level3" number="1.7.1">
+<div id="header-12" class="section level3" number="1.13.1">
 <h3>
-<span class="header-section-number">1.7.1</span> Header<a class="anchor" aria-label="anchor" href="#header-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.1</span> Header<a class="anchor" aria-label="anchor" href="#header-12"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall NICExternalDSIStatus(int telnet_handle, char *pin, int *data_out);</code></p>
 </div>
-<div id="purpose-6" class="section level3" number="1.7.2">
+<div id="purpose-12" class="section level3" number="1.13.2">
 <h3>
-<span class="header-section-number">1.7.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-12"><i class="fas fa-link"></i></a>
 </h3>
 <p>Reads the status of a NIC discrete input using the specified virtual pin name.</p>
 </div>
-<div id="parameter-3" class="section level3" number="1.7.3">
+<div id="parameter-9" class="section level3" number="1.13.3">
 <h3>
-<span class="header-section-number">1.7.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-9"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -243,9 +243,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-6" class="section level3" number="1.7.4">
+<div id="return-value-12" class="section level3" number="1.13.4">
 <h3>
-<span class="header-section-number">1.7.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.13.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-12"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -259,25 +259,25 @@
 </table></div>
 </div>
 </div>
-<div id="pinstringtopinindex" class="section level2" number="1.8">
+<div id="pinstringtopinindex" class="section level2" number="1.14">
 <h2>
-<span class="header-section-number">1.8</span> <strong>PinStringToPinIndex</strong><a class="anchor" aria-label="anchor" href="#pinstringtopinindex"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14</span> <strong>PinStringToPinIndex</strong><a class="anchor" aria-label="anchor" href="#pinstringtopinindex"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-7" class="section level3" number="1.8.1">
+<div id="header-13" class="section level3" number="1.14.1">
 <h3>
-<span class="header-section-number">1.8.1</span> Header<a class="anchor" aria-label="anchor" href="#header-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14.1</span> Header<a class="anchor" aria-label="anchor" href="#header-13"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int PinStringToPinIndex(char *pin_string);</code></p>
 </div>
-<div id="purpose-7" class="section level3" number="1.8.2">
+<div id="purpose-13" class="section level3" number="1.14.2">
 <h3>
-<span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-13"><i class="fas fa-link"></i></a>
 </h3>
 <p>Converts a virtual pin name into its corresponding pin index. The function validates the input string format before extracting the numeric portion.</p>
 </div>
-<div id="parameter-4" class="section level3" number="1.8.3">
+<div id="parameter-10" class="section level3" number="1.14.3">
 <h3>
-<span class="header-section-number">1.8.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-10"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -292,9 +292,9 @@
 </tr></tbody>
 </table></div>
 </div>
-<div id="return-value-7" class="section level3" number="1.8.4">
+<div id="return-value-13" class="section level3" number="1.14.4">
 <h3>
-<span class="header-section-number">1.8.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.14.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-13"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -334,25 +334,25 @@
 </table></div>
 </div>
 </div>
-<div id="retrievedata" class="section level2" number="1.9">
+<div id="retrievedata" class="section level2" number="1.15">
 <h2>
-<span class="header-section-number">1.9</span> <strong>RetrieveData</strong><a class="anchor" aria-label="anchor" href="#retrievedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15</span> <strong>RetrieveData</strong><a class="anchor" aria-label="anchor" href="#retrievedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-8" class="section level3" number="1.9.1">
+<div id="header-14" class="section level3" number="1.15.1">
 <h3>
-<span class="header-section-number">1.9.1</span> Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.1</span> Header<a class="anchor" aria-label="anchor" href="#header-14"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int RetrieveData(int data, int bit_mask, int *final_data);</code></p>
 </div>
-<div id="purpose-8" class="section level3" number="1.9.2">
+<div id="purpose-14" class="section level3" number="1.15.2">
 <h3>
-<span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-14"><i class="fas fa-link"></i></a>
 </h3>
 <p>Applies a bit mask to the input data and converts the result into a binary discrete value.</p>
 </div>
-<div id="parameter-5" class="section level3" number="1.9.3">
+<div id="parameter-11" class="section level3" number="1.15.3">
 <h3>
-<span class="header-section-number">1.9.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-11"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -384,9 +384,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-8" class="section level3" number="1.9.4">
+<div id="return-value-14" class="section level3" number="1.15.4">
 <h3>
-<span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.15.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-14"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -400,25 +400,25 @@
 </table></div>
 </div>
 </div>
-<div id="writediscretedata" class="section level2" number="1.10">
+<div id="writediscretedata" class="section level2" number="1.16">
 <h2>
-<span class="header-section-number">1.10</span> <strong>WriteDiscreteData</strong><a class="anchor" aria-label="anchor" href="#writediscretedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16</span> <strong>WriteDiscreteData</strong><a class="anchor" aria-label="anchor" href="#writediscretedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-9" class="section level3" number="1.10.1">
+<div id="header-15" class="section level3" number="1.16.1">
 <h3>
-<span class="header-section-number">1.10.1</span> Header<a class="anchor" aria-label="anchor" href="#header-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.1</span> Header<a class="anchor" aria-label="anchor" href="#header-15"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int WriteDiscreteData(int telnet_handle, unsigned long address, uint32_t data, unsigned int bit_mask);</code></p>
 </div>
-<div id="purpose-9" class="section level3" number="1.10.2">
+<div id="purpose-15" class="section level3" number="1.16.2">
 <h3>
-<span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-15"><i class="fas fa-link"></i></a>
 </h3>
 <p>Writes bit-masked discrete data to the specified device register and verifies that the write operation completed successfully.</p>
 </div>
-<div id="parameter-6" class="section level3" number="1.10.3">
+<div id="parameter-12" class="section level3" number="1.16.3">
 <h3>
-<span class="header-section-number">1.10.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-12"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -455,9 +455,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-9" class="section level3" number="1.10.4">
+<div id="return-value-15" class="section level3" number="1.16.4">
 <h3>
-<span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.16.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-15"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -477,25 +477,25 @@
 </table></div>
 </div>
 </div>
-<div id="readdiscretedata" class="section level2" number="1.11">
+<div id="readdiscretedata" class="section level2" number="1.17">
 <h2>
-<span class="header-section-number">1.11</span> <strong>ReadDiscreteData</strong><a class="anchor" aria-label="anchor" href="#readdiscretedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17</span> <strong>ReadDiscreteData</strong><a class="anchor" aria-label="anchor" href="#readdiscretedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-10" class="section level3" number="1.11.1">
+<div id="header-16" class="section level3" number="1.17.1">
 <h3>
-<span class="header-section-number">1.11.1</span> Header<a class="anchor" aria-label="anchor" href="#header-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.1</span> Header<a class="anchor" aria-label="anchor" href="#header-16"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int ReadDiscreteData(int telnet_handle, unsigned long address, uint32_t *final_data, int bit_mask);</code></p>
 </div>
-<div id="purpose-10" class="section level3" number="1.11.2">
+<div id="purpose-16" class="section level3" number="1.17.2">
 <h3>
-<span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-16"><i class="fas fa-link"></i></a>
 </h3>
 <p>Reads discrete register data from the specified address and applies a bit mask before returning the result.</p>
 </div>
-<div id="parameter-7" class="section level3" number="1.11.3">
+<div id="parameter-13" class="section level3" number="1.17.3">
 <h3>
-<span class="header-section-number">1.11.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-13"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -527,9 +527,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-10" class="section level3" number="1.11.4">
+<div id="return-value-16" class="section level3" number="1.17.4">
 <h3>
-<span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.17.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-16"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -549,25 +549,25 @@
 </table></div>
 </div>
 </div>
-<div id="readnicdiscretedata" class="section level2" number="1.12">
+<div id="readnicdiscretedata" class="section level2" number="1.18">
 <h2>
-<span class="header-section-number">1.12</span> <strong>ReadNICDiscreteData</strong><a class="anchor" aria-label="anchor" href="#readnicdiscretedata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18</span> <strong>ReadNICDiscreteData</strong><a class="anchor" aria-label="anchor" href="#readnicdiscretedata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-11" class="section level3" number="1.12.1">
+<div id="header-17" class="section level3" number="1.18.1">
 <h3>
-<span class="header-section-number">1.12.1</span> Header<a class="anchor" aria-label="anchor" href="#header-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.1</span> Header<a class="anchor" aria-label="anchor" href="#header-17"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int ReadNICDiscreteData(int telnet_handle, unsigned long address, uint32_t *final_data, int bit_mask);</code></p>
 </div>
-<div id="purpose-11" class="section level3" number="1.12.2">
+<div id="purpose-17" class="section level3" number="1.18.2">
 <h3>
-<span class="header-section-number">1.12.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-17"><i class="fas fa-link"></i></a>
 </h3>
 <p>Reads discrete data from the Network Interface Card (NIC), extracts the returned register value from the HBIT response, applies the specified bit mask, and stores the masked result.</p>
 </div>
-<div id="parameter-8" class="section level3" number="1.12.3">
+<div id="parameter-14" class="section level3" number="1.18.3">
 <h3>
-<span class="header-section-number">1.12.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-14"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -604,9 +604,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-11" class="section level3" number="1.12.4">
+<div id="return-value-17" class="section level3" number="1.18.4">
 <h3>
-<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-11"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.18.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-17"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -636,55 +636,7 @@
 <li><a class="nav-link" href="#graphicsdiscreteio">GraphicsDiscreteIO</a></li>
 <li><a class="nav-link" href="#overview-2">Overview</a></li>
 <li>
-<a class="nav-link" href="#graphicsexternaldsistatus"><span class="header-section-number">1.5</span> GraphicsExternalDSIStatus</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-4"><span class="header-section-number">1.5.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-4"><span class="header-section-number">1.5.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-1"><span class="header-section-number">1.5.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-4"><span class="header-section-number">1.5.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#dsianalogresetlogictest"><span class="header-section-number">1.6</span> DSIAnalogResetLogicTest</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-5"><span class="header-section-number">1.6.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-5"><span class="header-section-number">1.6.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-2"><span class="header-section-number">1.6.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-5"><span class="header-section-number">1.6.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#nicexternaldsistatus"><span class="header-section-number">1.7</span> NICExternalDSIStatus</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-6"><span class="header-section-number">1.7.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-6"><span class="header-section-number">1.7.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-3"><span class="header-section-number">1.7.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-6"><span class="header-section-number">1.7.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#pinstringtopinindex"><span class="header-section-number">1.8</span> PinStringToPinIndex</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-7"><span class="header-section-number">1.8.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-7"><span class="header-section-number">1.8.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-4"><span class="header-section-number">1.8.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-7"><span class="header-section-number">1.8.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#retrievedata"><span class="header-section-number">1.9</span> RetrieveData</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-8"><span class="header-section-number">1.9.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-8"><span class="header-section-number">1.9.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-5"><span class="header-section-number">1.9.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-8"><span class="header-section-number">1.9.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#writediscretedata"><span class="header-section-number">1.10</span> WriteDiscreteData</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-9"><span class="header-section-number">1.10.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-9"><span class="header-section-number">1.10.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-6"><span class="header-section-number">1.10.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-9"><span class="header-section-number">1.10.4</span> Return Value</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#readdiscretedata"><span class="header-section-number">1.11</span> ReadDiscreteData</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#graphicsexternaldsistatus"><span class="header-section-number">1.11</span> GraphicsExternalDSIStatus</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-10"><span class="header-section-number">1.11.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-10"><span class="header-section-number">1.11.2</span> Purpose</a></li>
 <li><a class="nav-link" href="#parameter-7"><span class="header-section-number">1.11.3</span> Parameter</a></li>
@@ -692,11 +644,59 @@
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#readnicdiscretedata"><span class="header-section-number">1.12</span> ReadNICDiscreteData</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#dsianalogresetlogictest"><span class="header-section-number">1.12</span> DSIAnalogResetLogicTest</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-11"><span class="header-section-number">1.12.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-11"><span class="header-section-number">1.12.2</span> Purpose</a></li>
 <li><a class="nav-link" href="#parameter-8"><span class="header-section-number">1.12.3</span> Parameter</a></li>
 <li><a class="nav-link" href="#return-value-11"><span class="header-section-number">1.12.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#nicexternaldsistatus"><span class="header-section-number">1.13</span> NICExternalDSIStatus</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-12"><span class="header-section-number">1.13.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-12"><span class="header-section-number">1.13.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-9"><span class="header-section-number">1.13.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-12"><span class="header-section-number">1.13.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#pinstringtopinindex"><span class="header-section-number">1.14</span> PinStringToPinIndex</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-13"><span class="header-section-number">1.14.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-13"><span class="header-section-number">1.14.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-10"><span class="header-section-number">1.14.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-13"><span class="header-section-number">1.14.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#retrievedata"><span class="header-section-number">1.15</span> RetrieveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-14"><span class="header-section-number">1.15.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-14"><span class="header-section-number">1.15.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-11"><span class="header-section-number">1.15.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-14"><span class="header-section-number">1.15.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#writediscretedata"><span class="header-section-number">1.16</span> WriteDiscreteData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-15"><span class="header-section-number">1.16.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-15"><span class="header-section-number">1.16.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-12"><span class="header-section-number">1.16.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-15"><span class="header-section-number">1.16.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#readdiscretedata"><span class="header-section-number">1.17</span> ReadDiscreteData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-16"><span class="header-section-number">1.17.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-16"><span class="header-section-number">1.17.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-13"><span class="header-section-number">1.17.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-16"><span class="header-section-number">1.17.4</span> Return Value</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#readnicdiscretedata"><span class="header-section-number">1.18</span> ReadNICDiscreteData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-17"><span class="header-section-number">1.18.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-17"><span class="header-section-number">1.18.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-14"><span class="header-section-number">1.18.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-17"><span class="header-section-number">1.18.4</span> Return Value</a></li>
 </ul>
 </li>
 </ul>
@@ -715,7 +715,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-17.</p>
+    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
