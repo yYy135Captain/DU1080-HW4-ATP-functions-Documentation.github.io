@@ -3,6 +3,9 @@ book_filename: "DU1080-HW4-Documentation"
 output_dir: "docs"
 
 rmd_files:
+  - "index.Rmd"
+  
+  # Instrument
   - "AGMTestBox.Rmd"
   - "Chroma2238.Rmd"
   - "DAQ.Rmd"
@@ -17,5 +20,29 @@ rmd_files:
   - "PowerSupply.Rmd"
   - "Relay.Rmd"
   - "SerialUART.Rmd"
+  
+  # DEOSProgramming
+  - "DEOSProgramming.Rmd"
+  
+  # DU-1080-4
+  - "DU-1080-4.Rmd"
+  
+  # HBIT_Com_DU-1080-4
+  - "HBIT_Com_DU-1080-4.Rmd"
+  
+  # MRAMDataProgramming
+  - "MRAMDataProgramming.Rmd"
+  
+  # SignalManager
+  - "SignalManager.Rmd"
+  
+  # StationConfig
+  - "StationConfig.Rmd"
+  
+  # TestEngine
+  - "TestEngine.Rmd"
+  
+  # Utilities_DU-1080-4
+  - "Utilities_DU-1080-4.Rmd"
   
 delete_merged_file: true
