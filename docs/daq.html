@@ -92,25 +92,22 @@
 <p>The <strong>DAQ</strong> module provides interfaces for controlling the NI DATA Acquisition device used by the DU1080 HW4 ATP software.
 It supports analog voltage output, counter pulse generation, pulse configuration, task control, and device cleanup through the NI-DAQmx library.</p>
 </div>
-<div id="daqinitialize" class="section level2" number="1.4">
+<div id="daqinitialize" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.4</span> <strong>DAQInitialize</strong><a class="anchor" aria-label="anchor" href="#daqinitialize"><i class="fas fa-link"></i></a>
+<strong>DAQInitialize</strong><a class="anchor" aria-label="anchor" href="#daqinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-3" class="section level3" number="1.4.1">
-<h3>
-<span class="header-section-number">1.4.1</span> Header<a class="anchor" aria-label="anchor" href="#header-3"><i class="fas fa-link"></i></a>
+<div id="header-3" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-3"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall DAQInitialize(char *resource_name, ViBoolean *test_result, char *status_message);</code></p>
 </div>
-<div id="purpose-3" class="section level3" number="1.4.2">
-<h3>
-<span class="header-section-number">1.4.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
+<div id="purpose-3" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-3"><i class="fas fa-link"></i></a>
 </h3>
 <p>Initializes a DAQ analog output channel and writes an initial voltage value to verify that the DAQ Resource is available.</p>
 </div>
-<div id="parameter" class="section level3" number="1.4.3">
-<h3>
-<span class="header-section-number">1.4.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter"><i class="fas fa-link"></i></a>
+<div id="parameter" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -137,9 +134,8 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </tbody>
 </table></div>
 </div>
-<div id="return-value-3" class="section level3" number="1.4.4">
-<h3>
-<span class="header-section-number">1.4.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-3"><i class="fas fa-link"></i></a>
+<div id="return-value-3" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-3"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -153,25 +149,22 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </table></div>
 </div>
 </div>
-<div id="daqsetvoltage" class="section level2" number="1.5">
+<div id="daqsetvoltage" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.5</span> <strong>DAQSetVoltage</strong><a class="anchor" aria-label="anchor" href="#daqsetvoltage"><i class="fas fa-link"></i></a>
+<strong>DAQSetVoltage</strong><a class="anchor" aria-label="anchor" href="#daqsetvoltage"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-4" class="section level3" number="1.5.1">
-<h3>
-<span class="header-section-number">1.5.1</span> Header<a class="anchor" aria-label="anchor" href="#header-4"><i class="fas fa-link"></i></a>
+<div id="header-4" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-4"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall DAQSetVoltage(char *resource_name, float64 voltage_level, char *status_message);</code></p>
 </div>
-<div id="purpose-4" class="section level3" number="1.5.2">
-<h3>
-<span class="header-section-number">1.5.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
+<div id="purpose-4" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-4"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sets the specified analog output voltage on a DAQ channel.</p>
 </div>
-<div id="parameter-1" class="section level3" number="1.5.3">
-<h3>
-<span class="header-section-number">1.5.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-1"><i class="fas fa-link"></i></a>
+<div id="parameter-1" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-1"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -203,9 +196,8 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </tbody>
 </table></div>
 </div>
-<div id="return-value-4" class="section level3" number="1.5.4">
-<h3>
-<span class="header-section-number">1.5.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
+<div id="return-value-4" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-4"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -219,25 +211,22 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </table></div>
 </div>
 </div>
-<div id="daqclose" class="section level2" number="1.6">
+<div id="daqclose" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.6</span> <strong>DAQClose</strong><a class="anchor" aria-label="anchor" href="#daqclose"><i class="fas fa-link"></i></a>
+<strong>DAQClose</strong><a class="anchor" aria-label="anchor" href="#daqclose"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-5" class="section level3" number="1.6.1">
-<h3>
-<span class="header-section-number">1.6.1</span> Header<a class="anchor" aria-label="anchor" href="#header-5"><i class="fas fa-link"></i></a>
+<div id="header-5" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-5"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall DAQClose(char *resource_name, char *status_message);</code></p>
 </div>
-<div id="purpose-5" class="section level3" number="1.6.2">
-<h3>
-<span class="header-section-number">1.6.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
+<div id="purpose-5" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-5"><i class="fas fa-link"></i></a>
 </h3>
 <p>Closes the DAQ analog output channel by writing a zero voltage to the specified resource and releasing the associated DAQ task.</p>
 </div>
-<div id="parameter-2" class="section level3" number="1.6.3">
-<h3>
-<span class="header-section-number">1.6.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-2"><i class="fas fa-link"></i></a>
+<div id="parameter-2" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-2"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -259,9 +248,8 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </tbody>
 </table></div>
 </div>
-<div id="return-value-5" class="section level3" number="1.6.4">
-<h3>
-<span class="header-section-number">1.6.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
+<div id="return-value-5" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-5"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -275,25 +263,22 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </table></div>
 </div>
 </div>
-<div id="daqcounterpulsegeneration" class="section level2" number="1.7">
+<div id="daqcounterpulsegeneration" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.7</span> <strong>DAQCounterPulseGeneration</strong><a class="anchor" aria-label="anchor" href="#daqcounterpulsegeneration"><i class="fas fa-link"></i></a>
+<strong>DAQCounterPulseGeneration</strong><a class="anchor" aria-label="anchor" href="#daqcounterpulsegeneration"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-6" class="section level3" number="1.7.1">
-<h3>
-<span class="header-section-number">1.7.1</span> Header<a class="anchor" aria-label="anchor" href="#header-6"><i class="fas fa-link"></i></a>
+<div id="header-6" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-6"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall DAQCounterPulseGeneration(char *resource_name, float intial_delay, float on, float off, char *status_message);</code></p>
 </div>
-<div id="purpose-6" class="section level3" number="1.7.2">
-<h3>
-<span class="header-section-number">1.7.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
+<div id="purpose-6" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-6"><i class="fas fa-link"></i></a>
 </h3>
 <p>Generates a finite counter pulse using the specified initial delay, ON time, and OFF time.</p>
 </div>
-<div id="parameter-3" class="section level3" number="1.7.3">
-<h3>
-<span class="header-section-number">1.7.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-3"><i class="fas fa-link"></i></a>
+<div id="parameter-3" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-3"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -330,9 +315,8 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </tbody>
 </table></div>
 </div>
-<div id="return-value-6" class="section level3" number="1.7.4">
-<h3>
-<span class="header-section-number">1.7.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
+<div id="return-value-6" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-6"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -346,25 +330,22 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </table></div>
 </div>
 </div>
-<div id="daqcounterpulseconfigstart" class="section level2" number="1.8">
+<div id="daqcounterpulseconfigstart" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.8</span> <strong>DAQCounterPulseConfigStart</strong><a class="anchor" aria-label="anchor" href="#daqcounterpulseconfigstart"><i class="fas fa-link"></i></a>
+<strong>DAQCounterPulseConfigStart</strong><a class="anchor" aria-label="anchor" href="#daqcounterpulseconfigstart"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-7" class="section level3" number="1.8.1">
-<h3>
-<span class="header-section-number">1.8.1</span> Header<a class="anchor" aria-label="anchor" href="#header-7"><i class="fas fa-link"></i></a>
+<div id="header-7" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-7"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall DAQCounterPulseConfigStart(char *resource_name, TaskHandle *daq_handle, float initial_delay, int initial_state, float frequency, float duty_cycle, char *status_message);</code></p>
 </div>
-<div id="purpose-7" class="section level3" number="1.8.2">
-<h3>
-<span class="header-section-number">1.8.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
+<div id="purpose-7" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-7"><i class="fas fa-link"></i></a>
 </h3>
 <p>Creates and starts a continuous counter pulse output task using the specified frequency, duty cycle, initial delay, and output idle state. The created task handle is returned so that pulse generation can continue until it is explicitly stopped.</p>
 </div>
-<div id="parameter-4" class="section level3" number="1.8.3">
-<h3>
-<span class="header-section-number">1.8.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-4"><i class="fas fa-link"></i></a>
+<div id="parameter-4" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-4"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -416,9 +397,8 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </tbody>
 </table></div>
 </div>
-<div id="return-value-7" class="section level3" number="1.8.4">
-<h3>
-<span class="header-section-number">1.8.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
+<div id="return-value-7" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-7"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -432,25 +412,22 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </table></div>
 </div>
 </div>
-<div id="daqcountpulseclearoff" class="section level2" number="1.9">
+<div id="daqcountpulseclearoff" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.9</span> <strong>DAQCountPulseClearOff</strong><a class="anchor" aria-label="anchor" href="#daqcountpulseclearoff"><i class="fas fa-link"></i></a>
+<strong>DAQCountPulseClearOff</strong><a class="anchor" aria-label="anchor" href="#daqcountpulseclearoff"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-8" class="section level3" number="1.9.1">
-<h3>
-<span class="header-section-number">1.9.1</span> Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
+<div id="header-8" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall DAQCountPulseClearOff(TaskHandle daq_task_handle, char *status_message);</code></p>
 </div>
-<div id="purpose-8" class="section level3" number="1.9.2">
-<h3>
-<span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
+<div id="purpose-8" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
 </h3>
 <p>Clear off pulse count for daq_task_handle.</p>
 </div>
-<div id="parameter-5" class="section level3" number="1.9.3">
-<h3>
-<span class="header-section-number">1.9.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-5"><i class="fas fa-link"></i></a>
+<div id="parameter-5" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-5"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -472,9 +449,8 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </tbody>
 </table></div>
 </div>
-<div id="return-value-8" class="section level3" number="1.9.4">
-<h3>
-<span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
+<div id="return-value-8" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -488,25 +464,22 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </table></div>
 </div>
 </div>
-<div id="daqcounterstategeneration" class="section level2" number="1.10">
+<div id="daqcounterstategeneration" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.10</span> <strong>DAQCounterStateGeneration</strong><a class="anchor" aria-label="anchor" href="#daqcounterstategeneration"><i class="fas fa-link"></i></a>
+<strong>DAQCounterStateGeneration</strong><a class="anchor" aria-label="anchor" href="#daqcounterstategeneration"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-9" class="section level3" number="1.10.1">
-<h3>
-<span class="header-section-number">1.10.1</span> Header<a class="anchor" aria-label="anchor" href="#header-9"><i class="fas fa-link"></i></a>
+<div id="header-9" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-9"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall DAQCounterStateGeneration(char *resource_name, float intial_delay, int default_state, char *status_message);</code></p>
 </div>
-<div id="purpose-9" class="section level3" number="1.10.2">
-<h3>
-<span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
+<div id="purpose-9" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
 </h3>
 <p>Generates a counter output with a specified default idle state after an initial delay.</p>
 </div>
-<div id="parameter-6" class="section level3" number="1.10.3">
-<h3>
-<span class="header-section-number">1.10.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
+<div id="parameter-6" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -543,9 +516,8 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 </tbody>
 </table></div>
 </div>
-<div id="return-value-9" class="section level3" number="1.10.4">
-<h3>
-<span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
+<div id="return-value-9" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -569,59 +541,59 @@ It supports analog voltage output, counter pulse generation, pulse configuration
 <li><a class="nav-link" href="#daq">DAQ</a></li>
 <li><a class="nav-link" href="#overview-1">Overview</a></li>
 <li>
-<a class="nav-link" href="#daqinitialize"><span class="header-section-number">1.4</span> DAQInitialize</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-3"><span class="header-section-number">1.4.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-3"><span class="header-section-number">1.4.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter"><span class="header-section-number">1.4.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-3"><span class="header-section-number">1.4.4</span> Return Value</a></li>
+<a class="nav-link" href="#daqinitialize">DAQInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-3">Header</a></li>
+<li><a class="nav-link" href="#purpose-3">Purpose</a></li>
+<li><a class="nav-link" href="#parameter">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-3">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#daqsetvoltage"><span class="header-section-number">1.5</span> DAQSetVoltage</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-4"><span class="header-section-number">1.5.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-4"><span class="header-section-number">1.5.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-1"><span class="header-section-number">1.5.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-4"><span class="header-section-number">1.5.4</span> Return Value</a></li>
+<a class="nav-link" href="#daqsetvoltage">DAQSetVoltage</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-4">Header</a></li>
+<li><a class="nav-link" href="#purpose-4">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-1">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-4">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#daqclose"><span class="header-section-number">1.6</span> DAQClose</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-5"><span class="header-section-number">1.6.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-5"><span class="header-section-number">1.6.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-2"><span class="header-section-number">1.6.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-5"><span class="header-section-number">1.6.4</span> Return Value</a></li>
+<a class="nav-link" href="#daqclose">DAQClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-5">Header</a></li>
+<li><a class="nav-link" href="#purpose-5">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-2">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-5">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#daqcounterpulsegeneration"><span class="header-section-number">1.7</span> DAQCounterPulseGeneration</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-6"><span class="header-section-number">1.7.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-6"><span class="header-section-number">1.7.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-3"><span class="header-section-number">1.7.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-6"><span class="header-section-number">1.7.4</span> Return Value</a></li>
+<a class="nav-link" href="#daqcounterpulsegeneration">DAQCounterPulseGeneration</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-6">Header</a></li>
+<li><a class="nav-link" href="#purpose-6">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-3">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-6">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#daqcounterpulseconfigstart"><span class="header-section-number">1.8</span> DAQCounterPulseConfigStart</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-7"><span class="header-section-number">1.8.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-7"><span class="header-section-number">1.8.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-4"><span class="header-section-number">1.8.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-7"><span class="header-section-number">1.8.4</span> Return Value</a></li>
+<a class="nav-link" href="#daqcounterpulseconfigstart">DAQCounterPulseConfigStart</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-7">Header</a></li>
+<li><a class="nav-link" href="#purpose-7">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-4">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-7">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#daqcountpulseclearoff"><span class="header-section-number">1.9</span> DAQCountPulseClearOff</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-8"><span class="header-section-number">1.9.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-8"><span class="header-section-number">1.9.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-5"><span class="header-section-number">1.9.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-8"><span class="header-section-number">1.9.4</span> Return Value</a></li>
+<a class="nav-link" href="#daqcountpulseclearoff">DAQCountPulseClearOff</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-8">Header</a></li>
+<li><a class="nav-link" href="#purpose-8">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-5">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-8">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#daqcounterstategeneration"><span class="header-section-number">1.10</span> DAQCounterStateGeneration</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-9"><span class="header-section-number">1.10.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-9"><span class="header-section-number">1.10.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-6"><span class="header-section-number">1.10.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-9"><span class="header-section-number">1.10.4</span> Return Value</a></li>
+<a class="nav-link" href="#daqcounterstategeneration">DAQCounterStateGeneration</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-9">Header</a></li>
+<li><a class="nav-link" href="#purpose-9">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-6">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-9">Return Value</a></li>
 </ul>
 </li>
 </ul>

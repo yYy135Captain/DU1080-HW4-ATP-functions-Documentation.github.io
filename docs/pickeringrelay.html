@@ -91,25 +91,22 @@
 </h2>
 <p>The <strong>PickeringRealy</strong> module provides an interface for controlling a Pickering relay card through the Pickering PXI driver library. It supports initializing the relay card, changing the state of individual relay channels, and closing the relay session after operations are complete. The module uses the Pickering PXI driver to communicate wih the relay hardware.</p>
 </div>
-<div id="pickeringrelayinitialize" class="section level2" number="1.42">
+<div id="pickeringrelayinitialize" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.42</span> <strong>PickeringRelayInitialize</strong><a class="anchor" aria-label="anchor" href="#pickeringrelayinitialize"><i class="fas fa-link"></i></a>
+<strong>PickeringRelayInitialize</strong><a class="anchor" aria-label="anchor" href="#pickeringrelayinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-41" class="section level3" number="1.42.1">
-<h3>
-<span class="header-section-number">1.42.1</span> Header<a class="anchor" aria-label="anchor" href="#header-41"><i class="fas fa-link"></i></a>
+<div id="header-41" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-41"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT  __stdcall PickeringRelayInitialize(char *visa_resource_name, ViSession *session_handle, ViBoolean *test_result, char *status_message);</code></p>
 </div>
-<div id="purpose-41" class="section level3" number="1.42.2">
-<h3>
-<span class="header-section-number">1.42.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-41"><i class="fas fa-link"></i></a>
+<div id="purpose-41" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-41"><i class="fas fa-link"></i></a>
 </h3>
 <p>Initializes the Pickering relay card and creates a communication session using the specified VISA resource.</p>
 </div>
-<div id="parameter-34" class="section level3" number="1.42.3">
-<h3>
-<span class="header-section-number">1.42.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-34"><i class="fas fa-link"></i></a>
+<div id="parameter-34" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-34"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -146,9 +143,8 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-41" class="section level3" number="1.42.4">
-<h3>
-<span class="header-section-number">1.42.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-41"><i class="fas fa-link"></i></a>
+<div id="return-value-41" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-41"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -162,24 +158,22 @@
 </table></div>
 </div>
 </div>
-<div id="pickeringrelayaction" class="section level2" number="1.43">
+<div id="pickeringrelayaction" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.43</span> <strong>PickeringRelayAction</strong><a class="anchor" aria-label="anchor" href="#pickeringrelayaction"><i class="fas fa-link"></i></a>
+<strong>PickeringRelayAction</strong><a class="anchor" aria-label="anchor" href="#pickeringrelayaction"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-42" class="section level3" number="1.43.1">
-<h3>
-<span class="header-section-number">1.43.1</span> Header<a class="anchor" aria-label="anchor" href="#header-42"><i class="fas fa-link"></i></a>
+<div id="header-42" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-42"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT  __stdcall PickeringRelayAction(ViSession *session_handle, char *action, int channel_id, char *status_message);</code></p>
 </div>
-<div id="purpose-42" class="section level3" number="1.43.2">
-<h3>
-<span class="header-section-number">1.43.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-42"><i class="fas fa-link"></i></a>
+<div id="purpose-42" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-42"><i class="fas fa-link"></i></a>
 </h3>
+<p>Sets channel state based on specified action.</p>
 </div>
-<div id="parameter-35" class="section level3" number="1.43.3">
-<h3>
-<span class="header-section-number">1.43.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-35"><i class="fas fa-link"></i></a>
+<div id="parameter-35" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-35"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -216,9 +210,8 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-42" class="section level3" number="1.43.4">
-<h3>
-<span class="header-section-number">1.43.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-42"><i class="fas fa-link"></i></a>
+<div id="return-value-42" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-42"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -238,25 +231,22 @@
 </table></div>
 </div>
 </div>
-<div id="pickeringrelayclose" class="section level2" number="1.44">
+<div id="pickeringrelayclose" class="section level2 unnumbered">
 <h2>
-<span class="header-section-number">1.44</span> <strong>PickeringRelayClose</strong><a class="anchor" aria-label="anchor" href="#pickeringrelayclose"><i class="fas fa-link"></i></a>
+<strong>PickeringRelayClose</strong><a class="anchor" aria-label="anchor" href="#pickeringrelayclose"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-43" class="section level3" number="1.44.1">
-<h3>
-<span class="header-section-number">1.44.1</span> Header<a class="anchor" aria-label="anchor" href="#header-43"><i class="fas fa-link"></i></a>
+<div id="header-43" class="section level3 unnumbered">
+<h3>Header<a class="anchor" aria-label="anchor" href="#header-43"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT  __stdcall PickeringRelayClose(ViSession *session_handle, char *status_message);</code></p>
 </div>
-<div id="purpose-43" class="section level3" number="1.44.2">
-<h3>
-<span class="header-section-number">1.44.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-43"><i class="fas fa-link"></i></a>
+<div id="purpose-43" class="section level3 unnumbered">
+<h3>Purpose<a class="anchor" aria-label="anchor" href="#purpose-43"><i class="fas fa-link"></i></a>
 </h3>
 <p>Closes the Pickering relay session and releases the associated hardware resources.</p>
 </div>
-<div id="parameter-36" class="section level3" number="1.44.3">
-<h3>
-<span class="header-section-number">1.44.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-36"><i class="fas fa-link"></i></a>
+<div id="parameter-36" class="section level3 unnumbered">
+<h3>Parameter<a class="anchor" aria-label="anchor" href="#parameter-36"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -283,9 +273,8 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-43" class="section level3" number="1.44.4">
-<h3>
-<span class="header-section-number">1.44.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-43"><i class="fas fa-link"></i></a>
+<div id="return-value-43" class="section level3 unnumbered">
+<h3>Return Value<a class="anchor" aria-label="anchor" href="#return-value-43"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -309,27 +298,27 @@
 <li><a class="nav-link" href="#pickeringrelay">PickeringRelay</a></li>
 <li><a class="nav-link" href="#overview-5">Overview</a></li>
 <li>
-<a class="nav-link" href="#pickeringrelayinitialize"><span class="header-section-number">1.42</span> PickeringRelayInitialize</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-41"><span class="header-section-number">1.42.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-41"><span class="header-section-number">1.42.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-34"><span class="header-section-number">1.42.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-41"><span class="header-section-number">1.42.4</span> Return Value</a></li>
+<a class="nav-link" href="#pickeringrelayinitialize">PickeringRelayInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-41">Header</a></li>
+<li><a class="nav-link" href="#purpose-41">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-34">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-41">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#pickeringrelayaction"><span class="header-section-number">1.43</span> PickeringRelayAction</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-42"><span class="header-section-number">1.43.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-42"><span class="header-section-number">1.43.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-35"><span class="header-section-number">1.43.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-42"><span class="header-section-number">1.43.4</span> Return Value</a></li>
+<a class="nav-link" href="#pickeringrelayaction">PickeringRelayAction</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-42">Header</a></li>
+<li><a class="nav-link" href="#purpose-42">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-35">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-42">Return Value</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#pickeringrelayclose"><span class="header-section-number">1.44</span> PickeringRelayClose</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-43"><span class="header-section-number">1.44.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-43"><span class="header-section-number">1.44.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameter-36"><span class="header-section-number">1.44.3</span> Parameter</a></li>
-<li><a class="nav-link" href="#return-value-43"><span class="header-section-number">1.44.4</span> Return Value</a></li>
+<a class="nav-link" href="#pickeringrelayclose">PickeringRelayClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-43">Header</a></li>
+<li><a class="nav-link" href="#purpose-43">Purpose</a></li>
+<li><a class="nav-link" href="#parameter-36">Parameter</a></li>
+<li><a class="nav-link" href="#return-value-43">Return Value</a></li>
 </ul>
 </li>
 </ul>
