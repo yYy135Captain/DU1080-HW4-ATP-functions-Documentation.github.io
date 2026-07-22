@@ -4,13 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>GraphicsDiscreteIO | DU1080 HW4 ATP Function</title>
+<title>GraphicsDiscreteIO | DU1080 HW4 API</title>
 <meta name="author" content="Tiffany Jia / Yuxuan Sun">
 <meta name="generator" content="bookdown 0.47 with bs4_book()">
-<meta property="og:title" content="GraphicsDiscreteIO | DU1080 HW4 ATP Function">
+<meta property="og:title" content="GraphicsDiscreteIO | DU1080 HW4 API">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GraphicsDiscreteIO | DU1080 HW4 ATP Function">
+<meta name="twitter:title" content="GraphicsDiscreteIO | DU1080 HW4 API">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">DU1080 HW4 ATP Function</a>
+        <a href="index.html" title="">DU1080 HW4 API</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -610,7 +610,51 @@
 </div>
 </div>
 </div>
-  <div class="chapter-nav">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+/*-----LOGO------*/
+  const sidebar = 
+    document.querySelector(".book-summary") ||
+    document.querySelector(".sidebar") ||
+    document.querySelector("#bookdown-sidebar");
+    
+  if (sidebar && !sidebar.querySelector(".site-brand")) {
+    cobst brand = document.createElement("div");
+    brand.className = "site-brand";
+    
+    const image = document.createElement("img");
+    image.src = new URL("logo.png", document.baseURL).href;
+    image.alt = "DU1080-4 API";
+    
+    brand.appendChild(image);
+    sidebar.prepend(brand);
+  }
+  
+  /*------Right TOC title to OverView------*/
+    const allElements = document.querySelectorAll("h1, h2, h3, h4, div, span, p, strong");
+    
+    for (const element of allElements) {
+      if (element.children.length === 0 && element.textContent.trim().toLowerCase()==="on this page") {
+        element.textContent = "Overview";
+        element.classList.add("right-toc-title");
+        break;
+      }
+      }
+      
+      
+      
+      
+      
+/*------Left "Table of Contents"------*/
+    for (const element of allElements) {
+      if (element.children.length === 0 && element.textContent.trim().toLowerCase()==="table of contents") {
+        element.classList.add("left-toc-title");
+        break;
+      }
+    }
+}
+);
+</script><div class="chapter-nav">
 <div class="prev"><a href="dmm.html">DMM</a></div>
 <div class="next"><a href="interfacebox.html">InterfaceBox</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -698,7 +742,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>DU1080 HW4 ATP Function</strong>" was written by Tiffany Jia / Yuxuan Sun. It was last built on 2026-07-21.</p>
+    <p>"<strong>DU1080 HW4 API</strong>" was written by Tiffany Jia / Yuxuan Sun. It was last built on 2026-07-22.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

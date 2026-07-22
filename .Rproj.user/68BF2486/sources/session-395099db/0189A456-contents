@@ -1,5 +1,5 @@
 ---
-title: "DU1080 HW4 ATP Function"
+title: "DU1080 HW4 API"
 author: Tiffany Jia / Yuxuan Sun
 date: "`r Sys.Date()`"
 site: bookdown::bs4_book 
@@ -7,9 +7,6 @@ documentclass: book
 favicon: "favicon.ico"
 ---
 
-<div class="site-brand">
-  <img src="logo.png" alt="DU1080-4 API logo">
-</div>
 
 # Welcome {-}
 Welcome to the DU-1080-HW4 ATP Function Documentation.

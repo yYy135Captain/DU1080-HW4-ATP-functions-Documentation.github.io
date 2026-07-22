@@ -1,0 +1,46 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+/*-----LOGO------*/
+  const sidebar = 
+    document.querySelector(".book-summary") ||
+    document.querySelector(".sidebar") ||
+    document.querySelector("#bookdown-sidebar");
+    
+  if (sidebar && !sidebar.querySelector(".site-brand")) {
+    cobst brand = document.createElement("div");
+    brand.className = "site-brand";
+    
+    const image = document.createElement("img");
+    image.src = new URL("logo.png", document.baseURL).href;
+    image.alt = "DU1080-4 API";
+    
+    brand.appendChild(image);
+    sidebar.prepend(brand);
+  }
+  
+  /*------Right TOC title to OverView------*/
+    const allElements = document.querySelectorAll("h1, h2, h3, h4, div, span, p, strong");
+    
+    for (const element of allElements) {
+      if (element.children.length === 0 && element.textContent.trim().toLowerCase()==="on this page") {
+        element.textContent = "Overview";
+        element.classList.add("right-toc-title");
+        break;
+      }
+      }
+      
+      
+      
+      
+      
+/*------Left "Table of Contents"------*/
+    for (const element of allElements) {
+      if (element.children.length === 0 && element.textContent.trim().toLowerCase()==="table of contents") {
+        element.classList.add("left-toc-title");
+        break;
+      }
+    }
+}
+);
+</script>
+

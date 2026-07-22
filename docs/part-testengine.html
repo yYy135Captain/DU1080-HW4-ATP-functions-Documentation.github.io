@@ -4,20 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>8 (PART*) TestEngine | DU1080 HW4 ATP Function</title>
+  <title>8 (PART*) TestEngine | DU1080 HW4 API</title>
 
     <meta name="author" content="Tiffany Jia / Yuxuan Sun" />
   
    
    <meta name="generator" content="placeholder" />
-  <meta property="og:title" content="8 (PART*) TestEngine | DU1080 HW4 ATP Function" />
+  <meta property="og:title" content="8 (PART*) TestEngine | DU1080 HW4 API" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 (PART*) TestEngine | DU1080 HW4 ATP Function" />
+  <meta name="twitter:title" content="8 (PART*) TestEngine | DU1080 HW4 API" />
   
   
   
@@ -56,7 +56,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">DU1080 HW4 ATP Function</a>
+        <a href="index.html" title="">DU1080 HW4 API</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -81,6 +81,52 @@
 <div id="part-testengine" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> (PART*) TestEngine</h1>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+/*-----LOGO------*/
+  const sidebar = 
+    document.querySelector(".book-summary") ||
+    document.querySelector(".sidebar") ||
+    document.querySelector("#bookdown-sidebar");
+    
+  if (sidebar && !sidebar.querySelector(".site-brand")) {
+    cobst brand = document.createElement("div");
+    brand.className = "site-brand";
+    
+    const image = document.createElement("img");
+    image.src = new URL("logo.png", document.baseURL).href;
+    image.alt = "DU1080-4 API";
+    
+    brand.appendChild(image);
+    sidebar.prepend(brand);
+  }
+  
+  /*------Right TOC title to OverView------*/
+    const allElements = document.querySelectorAll("h1, h2, h3, h4, div, span, p, strong");
+    
+    for (const element of allElements) {
+      if (element.children.length === 0 && element.textContent.trim().toLowerCase()==="on this page") {
+        element.textContent = "Overview";
+        element.classList.add("right-toc-title");
+        break;
+      }
+      }
+      
+      
+      
+      
+      
+/*------Left "Table of Contents"------*/
+    for (const element of allElements) {
+      if (element.children.length === 0 && element.textContent.trim().toLowerCase()==="table of contents") {
+        element.classList.add("left-toc-title");
+        break;
+      }
+    }
+}
+);
+</script>
+
   </main>
 
   <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -104,7 +150,7 @@
   <div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>DU1080 HW4 ATP Function</strong>" was written by Tiffany Jia / Yuxuan Sun. It was last built on 2026-07-21.</p>
+    <p>"<strong>DU1080 HW4 API</strong>" was written by Tiffany Jia / Yuxuan Sun. It was last built on 2026-07-22.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

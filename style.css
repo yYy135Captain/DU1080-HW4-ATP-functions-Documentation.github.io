@@ -319,7 +319,7 @@ th {
   6. LINKS
   =========================================================================== */  
 
-a {
+main a {
   color: var(--color-primary);
   text-decoration: none;
   
@@ -328,8 +328,8 @@ a {
     text-decoration-color var(--transition-speed);
 }  
   
-a:hover,
-a:focus {
+main a:hover,
+main a:focus {
   color: var(--color-primary-hover);
   text-decoration: underline;
 }
@@ -505,17 +505,53 @@ p.caption {
   align-items: center;
   justify-content: flex-start;
   
-  margin-bottom: var(--space-xl);
+  width: 100%;
+  margin-bottom: var(--space-md);
 }
 
+/*------logo image------*/
 .site-brand img {
   display: block;
   
-  width: clamp(8rem, 75%, 12rem);
+  width: clamp(4rem, 35%, 5.5rem);
   max-width: 100%;
   height: auto;
+
+  object-fit: contain;
 }
  
+/*------left table of contents------*/
+.left-toc-title {
+  display: block;
+  
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  
+  border-bottom: 0.15rem solid var(--color-primary);
+  
+  font-family: var(font-heading);
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25;
+}
+
+/*------Right overview title*/
+.right-toc-title {
+  display: block;
+  
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  
+  border-bottom: 0.15rem solid var(--color-primary);
+  
+  font-family: var(font-heading);
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25;
+}
+
+
+
  
   
 /* =============================================================================
@@ -575,7 +611,14 @@ main h2 {
 .sidebar .toc-title,
 .sidebar > h2,
 .book-summary .toc-title {
+  
   margin-top: var(--content-top-offset);
+  
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  
+  margin-bottom: 0.8rem;
 }
 
 
@@ -588,6 +631,7 @@ main h2 {
   font-family: var(--font-heading);
 }
 
+/*left sidebar */
 .book-summary {
   background-color: var(--color-surface);
   color: var(--color-text);
@@ -599,53 +643,7 @@ main h2 {
     color var(--transition-speed);
 }
 
-.book-summary a {
-  color: var(--color-text);
-}
 
-.book-summary a:hover,
-.book-summary a:focus {
-  color: var(--color-primary);
-}
-
-
-/* --- left table of contents ---*/
-.sidebar .toc-title,
-.sidebar > h2,
-.sidebar > h3 {
-  margin-bottom: var(--space-md);
-  padding-bottom: var(--space-sm);
-  
-  border-bottom: 0.15rem solid var(--color-primary);
-  
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 600;
-}
-
-/*------main folder name------*/
-.sidebar nav > ul > li > a,
-.book-summary > ul > li > a {
-  color: var(--color-text);
-  font-weight: 400;
-}
-
-/*------child items------*/
-.sidebar nav ul ul a,
-.book-summary ul ul a {
-  color: var(--color-text);
-  font-weight: 400;
-}
-
-
-/*------Nested Navigation------*/
-.sidebar nav ul ul,
-.book-summary ul ul {
-  margin-left: 5%;
-  padding-left: 7%;
-  
-  border-left: 0.1rem solid var(--color-border);
-}
 
 /* =============================================================================
   14.  LEFT ACTIVE PAGE marker
@@ -653,77 +651,185 @@ main h2 {
   Only the current page receives am orange line.
   =========================================================================== */
 
-.book-summary a {
-  position: relative;
+
+.book-summary a 
+.sidebar a {
+  display: block;
+  
+  padding: 0.375rem 0.75rem;
+  
+  color: var(--color-text);
+  background-color: transparent;
+  
+  font-weight: 400;
+  text-decoration: none;
   
   overflow-wrap: normal;
-  word-break: normal
+  word-break: normal;
   white-space: normal;
-}
-
-/*remove markers from all non-active items */
-.book-summary a::before {
-  content: none;
-}
-
-/* Active page text */
-.book-summary li.active > a,
-.book-summary a.active::before,
-.book-summary a[aria-current="page"] {
-  padding-left: 1.4em;
   
-  color: var(--color-primary);
+  transition: 
+    color var(--transition-speed);
+    background-color var(--transition-speed);
+}
+
+/*main folder*/
+
+.sidebar nav > ul > li > a,
+.book-summary > ul > li > a {
+  color: var(--color-text) !important;
   font-weight: 600;
 }
 
-/* Active page Line */
-.book-summary li.active > a::before,
-.book-summary a.active::before,
-.book-summary a[aria-current="page"]::before {
-  content: "";
+/* Nested page indentation */
+.sidebar nav ul ul,
+.book-summary ul ul {
+  margin-left: 5%;
+  padding-left: 7%;
   
-  position: absolute;
-  left: 0;
-  top: 50%;
-  
-  width: 0.85em;
-  height: 0.12em;
-  
-  background-color: var(--color-primary);
-  
-  transform: translateY(-50%);
+  border-left: 0.125rem solid var(--color-border);
 }
 
+
+/*Hover*/
+.book-summary a:hover,
+.book-summary a:focus,
+.sidebar a:hover,
+.sidebar a:focus {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+  text-decoration: none;
+}
+
+/*only the active page becomes orange */
+.book-summary li.active > a,
+.sidebar li.active > a,
+.book-summary a.active,
+.sidebar a.active,
+.book-summary a[aria-current="page"], 
+.sidebar a[aria-current="page"] {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+  
+  font-weight: 600;
+}
+
+
+.book-summary a::before,
+.sidebar a::before {
+  content: none !important;
+}
+
+.book-summary .chapter > span,
+.book-summary .part-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
 
 /* =============================================================================
   15.  RIGHT-SIDE PAGE Navigation
   =========================================================================== */
 
+.bs4-toc,
+.page-toc,
+.tocify {
+  border-left: 0.125rem solid var(--color-border);
+}
+
+/* right navigation link default to black */
+
+.bs4-toc a,
+.page-toc a,
+.tocify a {
+  
+  display: block;
+  
+  padding: 0.375rem 0.75rem;
+  
+  color: var(--color-text) !important;
+  background-color: transparent !important;
+  
+  font-weight: 400;
+  text-decoration: none;
+  
+  overflow-wrap: normal;
+  word-break: normal;
+  white-space: normal;
+  
+  transition:
+    color var(--transition-speed),
+    background-color var(--transition-speed);
+}
 
 
 
+/*Hover*/
+
+.bs4-toc a:hover,
+.bs4-toc a:focus,
+.page-toc a:hover,
+.page-toc a:focus,
+.tocify a:hover,
+.tocify a:focus,
+.chapter-toc a:hover,
+.chapter-toc a:focus {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+  text-decoration: none;
+}
+
+
+/* Active section*/
+.bs4-toc li.active > a,
+.page-toc li.active > a,
+.tocigy li.active > a,
+.chapter-toc li.active > a,
+.bs4-toc a.active,
+.page-toc a.active,
+.tocify a.active,
+.chapter-toc a.active,
+.bs4-toc a[aria-current="location"],
+.page-toc a[aria-current="location"],
+.tocity a[aria-current="location"],
+.chapter-toc a[aria-current="location"],
+.bs4-toc a[aria-current="true"],
+.page-toc a[aria-current="true"],
+.tocity a[aria-current="true"],
+.chapter-toc a[aria-current="true"] {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+  
+  font-weight: 600;
+}
+
+
+.bs4-toc a::before,
+.page-toc a::before,
+.tocify a::before,
+.chapter-toc a::before,
+.bs4-toc::before,
+.page-toc::before,
+.tocify::before,
+.chapter-toc::before {
+  content: none !important;
+}
+
+/*Right sidebar title */
+.right-toc-title {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  
+  border-bottom: 0.15rem solid var(--color-primary);
+  
+  color: var(--color-text);
+  
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
 
 /* =============================================================================
-  16.  RIGHT ACTIVE PAGE marker
-  =========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =============================================================================
-  16.  SEARCH BOX
+  17.  SEARCH BOX
   =========================================================================== */
 
 input[type="search"]

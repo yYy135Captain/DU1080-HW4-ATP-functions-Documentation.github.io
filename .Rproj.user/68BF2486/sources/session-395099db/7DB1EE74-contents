@@ -2,6 +2,9 @@ book_filename: "DU1080-HW4-Documentation"
 
 output_dir: "docs"
 
+resource_files:
+  - "logo.png"
+
 rmd_files:
   - "index.Rmd"
   
