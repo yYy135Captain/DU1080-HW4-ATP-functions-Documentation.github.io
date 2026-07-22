@@ -529,7 +529,7 @@ p.caption {
   
   border-bottom: 0.15rem solid var(--color-primary);
   
-  font-family: var(font-heading);
+  font-family: var(--font-heading);
   font-size: 1.25rem !important;
   font-weight: 700 !important;
   line-height: 1.25;
@@ -544,7 +544,7 @@ p.caption {
   
   border-bottom: 0.15rem solid var(--color-primary);
   
-  font-family: var(font-heading);
+  font-family: var(--font-heading);
   font-size: 1.25rem !important;
   font-weight: 700 !important;
   line-height: 1.25;
